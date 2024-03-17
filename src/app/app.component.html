@@ -6,11 +6,29 @@
     <div class="line"></div>
   </div>
 </div>
+<div class="body" [class.open]="isOpen">
+  <ul>
+    <li>
+      Store
+    </li>
+    <li>
+      Hörde
+    </li>
+  </ul>
+</div>
 
+<div class="footer">
+  <ul>
+    <li>
+      Spotify
+    </li>
+    <li>
+      Apple music
+    </li>
+  </ul>
+</div>
 <div class="menu" [class.open]="isOpen">
   <div class="menu-item" *ngFor="let item of menu">
     {{ item }}
   </div>
 </div>
-
-

@@ -23,17 +23,45 @@
  justify-content: space-between;
  align-items: center;
  padding: 1rem;
+
+}
+.body {
+ display: none; /* Initially hidden */
+ justify-content: center;
+ align-items: center;
+ transition: transform 0.3s ease; /* Smooth animation */
+ transform: translateY(100vh); /* Initially off screen */
+ background-color: #000; /* Black background */
+
+}
+
+
+.body.open {
+ display: flex; 
+   color: #fff;
 }
 
 .title {
- font-size: 1.5rem;
+ font-size: 1.8rem;
  font-weight: bold;
+ color: white;
 }
 /* Rotate first line to form 'X' */
 .hamburger-menu.open .line:nth-child(1) {
  transform: rotate(-45deg) translate(-5px, 6px);
 }
+.footer {
+ display: none; /* Initially hidden */
 
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ /* Other styles... */
+}
+.footer.open {
+ display: block; /* Visible when open */
+ color: #fff;
+}
 /* Fade out the middle line */
 .hamburger-menu.open .line:nth-child(2) {
  opacity: 0;
@@ -53,7 +81,8 @@
  position: absolute;
  top: 4rem; /* Adjust as needed */
  right: 0;
- width: 50vw; /* Wider menu */
+ width: 100vw; /* Wider menu */
+ height:100vh;
  transition: transform 0.3s ease; /* Smooth animation */
  transform: translateX(100%); /* Initially hidden */
  color: #fff; /* White text */
