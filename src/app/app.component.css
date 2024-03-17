@@ -38,7 +38,8 @@
 
 .body.open {
  display: flex; 
-   color: #fff;
+  
+   transform: translateY(0); /* Move to original position when open */
 }
 
 .title {
@@ -75,8 +76,8 @@
 /* Menu Styles */
 .menu {
  display: none;
- background-color: #333; /* Dark background */
- padding: 10px;
+ background-color: black; /* Dark background */
+
  border: none; /* Remove border */
  position: absolute;
  top: 4rem; /* Adjust as needed */
