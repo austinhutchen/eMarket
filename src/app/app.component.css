@@ -1,0 +1,65 @@
+/* src/app/app.component.css */
+.hamburger-menu {
+ cursor: pointer;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ width: 2rem;
+ height: 2rem;
+ position: relative;
+}
+
+.line {
+ width: 2rem;
+ height: 0.25rem;
+ background: #333;
+ transition: all 0.3s linear;
+}
+
+/* Rotate first line to form 'X' */
+.hamburger-menu.open .line1 {
+ transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+/* Fade out the middle line */
+.hamburger-menu.open .line2 {
+ opacity: 0;
+}
+
+/* Rotate last line to form 'X' */
+.hamburger-menu.open .line3 {
+ transform: rotate(45deg) translate(-5px, -6px);
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+ display: flex;
+ flex-direction: column;
+ cursor: pointer;
+ transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.line {
+ width: 30px;
+ height: 3px;
+ background-color: #333;
+ margin: 3px 0;
+}
+
+/* Menu Styles */
+.menu {
+ display: none;
+ background-color: #f9f9f9;
+ padding: 10px;
+ border: 1px solid #ddd;
+ position: absolute;
+ top: 2svh; /* Adjust as needed */
+ right: 15vh;
+ width: 100svh;
+ transition: transform 0.3s ease; /* Smooth animation */
+ transform: translateY(-100%); /* Initially hidden */
+}
+
+.menu.open {
+ display: block;
+ transform: translateY(0); /* Slide down when open */
+}
