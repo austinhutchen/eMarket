@@ -36,18 +36,23 @@
 /* Menu Styles */
 .menu {
  display: none;
- background-color: #f9f9f9;
+ background-color: #333; /* Dark background */
  padding: 10px;
- border: 1px solid #ddd;
+ border: none; /* Remove border */
  position: absolute;
- top: 2vh; /* Adjust as needed */
- right: 15vh;
- width: 100vh;
+ top: 4rem; /* Adjust as needed */
+ right: 0;
+ width: 50vw; /* Wider menu */
  transition: transform 0.3s ease; /* Smooth animation */
- transform: translateY(-100%); /* Initially hidden */
+ transform: translateX(100%); /* Initially hidden */
+ color: #fff; /* White text */
 }
 
 .menu.open {
  display: block;
- transform: translateY(0); /* Slide down when open */
+ transform: translateX(0); /* Slide out when open */
+}
+.menu-item {
+ padding: 10px 0; /* More vertical padding */
+ font-size: 1.2rem; /* Larger text */
 }
