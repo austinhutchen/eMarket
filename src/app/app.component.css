@@ -1,4 +1,4 @@
-/* src/app/app.component.css */
+/* Hamburger Menu Styles */
 .hamburger-menu {
  cursor: pointer;
  display: flex;
@@ -7,42 +7,30 @@
  width: 2rem;
  height: 2rem;
  position: relative;
+ transition: transform 0.3s ease; /* Smooth animation */
 }
 
 .line {
  width: 2rem;
  height: 0.25rem;
  background: #333;
+ margin: 3px 0;
  transition: all 0.3s linear;
 }
 
 /* Rotate first line to form 'X' */
-.hamburger-menu.open .line1 {
+.hamburger-menu.open .line:nth-child(1) {
  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 /* Fade out the middle line */
-.hamburger-menu.open .line2 {
+.hamburger-menu.open .line:nth-child(2) {
  opacity: 0;
 }
 
 /* Rotate last line to form 'X' */
-.hamburger-menu.open .line3 {
+.hamburger-menu.open .line:nth-child(3) {
  transform: rotate(45deg) translate(-5px, -6px);
-}
-/* Hamburger Menu Styles */
-.hamburger-menu {
- display: flex;
- flex-direction: column;
- cursor: pointer;
- transition: transform 0.3s ease; /* Smooth animation */
-}
-
-.line {
- width: 30px;
- height: 3px;
- background-color: #333;
- margin: 3px 0;
 }
 
 /* Menu Styles */
@@ -52,9 +40,9 @@
  padding: 10px;
  border: 1px solid #ddd;
  position: absolute;
- top: 2svh; /* Adjust as needed */
+ top: 2vh; /* Adjust as needed */
  right: 15vh;
- width: 100svh;
+ width: 100vh;
  transition: transform 0.3s ease; /* Smooth animation */
  transform: translateY(-100%); /* Initially hidden */
 }

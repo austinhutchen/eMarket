@@ -1,13 +1,19 @@
 <!-- src/app/app.component.html -->
 
-<div class="hamburger-menu" (click)="toggleMenu()">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-</div>
 
-<div class="menu" [class.open]="isOpen">
-  <div class="menu-item" *ngFor="let item of menu">
-    {{ item }}
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
-</div>
+  
+  <div class="menu" [class.open]="isOpen">
+    <div class="menu-item" *ngFor="let item of menu">
+      {{ item }}
+    </div>
+  </div>
+
+
+
+
+

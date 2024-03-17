@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  standalone: true
 })
 export class AppComponent {
   title: string = 'DLOR';
@@ -11,7 +12,7 @@ export class AppComponent {
   isOpen: boolean = false;
 
   toggleMenu() {
-    this.isOpen = !this.isOpen;
+    this.isOpen = !(this.isOpen);
     const hamburger = document.querySelector('.hamburger-menu');
     hamburger?.classList.toggle('open');
   }
