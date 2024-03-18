@@ -74,6 +74,10 @@
 header.black-background {
   background-color: rgb(56, 54, 54);
   transition: background-color 0.5s ease;
+
+}
+header.black-background .hamburger-menu .line {
+  background-color: white;
 }
 .title {
   font-size: 3.5vh;
@@ -136,18 +140,24 @@ header.black-background {
   right: 0;
   width: 100svw;
   /* Wider menu */
-  height: 83svh;
+  height: 100svh;
   transition: transform 0.3s ease;
   /* Smooth animation */
   transform: translateX(100%);
   /* Initially hidden */
-  color: black;
+
+  transition: all 0.3s ease; /* Smooth transition */
   /* White text */
 }
 
 .menu.open {
   display: block;
   transform: translateX(0);
+  .header.line{
+    background-color: #fff; /* White color when menu is open */
+    
+  }
+
   /* Slide out when open */
 }
 

@@ -13,13 +13,16 @@ export class AppComponent {
   title: string = 'DLOR';
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
+  
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.document.addEventListener('scroll', () => {
       const header = this.document.querySelector('header');
       if (this.document.documentElement.scrollTop === 0) {
         this.renderer.addClass(header, 'black-background');
+
       } else {
         this.renderer.removeClass(header, 'black-background');
+
       }
     });
   }
