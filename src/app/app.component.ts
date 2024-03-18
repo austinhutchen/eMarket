@@ -15,13 +15,13 @@ export class AppComponent {
   isOpen: boolean = false;
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.document.addEventListener('scroll', () => {
+      const header = this.document.querySelector('header');
       if (this.document.documentElement.scrollTop === 0) {
-        this.renderer.addClass(this.document.body, 'black-background');
+        this.renderer.addClass(header, 'black-background');
       } else {
-        this.renderer.removeClass(this.document.body, 'black-background');
+        this.renderer.removeClass(header, 'black-background');
       }
     });
-
   }
 
   openMenu() {
