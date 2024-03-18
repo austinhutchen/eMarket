@@ -23,13 +23,13 @@
   </nav>
 </div>
 
-<div class="footer">
-  <ul>
-    <li>
-      Spotify
-    </li>
-    <li>
-      Apple music
-    </li>
-  </ul>
+<div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
+  <ol>
+    <a>
+      <img src="/assets/Music.png">
+    </a>
+    <a>
+      <img src="/assets/Spotify.png">
+    </a>
+  </ol>
 </div>

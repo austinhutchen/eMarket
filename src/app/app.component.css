@@ -17,7 +17,7 @@
   color: white;
   text-decoration: none;
   font-size: 3vh;
-
+  top: 2rem;
   font-family: 'Times New Roman', Times, serif
 }
 
@@ -85,7 +85,8 @@
 }
 
 .footer {
-  display: none;
+  display: flex;
+  opacity:0;
   /* Initially hidden */
 
   position: fixed;
@@ -95,9 +96,10 @@
 }
 
 .footer.open {
-  display: block;
+  flex-direction: row;
   /* Visible when open */
   color: #fff;
+  opacity:1;
 }
 
 /* Fade out the middle line */
@@ -112,7 +114,7 @@
 
 /* Menu Styles */
 .menu {
-
+  margin-top: 20vh;
   display: block;
   background-color: black;
   /* Dark background */

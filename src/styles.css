@@ -2,4 +2,5 @@
 html{
  background-color: black;
  font-family: sans-serif;
+ background-image: url('/src/assets/background.jpg');
 }
