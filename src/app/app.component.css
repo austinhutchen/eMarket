@@ -35,7 +35,7 @@
 .line {
   width: 2rem;
   height: 0.25rem;
-  background: #333;
+  background: black;
   margin: 3px 0;
   transition: all 0.3s linear;
 }

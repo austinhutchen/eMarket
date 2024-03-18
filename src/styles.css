@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-html{
 
+html,body{
+ max-height: 100vh; /* Limit the height to the viewport height */
+  overflow: auto; 
  font-family: sans-serif;
 }
 .background {
