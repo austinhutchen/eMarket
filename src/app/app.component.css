@@ -131,9 +131,9 @@
   position: absolute;
   /* Adjust as needed */
   right: 0;
-  width: 100vw;
+  width: 90svw;
   /* Wider menu */
-  height: 80vh;
+  height: 100svh;
   transition: transform 0.3s ease;
   /* Smooth animation */
   transform: translateX(100%);
