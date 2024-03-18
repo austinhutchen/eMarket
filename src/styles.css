@@ -1,7 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 html{
- background: black url('assets/background.jpg') no-repeat center center fixed; 
- transition: background-size 0.5s ease;
- background-size: cover;
+
  font-family: sans-serif;
+}
+.background {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -1; /* Position behind the content */
+ overflow: hidden; /* Hide the parts of the image that overflow the container */
+}
+
+.background img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover; /* Similar to background-size: cover; */
+ transition: width 0.5s ease, height 0.5s ease;
 }

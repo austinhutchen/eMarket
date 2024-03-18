@@ -1,35 +1,41 @@
-<div class="header">
-  <div class="title">{{ title }}</div>
-  <div class="hamburger-menu" (click)="toggleMenu()">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+<div class="background">
+  <img src="/assets/Background.png">
+</div>
+<div class="content">
+
+  <div class="header">
+    <div class="title">{{ title }}</div>
+    <div class="hamburger-menu" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </div>
-</div>
 
-<div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
-  <nav>
-    <b>
+  <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
+    <nav>
+      <b>
 
-      <ol class="links">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <ol class="links">
+          <a routerLink="/home" routerLinkActive="active">Home</a>
 
-        <a routerLink="/about" routerLinkActive="active">Store</a>
+          <a routerLink="/about" routerLinkActive="active">Store</a>
 
-        <a routerLink="/contact" routerLinkActive="active">Hórde</a>
-      </ol><!--  -->
+          <a routerLink="/contact" routerLinkActive="active">Hórde</a>
+        </ol><!--  -->
 
-    </b>
-  </nav>
-</div>
+      </b>
+    </nav>
+  </div>
 
-<div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
-  <ol>
-    <a>
-      <img src="/assets/Music.png">
-    </a>
-    <a>
-      <img src="/assets/Spotify.png">
-    </a>
-  </ol>
+  <div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
+    <ol>
+      <a>
+        <img src="/assets/Music.png">
+      </a>
+      <a>
+        <img src="/assets/Spotify.png">
+      </a>
+    </ol>
+  </div>
 </div>
