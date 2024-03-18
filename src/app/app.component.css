@@ -30,6 +30,8 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  margin-bottom: 20px; /* Adjust as needed */
+
 }
 
 .line {
@@ -128,7 +130,7 @@ header.black-background .title{
 
 /* Menu Styles */
 .menu {
-  margin-top: 20vh;
+  margin-top: 15svh;
   display: block;
   font-family: monospace;
 
