@@ -18,7 +18,9 @@
   text-align: center;
   /* Center the text horizontally */
   align-items: center;
-
+top: 3vh;
+font-size: 2vh;
+font-family:'Times New Roman', Times, serif
 }
 
 .line {
