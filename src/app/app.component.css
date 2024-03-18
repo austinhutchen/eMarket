@@ -11,16 +11,24 @@
   /* Smooth animation */
 }
 
+.links a {
+  display: block;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 3vh;
+
+  font-family: 'Times New Roman', Times, serif
+}
+
 .links {
-  display: flex;
   cursor: pointer;
   justify-content: space-evenly;
   text-align: center;
   /* Center the text horizontally */
   align-items: center;
-top: 7vh;
-font-size: 3vh;
-font-family:'Times New Roman', Times, serif
+  top: 7vh;
+
 }
 
 .line {
@@ -68,7 +76,7 @@ font-family:'Times New Roman', Times, serif
   font-size: 3.5vh;
   font-weight: bold;
   color: white;
-  font-family:cursive	;
+  font-family: cursive;
 }
 
 /* Rotate first line to form 'X' */
@@ -104,7 +112,7 @@ font-family:'Times New Roman', Times, serif
 
 /* Menu Styles */
 .menu {
-  
+
   display: flex;
   background-color: black;
   /* Dark background */
@@ -118,7 +126,7 @@ font-family:'Times New Roman', Times, serif
   right: 0;
   width: 100vw;
   /* Wider menu */
-  height:80vh;
+  height: 80vh;
   transition: transform 0.3s ease;
   /* Smooth animation */
   transform: translateX(100%);
