@@ -71,7 +71,10 @@
   transform: translateY(0);
   /* Move to original position when open */
 }
-
+header.black-background {
+  background-color: black;
+  transition: background-color 0.5s ease;
+}
 .title {
   font-size: 3.5vh;
   font-weight: bold;

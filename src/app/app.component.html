@@ -1,8 +1,8 @@
 <div class="background">
   <img src="/assets/background.jpg">
 </div>
-<div class="content">
 
+<header>
   <div class="header">
     <div class="title">{{ title }}</div>
     <div class="hamburger-menu" (click)="toggleMenu()">
@@ -11,22 +11,25 @@
       <div class="line"></div>
     </div>
   </div>
+</header>
 
-  <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
-    <nav>
-      <b>
+<div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
+  <nav>
+    <b>
 
-        <ol class="links">
-          <a routerLink="/home" routerLinkActive="active">Home</a>
+      <ol class="links">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
 
-          <a routerLink="/about" routerLinkActive="active">Store</a>
+        <a routerLink="/about" routerLinkActive="active">Store</a>
 
-          <a routerLink="/contact" routerLinkActive="active">Hórde</a>
-        </ol><!--  -->
+        <a routerLink="/contact" routerLinkActive="active">Hórde</a>
+      </ol><!--  -->
 
-      </b>
-    </nav>
-  </div>
+    </b>
+  </nav>
+</div>
+<footer>
+
 
   <div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
     <ol>
@@ -38,4 +41,4 @@
       </a>
     </ol>
   </div>
-</div>
+</footer>
