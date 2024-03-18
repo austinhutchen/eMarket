@@ -12,6 +12,7 @@ export class AppComponent {
 
   toggleMenu() {
     this.isOpen = !(this.isOpen);
+    console.log(this.isOpen);
     const hamburger = document.querySelector('.hamburger-menu');
     hamburger?.classList.toggle('open');
   }

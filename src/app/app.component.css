@@ -22,13 +22,14 @@
 }
 
 .links {
+  opacity: 0;
+  transition: opacity 0.3s ease;
   cursor: pointer;
   justify-content: space-evenly;
   text-align: center;
   flex-direction: column;
   align-items: center;
-  top: 7vh;
-
+  margin: 10px;
 }
 
 .line {
@@ -51,19 +52,18 @@
 .body {
   display: none;
   /* Initially hidden */
-  padding: 1rem;
-  top: 4rem;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s ease;
   /* Smooth animation */
-  transform: translateY(100vh);
+  transform: translateY(100%);
   /* Initially off screen */
-  background-color: #000;
   /* Black background */
 
 }
 
+
+.menu.open .links {
+  opacity: 1;
+}
 
 .body.open {
   display: flex;
@@ -113,7 +113,7 @@
 /* Menu Styles */
 .menu {
 
-  display: flex;
+  display: block;
   background-color: black;
   /* Dark background */
   justify-content: center;
@@ -121,7 +121,6 @@
   border: none;
   /* Remove border */
   position: absolute;
-  top: 7rem;
   /* Adjust as needed */
   right: 0;
   width: 100vw;
