@@ -65,8 +65,8 @@
 .title {
   font-size: 3vh;
   font-weight: bold;
-  color: goldenrod;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  color: white;
+  font-family: Trebuchet MS, sans-serif	;
 }
 
 /* Rotate first line to form 'X' */
