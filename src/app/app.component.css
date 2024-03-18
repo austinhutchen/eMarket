@@ -18,7 +18,7 @@
   text-decoration: none;
   font-size: 3vh;
   top: 2rem;
-  font-family: 'Times New Roman', Times, serif
+  font-family: cursive;
 }
 
 .links {
@@ -74,7 +74,7 @@
 header.black-background {
   background-color: rgba(56, 54, 54, 0.7); /* Semi-transparent black */
   transition: background-color 0.5s ease;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 header.black-background .hamburger-menu .line {
   background-color: white;
