@@ -1,99 +1,137 @@
 /* Hamburger Menu Styles */
 .hamburger-menu {
- cursor: pointer;
- display: flex;
- flex-direction: column;
- justify-content: space-around;
- width: 2rem;
- height: 2rem;
- position: relative;
- transition: transform 0.3s ease; /* Smooth animation */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  /* Smooth animation */
+}
+
+.links {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+  text-align: center;
+  /* Center the text horizontally */
+  align-items: center;
+
 }
 
 .line {
- width: 2rem;
- height: 0.25rem;
- background: #333;
- margin: 3px 0;
- transition: all 0.3s linear;
+  width: 2rem;
+  height: 0.25rem;
+  background: #333;
+  margin: 3px 0;
+  transition: all 0.3s linear;
 }
+
 /* Header Styles */
 .header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 
 }
+
 .body {
- display: none; /* Initially hidden */
- justify-content: center;
- align-items: center;
- transition: transform 0.3s ease; /* Smooth animation */
- transform: translateY(100vh); /* Initially off screen */
- background-color: #000; /* Black background */
+  display: none;
+  /* Initially hidden */
+  padding: 1rem;
+  top: 4rem;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  /* Smooth animation */
+  transform: translateY(100vh);
+  /* Initially off screen */
+  background-color: #000;
+  /* Black background */
 
 }
 
 
 .body.open {
- display: flex; 
-  
-   transform: translateY(0); /* Move to original position when open */
+  display: flex;
+
+  transform: translateY(0);
+  /* Move to original position when open */
 }
 
 .title {
- font-size: 1.8rem;
- font-weight: bold;
- color: white;
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
 }
+
 /* Rotate first line to form 'X' */
 .hamburger-menu.open .line:nth-child(1) {
- transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
-.footer {
- display: none; /* Initially hidden */
 
- position: fixed;
- bottom: 0;
- width: 100%;
- /* Other styles... */
+.footer {
+  display: none;
+  /* Initially hidden */
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Other styles... */
 }
+
 .footer.open {
- display: block; /* Visible when open */
- color: #fff;
+  display: block;
+  /* Visible when open */
+  color: #fff;
 }
+
 /* Fade out the middle line */
 .hamburger-menu.open .line:nth-child(2) {
- opacity: 0;
+  opacity: 0;
 }
 
 /* Rotate last line to form 'X' */
 .hamburger-menu.open .line:nth-child(3) {
- transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Menu Styles */
 .menu {
- display: none;
- background-color: black; /* Dark background */
-
- border: none; /* Remove border */
- position: absolute;
- top: 4rem; /* Adjust as needed */
- right: 0;
- width: 100vw; /* Wider menu */
- height:100vh;
- transition: transform 0.3s ease; /* Smooth animation */
- transform: translateX(100%); /* Initially hidden */
- color: #fff; /* White text */
+  display: flex;
+  background-color: black;
+  /* Dark background */
+  justify-content: center;
+  align-items: center;
+  border: none;
+  /* Remove border */
+  position: absolute;
+  top: 4rem;
+  /* Adjust as needed */
+  right: 0;
+  width: 100vw;
+  /* Wider menu */
+  height: 100vh;
+  transition: transform 0.3s ease;
+  /* Smooth animation */
+  transform: translateX(100%);
+  /* Initially hidden */
+  color: #fff;
+  /* White text */
 }
 
 .menu.open {
- display: block;
- transform: translateX(0); /* Slide out when open */
+  display: block;
+  transform: translateX(0);
+  /* Slide out when open */
 }
+
 .menu-item {
- padding: 10px 0; /* More vertical padding */
- font-size: 1.2rem; /* Larger text */
+  padding: 10px 0;
+  /* More vertical padding */
+  font-size: 1.2rem;
+  /* Larger text */
 }
