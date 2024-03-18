@@ -1,7 +1,7 @@
 # DLOR
 <img width="1440" alt="Screenshot 2024-03-18 at 3 23 21 PM" src="https://github.com/austinhutchen/typedFashion/assets/93489691/bab4feff-02cd-40f4-a4dc-03e81e777e9a">
 
-
+<hr>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Development server
