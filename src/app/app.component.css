@@ -74,7 +74,7 @@
 header.black-background {
   background-color: rgb(56, 54, 54);
   transition: background-color 0.5s ease;
-
+  border-radius: 10px; /* Adjust as needed */
 }
 header.black-background .hamburger-menu .line {
   background-color: white;
