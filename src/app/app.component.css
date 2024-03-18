@@ -109,12 +109,12 @@
   border: none;
   /* Remove border */
   position: absolute;
-  top: 4rem;
+  top: 7rem;
   /* Adjust as needed */
   right: 0;
   width: 100vw;
   /* Wider menu */
-  height: 100vh;
+  height:80vh;
   transition: transform 0.3s ease;
   /* Smooth animation */
   transform: translateX(100%);
