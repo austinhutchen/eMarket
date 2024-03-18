@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html{
  background: black url('assets/background.jpg') no-repeat center center fixed; 
+ transition: background-size 0.5s ease;
  background-size: cover;
  font-family: sans-serif;
 }
