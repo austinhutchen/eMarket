@@ -164,9 +164,23 @@ header.black-background .title{
 
   /* Slide out when open */
 }
-
+ol{
+list-style-type: none;
+}
+.links a {
+  /* other properties */
+  border: 0.4vh solid transparent; /* Thicker border */
+  border-radius: 3px; /* Rounded borders */
+  background-clip: padding-box; /* Prevent the background from extending to the border */
+}
+.links a:hover, .links a:active {
+  border-color: #333; /* Dark gray border */
+}
 .menu-item {
   padding: 10px 0;
+  text-shadow: 1px 1px #ccc, 2px 2px #c9c9c9, 3px 3px #b6b6b6;
+  color: #333;
+
   /* More vertical padding */
   font-size: 1.2rem;
   /* Larger text */
