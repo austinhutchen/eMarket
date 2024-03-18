@@ -85,7 +85,9 @@ header.black-background .hamburger-menu .line {
   color: #b3b32e;
   font-family: cursive;
 }
-
+header.black-background .title{
+  color: #d4d466;
+}
 /* Rotate first line to form 'X' */
 .hamburger-menu.open .line:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
