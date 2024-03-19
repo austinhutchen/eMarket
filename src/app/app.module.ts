@@ -1,26 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-
-// Import your components here
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module'; // Import AppRoutingModule
 
-// Define your routes here
-export const routes: Routes = [
-  { path: 'home', component: AppComponent },
-  { path: 'store', component: undefined },
-  { path: 'horde', component: undefined },
-  // other routes...
-];
+import { HordeComponent } from './horde/horde.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
+  declarations: [
+    AppComponent,
+
+    // other declarations...
+  ],
   imports: [
     BrowserModule,
-    CommonModule,
-    RouterModule.forRoot(routes), // Add this
+    AppRoutingModule, // Add this
+    // other imports...
   ],
   providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

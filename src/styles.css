@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html,body{
- max-height: 100vh; /* Limit the height to the viewport height */
+ max-height: 100svh; /* Limit the height to the viewport height */
   overflow: auto; 
  font-family: sans-serif;
  overflow-x: hidden; /* Disable horizontal scrolling */
-
+max-width: 100svw;
 }
 .background {
  position: absolute;

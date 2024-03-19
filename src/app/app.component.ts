@@ -19,7 +19,6 @@ export class AppComponent {
       const header = this.document.querySelector('header');
       if (this.document.documentElement.scrollTop === 0) {
         this.renderer.addClass(header, 'black-background');
-
       } else {
         this.renderer.removeClass(header, 'black-background');
 
