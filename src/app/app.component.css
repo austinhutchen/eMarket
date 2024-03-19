@@ -74,8 +74,7 @@
   /* Move to original position when open */
 }
 header.black-background {
-  background-color: rgba(56, 54, 54, 0.7); /* Semi-transparent black */
-  transition: background-color 0.5s ease;
+  background-color: rgba(56, 54, 54, 0.6); /* Less transparent black */  transition: background-color 0.5s ease;
   border-radius: 2vh;
 }
 header.black-background .hamburger-menu .line {
@@ -84,7 +83,7 @@ header.black-background .hamburger-menu .line {
 .title {
   font-size: 3.5vh;
   font-weight: bold;
-  color: #b3b32e;
+  color: #9a9a26;
   font-family: cursive;
 }
 header.black-background .title{
