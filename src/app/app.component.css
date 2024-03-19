@@ -76,7 +76,7 @@
 header.black-background {
   background-color: rgba(56, 54, 54, 0.7); /* Semi-transparent black */
   transition: background-color 0.5s ease;
-  border-radius: 20px;
+  border-radius: 2vh;
 }
 header.black-background .hamburger-menu .line {
   background-color: white;
@@ -182,6 +182,6 @@ list-style-type: none;
   color: #333;
 
   /* More vertical padding */
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   /* Larger text */
 }
