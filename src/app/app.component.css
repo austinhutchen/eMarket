@@ -18,6 +18,8 @@
   text-decoration: none;
   font-size: 3vh;
   top: 2rem;
+  font-family: cursive;
+  color: rgba(0,0,0,0.7)
 
 }
 
@@ -124,7 +126,6 @@ header.black-background .title {
   width: 5vh;
   height: 5vh;
   margin: 10px;
-
 }
 
 /* Fade out the middle line */
@@ -141,8 +142,6 @@ header.black-background .title {
 .menu {
   margin-top: 15svh;
   display: block;
-
-
   /* Dark background */
   justify-content: center;
   align-items: center;
