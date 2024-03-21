@@ -2,13 +2,13 @@
 
 html,
 body {
- max-height: 100svh;
+ max-height: 100%;
  /* Limit the height to the viewport height */
 
 
  overflow-x: hidden;
  /* Disable horizontal scrolling */
- max-width: 100svw;
+ max-width: 100%;
 }
 
 .background {
