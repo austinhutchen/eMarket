@@ -4,7 +4,7 @@ html,
 body {
  max-height: 100svh;
  /* Limit the height to the viewport height */
- overflow: auto;
+
 
  overflow-x: hidden;
  /* Disable horizontal scrolling */
