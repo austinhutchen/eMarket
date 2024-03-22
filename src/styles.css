@@ -182,7 +182,7 @@ header.black-background {
 .footer.open {
  flex-direction: row;
  /* Visible when open */
- background-color: rba(0,0,0,0.3);
+ background-color: rba(0,0,0,0.7);
  opacity: 1;
 }
 
