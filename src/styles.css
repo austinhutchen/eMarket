@@ -27,7 +27,16 @@ html {
  overflow: hidden;
  /* Hide the parts of the image that overflow the container */
 }
-
+@keyframes fadeInUp {
+ 0% {
+   opacity: 0;
+   transform: translateY(20px);
+ }
+ 100% {
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
 .background::before {
  content: "";
  position: absolute;
@@ -165,20 +174,18 @@ body.menu-open .background img {
  opacity: 0;
 }
 
-.footer {
+ .footer {
  display: flex;
- opacity: 0;
+ opacity: 0 ;
  /* Initially hidden */
  justify-content: center;
  align-items: center;
  position: fixed;
  bottom: 0;
- background-color: rgba(0, 0, 0, 0.3);
- border-radius: 0.7em;
 
- transform: translateX(-50%);
+
  /* Add this line */
- left: 50%;
+
  /* Other styles... */
 }
 
@@ -207,6 +214,11 @@ header.black-background {
  flex-direction: row;
  /* Visible when open */
 
+ background-color: rgba(0, 0, 0, 0.3);
+ border-radius: 0.7em;
+ left: 43%;
+ transform: translateX(-50%);
+ animation: fadeInUp 2s ease-out forwards;
  opacity: 1;
 
  max-width: fit-content;
@@ -216,7 +228,7 @@ header.black-background {
  width: 30%;
  height: 30%;
 
- transition: font-size 2s ease-out 250ms;
+
 }
 
 /* Rotate last line to form 'X' */
@@ -254,7 +266,7 @@ header.black-background {
  transition: transform 3s ease;
  /* Smooth animation */
  /* Initially hidden */
- color: white;
+
 
  /* Smooth transition */
  /* White text */
