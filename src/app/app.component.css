@@ -9,7 +9,7 @@
   position: relative;
   transition: transform 0.3s ease;
   /* Smooth animation */
-  color:white;
+  color: white;
 }
 
 .links a {
@@ -28,13 +28,20 @@
     0 3px 0 #bbb,
     0 4px 0 #b9b9b9,
     0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
+    0 6px 1px rgba(0, 0, 0, .5),
+    /* Increased alpha value */
+    0 0 5px rgba(0, 0, 0, .5),
+    /* Increased alpha value */
+    0 1px 3px rgba(0, 0, 0, .6),
+    /* Increased alpha value */
+    0 3px 5px rgba(0, 0, 0, .5),
+    /* Increased alpha value */
+    0 5px 10px rgba(0, 0, 0, .6),
+    /* Increased alpha value */
+    0 10px 10px rgba(0, 0, 0, .5),
+    /* Increased alpha value */
+    0 20px 20px rgba(0, 0, 0, .4);
+  /* Increased alpha value */
 }
 
 .links {
@@ -47,7 +54,7 @@
   align-items: center;
   margin: 10px;
   /* Adjust as needed */
- color: white;
+  color: white;
 }
 
 .line {
@@ -67,7 +74,8 @@
   border-radius: 2vh;
 
   background-color: rgba(0, 0, 0, 0.0);
-  transition: background-color 0.5s ease; /* Add this line */
+  transition: background-color 0.5s ease;
+  /* Add this line */
 
 }
 
@@ -97,7 +105,8 @@
 header.black-background {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6vh;
-  transition: background-color 0.5s ease; /* Add this line */
+  transition: background-color 0.5s ease;
+  /* Add this line */
 
 }
 
@@ -146,7 +155,7 @@ header.black-background .title {
   width: 5vh;
   height: 5vh;
   margin: 10px;
-transition: font-size 2s ease-out 250ms;
+  transition: font-size 2s ease-out 250ms;
 }
 
 /* Fade out the middle line */
@@ -178,7 +187,7 @@ transition: font-size 2s ease-out 250ms;
   /* Smooth animation */
   transform: translateX(100%);
   /* Initially hidden */
-  color:white;
+  color: white;
   transition: all 0.3s ease;
   /* Smooth transition */
   /* White text */
