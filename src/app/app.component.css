@@ -9,17 +9,17 @@
   position: relative;
   transition: transform 0.3s ease;
   /* Smooth animation */
+  color:white;
 }
 
 .links a {
   display: block;
   margin: 10px;
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 3.3vh;
   top: 1.3rem;
   font-family: cursive;
-  color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
   color: #fff;
   text-shadow:
@@ -47,7 +47,7 @@
   align-items: center;
   margin: 10px;
   /* Adjust as needed */
-
+ color: white;
 }
 
 .line {
@@ -64,7 +64,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
+  border-radius: 6vw;
+  opacity: 0.6;
 }
 
 .body {
@@ -102,14 +103,14 @@ header.black-background .hamburger-menu .line {
 }
 
 .title {
-  font-size: 3.5vh;
+  font-size: 2svh;
   font-weight: bold;
-  color: #9a9a26;
+  color: white;
   font-family: cursive;
 }
 
 header.black-background .title {
-  color: #d4d466;
+  color: white;
 }
 
 /* Rotate first line to form 'X' */
@@ -124,6 +125,8 @@ header.black-background .title {
   align-items: center;
   position: fixed;
   bottom: 0;
+  background-color: black;
+  border-radius: 2vh;
   width: 100%;
   /* Other styles... */
 }
@@ -132,13 +135,14 @@ header.black-background .title {
   flex-direction: row;
   /* Visible when open */
   color: #fff;
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .footer img {
   width: 5vh;
   height: 5vh;
   margin: 10px;
+transition: font-size 2s ease-out 250ms;
 }
 
 /* Fade out the middle line */
@@ -153,7 +157,7 @@ header.black-background .title {
 
 /* Menu Styles */
 .menu {
-  margin-top: 15svh;
+  margin-top: 10svh;
   display: block;
   /* Dark background */
   justify-content: center;
@@ -170,7 +174,7 @@ header.black-background .title {
   /* Smooth animation */
   transform: translateX(100%);
   /* Initially hidden */
-
+  color:white;
   transition: all 0.3s ease;
   /* Smooth transition */
   /* White text */
@@ -204,7 +208,7 @@ ol {
   text-decoration: none;
   padding: 1vh 2vh;
   /* Adjust as needed */
-
+  color: white;
   background-clip: padding-box;
   /* Prevent the background from extending to the border */
 }
@@ -219,7 +223,6 @@ ol {
 .menu-item {
   padding: 10px 0;
   text-shadow: 1px 1px #ccc, 2px 2px #c9c9c9, 3px 3px #b6b6b6;
-  color: #333;
 
   /* More vertical padding */
   font-size: 1.5rem;
