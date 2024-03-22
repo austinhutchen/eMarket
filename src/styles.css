@@ -4,7 +4,14 @@ html,
 body {
  max-height: 100%;
  /* Limit the height to the viewport height */
-
+ background-image: url('/assets/noise.webp');
+ background-color: #000;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+ opacity: 0.8;
+ animation: noiseFX 2s steps(6) infinite;
  overflow-x: hidden;
  /* Disable horizontal scrolling */
  max-width: 100%;
@@ -39,30 +46,29 @@ body.menu-open .background img {
 }
 
 @keyframes noiseFX {
-
  0%,
  100% {
   transform: translate(0, 0);
  }
 
  10% {
-  transform: translate(-5%, -10%);
+  transform: translate(-10%, -20%);
  }
 
  30% {
-  transform: translate(3%, -15%);
+  transform: translate(6%, -30%);
  }
 
  50% {
-  transform: translate(12%, 9%);
+  transform: translate(24%, 18%);
  }
 
  70% {
-  transform: translate(9%, 4%);
+  transform: translate(18%, 8%);
  }
 
  90% {
-  transform: translate(-1%, 7%);
+  transform: translate(-2%, 14%);
  }
 }
 
