@@ -65,7 +65,7 @@
   align-items: center;
   padding: 1rem;
   border-radius: 6vw;
-  opacity: 0.6;
+  opacity: 0;
 }
 
 .body {
@@ -96,6 +96,7 @@ header.black-background {
   /* Less transparent black */
   transition: background-color 0.5s ease;
   border-radius: 2vh;
+  opacity: 0.6
 }
 
 header.black-background .hamburger-menu .line {
