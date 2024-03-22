@@ -157,7 +157,7 @@ transition: font-size 2s ease-out 250ms;
 
 /* Menu Styles */
 .menu {
-  margin-top: 15svh;
+  margin-top: 25svh;
   display: block;
   /* Dark background */
   justify-content: center;
@@ -166,7 +166,7 @@ transition: font-size 2s ease-out 250ms;
   /* Remove border */
   position: absolute;
   /* Adjust as needed */
-  right: 0;
+  right: -1;
   width: 100svw;
   /* Wider menu */
   height: 100svh;
