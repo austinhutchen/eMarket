@@ -18,7 +18,7 @@ body {
  height: 150%;
  z-index: -1;
  /* Position behind the content */
- overflow: auto;
+ overflow: hidden;
  /* Hide the parts of the image that overflow the container */
 }
 
