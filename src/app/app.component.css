@@ -64,8 +64,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+<<<<<<< HEAD
   border-radius: 6vw;
   opacity: 0;
+=======
+  border-radius: 2vh;
+
+  background-color: rgba(0, 0, 0, 0.0);
+  transition: background-color 0.5s ease; /* Add this line */
+
+>>>>>>> 45c1433 (small patch (likely css, check release notes))
 }
 
 .body {
@@ -92,11 +100,18 @@
 }
 
 header.black-background {
+<<<<<<< HEAD
   background-color: rgba(56, 54, 54, 0.6);
   /* Less transparent black */
   transition: background-color 0.5s ease;
   border-radius: 2vh;
   opacity: 0.6;
+=======
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6vh;
+  transition: background-color 0.5s ease; /* Add this line */
+
+>>>>>>> 45c1433 (small patch (likely css, check release notes))
 }
 
 header.black-background .hamburger-menu .line {
@@ -104,10 +119,15 @@ header.black-background .hamburger-menu .line {
 }
 
 .title {
+<<<<<<< HEAD
   font-size: 4svh;
+=======
+  font-size: 3svh;
+>>>>>>> 45c1433 (small patch (likely css, check release notes))
   font-weight: bold;
   color: white;
   font-family: cursive;
+  opacity: 0.8;
 }
 
 header.black-background .title {
@@ -128,7 +148,7 @@ header.black-background .title {
   bottom: 0;
   background-color: black;
   border-radius: 2vh;
-  width: 100%;
+  width: 90%;
   /* Other styles... */
 }
 
