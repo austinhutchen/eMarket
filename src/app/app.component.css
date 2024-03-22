@@ -1,16 +1,4 @@
-/* Hamburger Menu Styles */
-.hamburger-menu {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  transition: transform 0.3s ease;
-  /* Smooth animation */
-  color: white;
-}
+
 
 .links a {
   display: block;
@@ -22,6 +10,8 @@
   font-family: cursive;
   font-weight: bold;
   color: #fff;
+  transition:opacity 0.3s cubic-bezier(0.42,0,0.58,1);
+  opacity: 1; /* Add this line */
   text-shadow:
     0 1px 0 #ccc,
     0 2px 0 #c9c9c9,
@@ -43,20 +33,12 @@
     0 20px 20px rgba(0, 0, 0, .4);
   /* Increased alpha value */
 }
-
-.links {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-  justify-content: space-evenly;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  /* Adjust as needed */
-  color: white;
+.links a:link {
+  opacity: 1; /* Add this line */
 }
-
+.links a:visited {
+  opacity: 1; /* Add this line */
+}
 .line {
   width: 2rem;
   height: 0.25rem;
@@ -216,7 +198,6 @@ ol {
   /* Thicker border */
   border-radius: 2vh;
   /* Adjust as needed */
-  transition: background-color 0.3s ease;
   /* Adjust as needed */
   text-decoration: none;
   padding: 1vh 2vh;
