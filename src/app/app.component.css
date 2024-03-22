@@ -1,5 +1,15 @@
+@keyframes fadeInFromMiddle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-
+.menu.open .link a{
+  animation: fadeInFromMiddle;
+}
 .links a {
   display: block;
   margin: 10px;
@@ -10,7 +20,6 @@
   font-family: cursive;
   font-weight: bold;
   color: #fff;
-  transition:opacity 0.3s cubic-bezier(0.42,0,0.58,1);
   opacity: 1; /* Add this line */
   text-shadow:
     0 1px 0 #ccc,
@@ -34,11 +43,9 @@
   /* Increased alpha value */
 }
 .links a:link {
-  opacity: 1; /* Add this line */
+  opacity: 0; /* Add this line */
 }
-.links a:visited {
-  opacity: 1; /* Add this line */
-}
+
 .line {
   width: 2rem;
   height: 0.25rem;
@@ -167,10 +174,9 @@ header.black-background .title {
   height: 100svh;
   transition: transform 0.3s ease;
   /* Smooth animation */
-  transform: translateX(100%);
   /* Initially hidden */
   color: white;
-  transition: all 0.3s ease;
+
   /* Smooth transition */
   /* White text */
 }
