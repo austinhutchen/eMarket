@@ -207,6 +207,7 @@ ol {
  border-radius: 200/2;
 }
 .menu.open .links a {
+  -webkit-animation: fadeInFromMiddle 0.3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
   animation: fadeInFromMiddle 0.3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 }
 .menu-item {

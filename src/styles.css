@@ -36,7 +36,18 @@ body.menu-open .background img {
   /* End at original size */
  }
 }
-
+@-webkit-keyframes fadeInFromMiddle {
+ from {
+   opacity: 0;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+ }
+ to {
+   opacity: 1;
+   -webkit-transform: translateY(0);
+   transform: translateY(0);
+ }
+}
 .background img {
  width: 100%;
  height: 100%;
