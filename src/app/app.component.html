@@ -2,7 +2,7 @@
   <img src="/assets/background.webp">
 </div>
 
-  <div class="header">
+  <div class="header" [class.black-background]="isScrolled">
     <div class="title">{{ title }}</div>
     <div class="hamburger-menu" (click)="toggleMenu()">
       <div class="line"></div>

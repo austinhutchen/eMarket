@@ -68,17 +68,6 @@
 
 }
 
-.body {
-  display: none;
-  /* Initially hidden */
-  transition: transform 0.3s ease;
-  /* Smooth animation */
-  transform: translateY(100%);
-  /* Initially off screen */
-  /* Black background */
-
-}
-
 
 .menu.open .links {
   opacity: 1;
@@ -99,9 +88,7 @@ header.black-background {
 
 }
 
-header.black-background .hamburger-menu .line {
-  background-color: white;
-}
+
 
 .title {
   font-size: 3svh;
@@ -172,7 +159,7 @@ header.black-background .title {
   width: 100svw;
   /* Wider menu */
   height: 100svh;
-  transition: transform 0.3s ease;
+  transition: transform 3s ease;
   /* Smooth animation */
   /* Initially hidden */
   color: white;
@@ -217,9 +204,11 @@ ol {
 .links a:active {
   border-color: #333;
   /* Dark gray border */
-
+ border-radius: 200/2;
 }
-
+.menu.open .links a {
+  animation: fadeInFromMiddle 0.3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
 .menu-item {
   padding: 10px 0;
   text-shadow: 1px 1px #ccc, 2px 2px #c9c9c9, 3px 3px #b6b6b6;

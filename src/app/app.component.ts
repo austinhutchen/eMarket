@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -13,7 +13,7 @@ export class AppComponent {
   title: string = 'DLOR';
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
-  
+  isScrolled: boolean = false;
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.document.addEventListener('scroll', () => {
       const header = this.document.querySelector('header');
@@ -25,8 +25,16 @@ export class AppComponent {
       }
     });
   }
-
-  openMenu() {
+  @HostListener('window:scroll', [])
+  onWindowScroll():void {
+    const scrollOffset:number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollOffset > 100) { // replace 100 with the scroll position you want
+      this.isScrolled = true;
+    } else {
+      this.isScrolled = false;
+    }
+  }
+  openMenu():void {
     this.renderer?.addClass(this.document.body, 'menu-open');
   }
 
