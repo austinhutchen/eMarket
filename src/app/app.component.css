@@ -65,7 +65,7 @@
   align-items: center;
   padding: 1rem;
   border-radius: 6vw;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .body {
@@ -135,7 +135,7 @@ header.black-background .title {
   flex-direction: row;
   /* Visible when open */
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .footer img {
