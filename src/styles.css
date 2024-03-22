@@ -54,6 +54,15 @@ body.menu-open .background img {
  pointer-events: none;
  animation: noiseFX 2s infinite;
 }
+@keyframes fadeInFromMiddle {
+ from {
+   opacity: 0;
+ }
+ to {
+   opacity: 1;
+ }
+}
+/* decrease opacity values for more visible noise*/
 @keyframes noiseFX {
  0%, 100% {
    opacity: 0.95;

@@ -1,11 +1,3 @@
-@keyframes fadeInFromMiddle {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .menu.open .link a{
   animation: fadeInFromMiddle;
