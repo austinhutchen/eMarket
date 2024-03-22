@@ -216,7 +216,7 @@ header.black-background {
 
  background-color: rgba(0, 0, 0, 0.3);
  border-radius: 0.7em;
- left: 43%;
+ left: 33%;
  transform: translateX(-50%);
  animation: fadeInUp 2s ease-out forwards;
  opacity: 1;
