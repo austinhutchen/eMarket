@@ -9,16 +9,17 @@ import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+
 
     // other declarations...
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // Add this
+    AppComponent
     // other imports...
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
