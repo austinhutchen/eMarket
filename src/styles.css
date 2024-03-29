@@ -2,15 +2,7 @@
 
 html {
   max-height: 100%;
-  /* Limit the height to the viewport height */
-  background-image: url('/assets/noise.webp');
-  background-color: #000;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
 
-  animation: noiseFX 2s steps(6) infinite;
   overflow-x: hidden;
   /* Disable horizontal scrolling */
   max-width: 100%;
@@ -129,7 +121,7 @@ body.menu-open .background img {
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
     /* End at original size */
   }
 }

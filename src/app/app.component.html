@@ -16,14 +16,11 @@
 
 
 <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
-  <nav>
-    <b>
-      <ol class="links">
-        <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
-        <li><a routerLink="/horde" routerLinkActive="active">Hórde</a></li>
-      </ol>
-    </b>
-  </nav>
+
+    
+        <a routerLink="/store" >Store</a>
+        <a routerLink="/horde" >Hórde</a>
+  
 </div>
 
 
@@ -39,3 +36,4 @@
     </ol>
   </div>
 </footer>
+<router-outlet></router-outlet>
