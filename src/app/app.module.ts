@@ -1,16 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HordeComponent } from './horde/horde.component';
 import { StoreComponent } from './store/store.component';
-
-const routes: Routes = [
-  { path: 'store', component: StoreComponent },
-  { path: 'horde', component: HordeComponent },
-  // more routes...
-];
 
 @NgModule({
   declarations: [
@@ -21,7 +16,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
     // Other imports...
   ],
   providers: [],
