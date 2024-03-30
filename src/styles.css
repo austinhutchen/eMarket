@@ -206,17 +206,18 @@ header.black-background {
 }
 
 .footer.open {
-  flex-direction: row;
-  /* Visible when open */
-
+  display: flex; /* Add this if not already present in your CSS */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 0.7em;
-  left: 33%;
-  transform: translateX(-50%);
   animation: fadeInUp 2s ease-out forwards;
   opacity: 1;
-
-  max-width: fit-content;
+  max-width: calc(fit-content *2.0);
 }
 
 .footer img {
