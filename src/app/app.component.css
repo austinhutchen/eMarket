@@ -1,7 +1,7 @@
-
-.menu.open .link a{
+.menu.open .link a {
   animation: fadeInFromMiddle;
 }
+
 .links a {
   display: block;
   margin: 10px;
@@ -11,7 +11,6 @@
   top: 1.3rem;
   font-family: cursive;
   font-weight: bold;
-  color: #fff;
   opacity: 1; /* Add this line */
   text-shadow:
     0 1px 0 #ccc,
@@ -20,20 +19,14 @@
     0 4px 0 #b9b9b9,
     0 5px 0 #aaa,
     0 6px 1px rgba(0, 0, 0, .5),
-    /* Increased alpha value */
     0 0 5px rgba(0, 0, 0, .5),
-    /* Increased alpha value */
     0 1px 3px rgba(0, 0, 0, .6),
-    /* Increased alpha value */
     0 3px 5px rgba(0, 0, 0, .5),
-    /* Increased alpha value */
     0 5px 10px rgba(0, 0, 0, .6),
-    /* Increased alpha value */
     0 10px 10px rgba(0, 0, 0, .5),
-    /* Increased alpha value */
     0 20px 20px rgba(0, 0, 0, .4);
-  /* Increased alpha value */
 }
+
 .links a:link {
   opacity: 0; /* Add this line */
 }
@@ -46,20 +39,15 @@
   transition: all 0.3s linear;
 }
 
-/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border-radius: 2vh;
-
   background-color: rgba(0, 0, 0, 0.0);
-  transition: background-color 0.5s ease;
-  /* Add this line */
-
+  transition: background-color 0.5s ease; /* Add this line */
 }
-
 
 .menu.open .links {
   opacity: 1;
@@ -67,17 +55,11 @@
 
 .body.open {
   display: flex;
-
-  transform: translateY(0);
-  /* Move to original position when open */
+  transform: translateY(0); /* Move to original position when open */
 }
 
-
-
-
 @keyframes noiseFX {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   10% {
@@ -113,12 +95,6 @@ header.black-background .title {
 .hamburger-menu.open .line:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
-
-
-
-
-
-
 
 ol {
   list-style-type: none;

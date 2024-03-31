@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component} from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -24,15 +24,7 @@ export class AppComponent {
       }
     });
   }
-  @HostListener('window:scroll', [])
-  onWindowScroll():void {
-    const scrollOffset:number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (scrollOffset > 100) { // replace 100 with the scroll position you want
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
-    }
-  }
+
   openMenu():void {
     this.renderer?.addClass(this.document.body, 'menu-open');
   }
