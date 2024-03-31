@@ -167,6 +167,7 @@ body.menu-open .background img {
   align-items: center;
   position: fixed;
   bottom: 0;
+  transform: translateY(100%); /* Move it off-screen */
 
 
   /* Add this line */
@@ -202,7 +203,7 @@ header.black-background {
   position: fixed;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  transition: transform 0.3s ease-in-out; /* Animate the transform property */
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0.7em;
   animation: fadeInUp 2s ease-out forwards;
