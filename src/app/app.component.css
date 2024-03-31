@@ -11,7 +11,7 @@
   top: 1.3rem;
   font-family: cursive;
   font-weight: bold;
-  opacity: 1; /* Add this line */
+  opacity: 1;
   text-shadow:
     0 1px 0 #ccc,
     0 2px 0 #c9c9c9,
@@ -28,7 +28,7 @@
 }
 
 .links a:link {
-  opacity: 0; /* Add this line */
+  opacity: 0;
 }
 
 .line {
@@ -38,15 +38,16 @@
   margin: 3px 0;
   transition: all 0.3s linear;
 }
-
+ol{
+  list-style-type:none;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-radius: 2vh;
   background-color: rgba(0, 0, 0, 0.0);
-  transition: background-color 0.5s ease; /* Add this line */
+  transition: background-color 0.5s ease;
 }
 
 .menu.open .links {
@@ -55,7 +56,7 @@
 
 .body.open {
   display: flex;
-  transform: translateY(0); /* Move to original position when open */
+  transform: translateY(0);
 }
 
 @keyframes noiseFX {
@@ -96,40 +97,9 @@ header.black-background .title {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-ol {
-  list-style-type: none;
-}
-
-.links a {
-  /* other properties */
-  border: 0.4vh solid transparent;
-  /* Thicker border */
-  border-radius: 2vh;
-  /* Adjust as needed */
-  /* Adjust as needed */
-  text-decoration: none;
-  padding: 1vh 2vh;
-  /* Adjust as needed */
-  color: white;
-  background-clip: padding-box;
-  /* Prevent the background from extending to the border */
-}
-
-.links a:hover,
-.links a:active {
-  border-color: #333;
-  /* Dark gray border */
- border-radius: 200/2;
-}
-.menu.open .links a {
-  -webkit-animation: fadeInFromMiddle 0.3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
-  animation: fadeInFromMiddle 0.3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
-}
+/* Additional styles for menu items */
 .menu-item {
   padding: 10px 0;
   text-shadow: 1px 1px #ccc, 2px 2px #c9c9c9, 3px 3px #b6b6b6;
-
-  /* More vertical padding */
   font-size: 1.5rem;
-  /* Larger text */
 }
