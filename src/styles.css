@@ -178,10 +178,8 @@ body.menu-open .background img {
   position: fixed;
   bottom: 0;
   transform: translateY(100%); /* Move it off-screen */
-  flex-basis: 5svw;
-  flex-grow: 1;
-  /* Add this line */
-
+  /* flex grow shrink basis */
+  flex: 1 1 5svw;
   /* Other styles... */
 }
 
