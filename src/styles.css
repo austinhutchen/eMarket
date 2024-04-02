@@ -44,6 +44,10 @@ body.menu-open .background img {
   animation: zoomOut 3s ease forwards;
 }
 
+.footerImg{
+  height: 7svw;
+  width: 5svw;
+}
 .noise {
   position: absolute;
   top: 0;
@@ -173,13 +177,13 @@ body.menu-open .background img {
   opacity: 0;
   flex-direction: row-reverse;
   /* Initially hidden */
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
   transform: translateY(100%); /* Move it off-screen */
   /* flex grow shrink basis */
-  flex: 1 1 5svw;
+  flex: 2 2 8svw;
   /* Other styles... */
 }
 
