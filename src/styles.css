@@ -169,14 +169,15 @@ body.menu-open .background img {
 .footer {
   display: flex;
   opacity: 0;
+  flex-direction: row-reverse;
   /* Initially hidden */
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
   transform: translateY(100%); /* Move it off-screen */
-
-
+  flex-basis: 5svw;
+  flex-grow: 1;
   /* Add this line */
 
   /* Other styles... */
