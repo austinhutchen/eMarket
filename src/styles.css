@@ -27,40 +27,14 @@ html,body{
   }
 }
 
-.background::before {
-  content: "";
-  position: absolute;
-  background-image: url('/assets/noise.webp');
-  top: 0; /* Changed from -50% */
-  left: 0; /* Changed from -50% */
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
 
-  animation: noiseFX 2s steps(6) infinite;
-}
 
 body.menu-open .background img {
   animation: zoomOut 3s ease forwards;
 }
 
-.footerImg{
-  height: 7svw;
-  width: 5svw;
-}
-.noise {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(/assets/noise.webp);
-  opacity: 0;
-  pointer-events: none;
-  animation: noiseFX 2s infinite;
-  min-height: 100svh; /* Adjust as needed */
 
-}
+
 .mailBox{
   position: relative; /* z-index only works on positioned elements */
 }
@@ -151,8 +125,53 @@ body.menu-open .background img {
   background-size: cover;
   /* Similar to background-size: cover; */
   transition: width 0.4s ease, height 0.4s ease;
+  background-color: rgba(0,0,0,0.7);
 }
+.footerImg{
+  height: 7svw;
+  width: 5svw;
+}
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/noise.webp);
+  opacity: 0;
+  pointer-events: none;
+  animation: noiseFX 2s infinite;
+  min-height: 100svh; /* Adjust as needed */
 
+}
+.background::before {
+  content: "";
+  position: absolute;
+  background-image: url('/assets/noise.webp');
+  top: 0; /* Changed from -50% */
+  left: 0; /* Changed from -50% */
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+
+  animation: noiseFX 2s steps(6) infinite;
+}
+@media (min-width: 1200px) {
+  .background img {
+    width: 100%; /* Reduce width on large screens */
+    height: 100%; /* Maintain aspect ratio */
+  }
+  .noise{
+    width: 100%; /* Reduce width on large screens */
+    height: 100%; /* Maintain aspect ratio */
+  }
+  .background::before{
+    top:0;
+    bottom:0;
+    width: 100%;
+  height: 100%;
+  }
+}
 /* Hamburger Menu Styles */
 .hamburger-menu {
   cursor: pointer;
