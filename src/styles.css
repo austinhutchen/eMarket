@@ -11,6 +11,8 @@ html {
 html,body{
   background: linear-gradient(to right, #000000, #434343, #1a1a1a);
   background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+
 }
 
 @keyframes fadeInUp {
