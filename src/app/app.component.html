@@ -1,49 +1,55 @@
-<div className="App">
-  <div class="background noise">
-    <img src="/assets/background.webp">
+<div class="background noise" #background >
+  <img src="/assets/background.webp">
+</div>
+
+
+
+<div class="header" [class.black-background]="isScrolled">
+  <div class="title">{{ title }}</div>
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
+</div>
+
+
+<div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
+  <nav>
+    <b>
+      <ol class="links">
+        <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
+        <li><a routerLink="/horde" routerLinkActive="active">Hórde</a></li>
+      </ol>
+    </b>
+  </nav>
+</div>
+
+
+  <div class="mailBox" #mailBox>
+    <h1>
+      Join the Hórde
+
+    </h1>
+    <input type="email" placeholder="Email Address">
+    <form type="text"  name="inputValue" required>
+  <button type="submit">Submit</button>
+    </form>
+</div>
 
 
 
-  <div class="header" [class.black-background]="isScrolled">
-    <div class="title">{{ title }}</div>
-    <div class="hamburger-menu" (click)="toggleMenu()">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </div>
+
+<div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
 
 
-  <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
-    <nav>
-      <b>
-        <ol class="links">
-          <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
-          <li><a routerLink="/horde" routerLinkActive="active">Hórde</a></li>
-        </ol>
-      </b>
-    </nav>
-  </div>
-  <div className="mailBox">
-Join the Hórde
 
-
-  </div>
-
-    <div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
-      <div className="footerImg">
-
-
-        <a>
-          <img src="/assets/Music.png">
-        </a>
-        <a>
-          <img src="/assets/Spotify.png">
-        </a>
-      </div>
-
-
+  <a>
+    <img src="/assets/Music.png">
+  </a>
+  <a>
+    <img src="/assets/Spotify.png">
+  </a>
 
 
 </div>

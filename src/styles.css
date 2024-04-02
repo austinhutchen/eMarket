@@ -36,8 +36,11 @@ body.menu-open .background img {
 
 
 .mailBox{
-  position: relative; /* z-index only works on positioned elements */
-  z-index:2;
+  position: relative; /* Position relative to the normal flow */
+  z-index: 2; /* Higher z-index */
+  color: white;
+  visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes fadeInFromMiddle {

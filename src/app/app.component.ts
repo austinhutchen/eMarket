@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, AfterViewInit, ViewChild,ElementRef} from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,11 +8,16 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   title: string = 'DLOR';
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
   isScrolled: boolean = false;
+  inputValue: string = '';
+
+  submitForm() {
+    console.log(this.inputValue);
+  }
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.document.addEventListener('scroll', () => {
       const header = this.document.querySelector('header');
@@ -24,8 +29,22 @@ export class AppComponent {
       }
     });
   }
+  
+  @ViewChild('background') backgroundImage!: ElementRef;
+  @ViewChild('mailBox') mailBox!: ElementRef;
+  adjustMailBoxMargin() {
+    const bgImageHeight = this.backgroundImage.nativeElement.offsetHeight;
+    this.mailBox.nativeElement.style.marginTop = bgImageHeight + 'px';
+  }
+  ngAfterViewInit() {
+    this.renderer.listen('window', 'load', () => {
+      this.adjustMailBoxMargin();
+      this.mailBox.nativeElement.style.visibility = 'visible';
+    });
 
+  }
   openMenu():void {
+    this.adjustMailBoxMargin();
     this.renderer?.addClass(this.document.body, 'menu-open');
   }
 
