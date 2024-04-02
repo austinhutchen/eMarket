@@ -37,6 +37,7 @@ body.menu-open .background img {
 
 .mailBox{
   position: relative; /* z-index only works on positioned elements */
+  z-index:2;
 }
 
 @keyframes fadeInFromMiddle {
