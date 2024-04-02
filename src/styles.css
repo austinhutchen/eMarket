@@ -10,6 +10,7 @@ html {
 }
 html,body{
   background: linear-gradient(to right, #000000, #434343, #1a1a1a);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 @keyframes fadeInUp {
@@ -33,6 +34,7 @@ html,body{
   width: 100%;
   height: 100%;
   opacity: 0.8;
+
   animation: noiseFX 2s steps(6) infinite;
 }
 
@@ -50,6 +52,11 @@ body.menu-open .background img {
   opacity: 0;
   pointer-events: none;
   animation: noiseFX 2s infinite;
+  min-height: 100svh; /* Adjust as needed */
+
+}
+.mailBox{
+  position: relative; /* z-index only works on positioned elements */
 }
 
 @keyframes fadeInFromMiddle {
