@@ -8,7 +8,9 @@ html {
   min-height: 100%;
 
 }
-html,body{
+
+html,
+body {
   background: linear-gradient(to right, #000000, #434343, #1a1a1a);
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
@@ -38,11 +40,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; /* Pushes children to the bottom */
-  height: 117vh; /* Full height of the viewport */
+  justify-content: flex-end;
+  /* Pushes children to the bottom */
+  height: 117vh;
+  /* Full height of the viewport */
 }
 
-.mailBox{
+.mailBox {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -51,11 +55,13 @@ section {
   font-size: 1.1rem;
   justify-content: center;
 }
+
 .mailBox form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 @keyframes fadeInFromMiddle {
   from {
     opacity: 0;
@@ -66,10 +72,13 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes noiseFX {
+
   0%,
   100% {
-    opacity: 0.95; /* Lower value = stronger effect */
+    opacity: 0.95;
+    /* Lower value = stronger effect */
   }
 
   10% {
@@ -89,7 +98,8 @@ section {
   }
 
   50% {
-    opacity: 1.0; /* Higher value = less overpowering effect */
+    opacity: 1.0;
+    /* Higher value = less overpowering effect */
   }
 
   60% {
@@ -99,6 +109,7 @@ section {
   70% {
     opacity: 0.98;
   }
+
   80% {
     opacity: 0.97;
   }
@@ -134,61 +145,65 @@ section {
 }
 
 .background img {
-  position: relative; /* Add this to make .background a positioned ancestor */
+  position: relative;
+  /* Add this to make .background a positioned ancestor */
 
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   transform: scale(1.4);
   /* Start zoomed in */
   background-size: cover;
   /* Similar to background-size: cover; */
   transition: width 0.4s ease, height 0.4s ease;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.footerImg{
+
+.footerImg {
   height: 7svw;
   width: 5svw;
 }
+
 .noise {
   position: absolute;
   top: 0;
+  /* Changed from -50% */
+  left: 0;
+  /* Changed from -50% */
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/assets/noise.webp);
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   animation: noiseFX 2s infinite;
-  min-height: 100svh; /* Adjust as needed */
+  background: url('/assets/noise.webp');
+  min-height: 100svh;
+  /* Adjust as needed */
 
 }
+
 .background::before {
   content: "";
   position: absolute;
-  background-image: url('/assets/noise.webp');
-  top: 0; /* Changed from -50% */
-  left: 0; /* Changed from -50% */
-  bottom: 0;
-  left: 0;
-
-  opacity: 0.8;
-
-  animation: noiseFX 2s steps(6) infinite;
+  pointer-events: none;
 }
+
 @media (min-width: 1200px) {
   .background img {
-    width: 100%; /* Reduce width on large screens */
-    height: 98%; /* Maintain aspect ratio */
+    width: 100%;
+    /* Reduce width on large screens */
+    height: 100%;
+    /* Maintain aspect ratio */
   }
-  .noise{
-    width: 100%; /* Reduce width on large screens */
-    height: 98%; /* Maintain aspect ratio */
-  }
-  .background::before{
-    width: 100%; /* Reduce width on large screens */
-    height: 98%; /* Maintain aspect ratio */
+
+  .background::before {
+    width: 100%;
+    /* Reduce width on large screens */
+    height: 100%;
+    /* Maintain aspect ratio */
   }
 }
+
 /* Hamburger Menu Styles */
 .hamburger-menu {
   cursor: pointer;
@@ -217,7 +232,8 @@ section {
   align-items: center;
   position: fixed;
   bottom: 0;
-  transform: translateY(100%); /* Move it off-screen */
+  transform: translateY(100%);
+  /* Move it off-screen */
   /* flex grow shrink basis */
   flex: 2 2 8svw;
   /* Other styles... */
@@ -239,13 +255,17 @@ section {
 }
 
 .footer.open {
-  display: flex; /* Add this if not already present in your CSS */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  /* Add this if not already present in your CSS */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
   position: fixed;
   left: 50%;
   bottom: 0;
-  transition: transform 0.3s ease-in-out; /* Animate the transform property */
+  transition: transform 0.3s ease-in-out;
+  /* Animate the transform property */
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0.7em;
   animation: fadeInUp 2s ease-out forwards;
@@ -289,7 +309,6 @@ section {
   transition: transform 3s ease;
   /* Smooth animation */
   /* Initially hidden */
-
 
   /* Smooth transition */
   /* White text */
