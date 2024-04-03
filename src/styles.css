@@ -125,6 +125,8 @@ body.menu-open .background img {
 }
 
 .background img {
+  position: relative; /* Add this to make .background a positioned ancestor */
+
   width: 100%;
   height: 100%;
   transform: scale(1.4);
@@ -157,8 +159,9 @@ body.menu-open .background img {
   background-image: url('/assets/noise.webp');
   top: 0; /* Changed from -50% */
   left: 0; /* Changed from -50% */
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+
   opacity: 0.8;
 
   animation: noiseFX 2s steps(6) infinite;
@@ -166,17 +169,15 @@ body.menu-open .background img {
 @media (min-width: 1200px) {
   .background img {
     width: 100%; /* Reduce width on large screens */
-    height: 100%; /* Maintain aspect ratio */
+    height: 98%; /* Maintain aspect ratio */
   }
   .noise{
     width: 100%; /* Reduce width on large screens */
-    height: 100%; /* Maintain aspect ratio */
+    height: 98%; /* Maintain aspect ratio */
   }
   .background::before{
-    top:0;
-    bottom:0;
-    width: 100%;
-  height: 100%;
+    width: 100%; /* Reduce width on large screens */
+    height: 98%; /* Maintain aspect ratio */
   }
 }
 /* Hamburger Menu Styles */
@@ -213,13 +214,7 @@ body.menu-open .background img {
   /* Other styles... */
 }
 
-header.black-background {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 6vh;
-  transition: background-color 0.5s ease;
-  /* Add this line */
 
-}
 
 .menu.open {
   display: block;
