@@ -25,14 +25,20 @@
   </nav>
 </div>
 
-
+<!-- Go to your Mailchimp account, navigate to the Audience tab.
+Click the Manage Audience drop-down and choose Signup forms.
+Select Embedded forms.
+Choose a form type — Classic, Horizontal, or Unstyled — and customize the form options.
+Copy the form action URL from the generated code. It should look something like this: https://yourusername.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX.-->
   <div class="mailBox" #mailBox>
     <h1>
       Join the Hórde
 
     </h1>
     <input type="email" placeholder="Email Address">
-    <form type="text"  name="inputValue" required>
+    <form action="https://yourusername.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX" method="post" target="_blank" >
+      <input type="email" placeholder="Email Address" name="EMAIL" required>
+
   <button type="submit">Submit</button>
     </form>
 </div>
