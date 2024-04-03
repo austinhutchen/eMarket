@@ -167,17 +167,17 @@ body.menu-open .background img {
 @media (min-width: 1200px) {
   .background img {
     width: 100%; /* Reduce width on large screens */
-    height: 60%; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
   }
   .noise{
     width: 100%; /* Reduce width on large screens */
-    height: 60%; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
   }
   .background::before{
     top:0;
     bottom:0;
     width: 100%;
-  height: 60%;
+  height: 100%;
   }
 }
 /* Hamburger Menu Styles */
