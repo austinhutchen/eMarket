@@ -34,19 +34,28 @@ body.menu-open .background img {
 }
 
 
-
-.mailBox{
-  position: relative; /* Position relative to the normal flow */
-  z-index: 2; /* Higher z-index */
-  color: white;
-  visibility: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  flex: 1 1 100%;
-  flex-direction: row;
+section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end; /* Pushes children to the bottom */
+  height: 117vh; /* Full height of the viewport */
 }
 
+.mailBox{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+.mailBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @keyframes fadeInFromMiddle {
   from {
     opacity: 0;

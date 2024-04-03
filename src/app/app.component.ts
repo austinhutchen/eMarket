@@ -31,20 +31,16 @@ export class AppComponent implements AfterViewInit{
   }
   
   @ViewChild('background') backgroundImage!: ElementRef;
-  @ViewChild('mailBox') mailBox!: ElementRef;
-  adjustMailBoxMargin() {
-    const bgImageHeight = this.backgroundImage.nativeElement.offsetHeight;
-    this.mailBox.nativeElement.style.marginTop = bgImageHeight + 'px';
-  }
+
+
   ngAfterViewInit() {
     this.renderer.listen('window', 'load', () => {
-      this.adjustMailBoxMargin();
-      this.mailBox.nativeElement.style.visibility = 'visible';
+      console.log("loaded");
+
     });
 
   }
   openMenu():void {
-    this.adjustMailBoxMargin();
     this.renderer?.addClass(this.document.body, 'menu-open');
   }
 
