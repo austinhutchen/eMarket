@@ -38,17 +38,7 @@
   margin: 3px 0;
   transition: all 0.3s linear;
 }
-ol{
-  list-style-type:none;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.0);
-  transition: background-color 0.5s ease;
-}
+
 
 .menu.open .links {
   opacity: 1;
