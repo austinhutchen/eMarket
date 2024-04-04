@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild,ElementRef} from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,9 +8,9 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
   title: string = 'DLOR';
-  overLay:boolean = false;
+  overLay: boolean = false;
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
   isScrolled: boolean = false;
@@ -20,16 +20,13 @@ export class AppComponent implements AfterViewInit{
     console.log(this.inputValue);
   }
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
-    this.document.addEventListener('scroll', () => {
-      const header = this.document.querySelector('header');
-      if (this.document.documentElement.scrollTop === 0) {
-        this.renderer.addClass(header, 'black-background');
+    this.renderer.listen('window', 'scroll', (e: Event) => {
+      if (window.scrollY > 0) {
+        this.isScrolled = true;
       } else {
-        this.renderer.removeClass(header, 'black-background');
-
+        this.isScrolled = false;
       }
     });
-   
   }
   toggleOverlay() {
     this.overLay = !this.overLay;
@@ -44,7 +41,7 @@ export class AppComponent implements AfterViewInit{
     });
 
   }
-  openMenu():void {
+  openMenu(): void {
     this.renderer?.addClass(this.document.body, 'menu-open');
     this.toggleOverlay();
 
