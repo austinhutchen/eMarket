@@ -10,6 +10,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements AfterViewInit{
   title: string = 'DLOR';
+  overLay:boolean = false;
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
   isScrolled: boolean = false;
@@ -28,8 +29,11 @@ export class AppComponent implements AfterViewInit{
 
       }
     });
+   
   }
-  
+  toggleOverlay() {
+    this.overLay = !this.overLay;
+  }
   @ViewChild('background') backgroundImage!: ElementRef;
 
 
@@ -42,10 +46,14 @@ export class AppComponent implements AfterViewInit{
   }
   openMenu():void {
     this.renderer?.addClass(this.document.body, 'menu-open');
+    this.toggleOverlay();
+
   }
 
   closeMenu() {
     this.renderer?.removeClass(this.document.body, 'menu-open');
+    this.toggleOverlay();
+
   }
   toggleMenu() {
     this.isOpen = !(this.isOpen);
