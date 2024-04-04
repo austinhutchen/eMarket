@@ -7,14 +7,19 @@ html {
   overscroll-behavior: contain;
   min-height: 100%;
   overflow-x: hidden;
-
-}
-
-
-body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(67, 67, 67, 0.9), rgba(26, 26, 26, 0.9));
 
 }
+
+ input[type="email"] {
+  height: 2.4em; /* Adjust this value as needed */
+  width: 40em; /* Adjust this value as needed */
+}
+button{
+  height: 3em; /* Adjust this value as needed */
+  width: 5em; /* Adjust this value as needed */
+}
+
 .background::before {
   content: "";
   position: absolute;
@@ -33,7 +38,7 @@ body {
 .background{
   position: relative;
   width: 100%;
-  height: 82vh;
+  height: 85vh;
   display: flex; /* Add this line */
   justify-content: center; /* Add this line */
   align-items: center; /* Add this line */
