@@ -6,14 +6,13 @@ html {
   max-width: 100%;
   overscroll-behavior: contain;
   min-height: 100%;
+  overflow-x: hidden;
 
 }
 
-html,
+
 body {
-  background: linear-gradient(to right, #000000, #434343, #1a1a1a);
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(67, 67, 67, 0.9), rgba(26, 26, 26, 0.9));
 
 }
 .background::before {
@@ -69,7 +68,7 @@ section {
   justify-content: flex-end;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .mailBox {
