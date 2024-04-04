@@ -20,38 +20,25 @@ body {
   content: "";
   position: absolute;
   pointer-events: none;
-}
-.noise {
-  position: absolute;
-  top: 0;
-  /* Changed from -50% */
+  top: 0; /* This will position it at the top of the parent container */
   left: 0;
-  /* Changed from -50% */
-  bottom: 0;
-  left: 0;
+  bottom: 0; /* This will stretch it to the bottom of the parent container */
   width: 100%;
-  height: 100%;
   opacity: 1;
   pointer-events: none;
   animation: noiseFX 2s infinite;
   background: url('/assets/noise.webp');
-  min-height: 100svh;
-  /* Adjust as needed */
-
 }
-.background img {
-  position: relative;
-  /* Add this to make .background a positioned ancestor */
 
+
+.background{
+  position: relative;
   width: 100%;
   height: 100%;
-
-  /* Start zoomed in */
-  background-size: cover;
-
-  background-color: rgba(0, 0, 0, 0.7);
+  display: flex; /* Add this line */
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
 }
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -77,7 +64,6 @@ section {
   align-items: center;
   justify-content: flex-end;
   /* Pushes children to the bottom */
-  height: 119vh;
   /* Full height of the viewport */
 }
 
@@ -195,43 +181,18 @@ ol{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+
   background-color: rgba(0, 0, 0, 0.0);
   transition: background-color 0.5s ease;
+    position: absolute; /* Change this from relative to absolute */
+    top: 0; /* Position it at the top of the nearest positioned ancestor */
+    width: 99%; /* Make it span the full width */
+    z-index: 3; /* This should be higher than the z-index of .background and .background img */
 }
 
 
-@media (min-width: 1200px) {
-  .background img {
-    width: 100%;
-    /* Reduce width on large screens */
-    height: auto;
-    /* Maintain aspect ratio */
-  }
-  .noise{
-    width: 100%;
-    /* Reduce width on large screens */
-    height: auto;
-  }
-  .background::before {
-    width: 100%;
-    /* Reduce width on large screens */
-    height: auto;
-    /* Maintain aspect ratio */
-  }
-}
 @media (max-width: 576px) {
-  .background img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
-  .noise {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
-  .background::before {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
+  
   .hamburger-menu {
     width: 2rem; /* Reduce size on small screens */
     height: 2rem; /* Reduce size on small screens */
@@ -246,6 +207,7 @@ ol{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
   width: 3rem;
   height: 3rem;
   position: relative;
@@ -273,14 +235,27 @@ ol{
   /* flex grow shrink basis */
   flex: 2 2 8svw;
   /* Other styles... */
+  z-index:3;
 }
 
+.background img {
+  position: relative;
+  /* Add this to make .background a positioned ancestor */
+  object-fit: cover; /* Add this line */
+  z-index: 2;
 
+  width: 100%;
+  height: 80%;
 
+  /* Start zoomed in */
+  background-size: cover;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .menu.open {
   display: block;
   transform: translateX(0);
-
+z-index: 4;
   .header.line {
     background-color: #fff;
     /* White color when menu is open */
@@ -329,7 +304,7 @@ ol{
 }
 
 .menu {
-  margin-top: 25svh;
+  top: 30%;
   display: block;
   /* Dark background */
   justify-content: center;
@@ -339,10 +314,10 @@ ol{
   position: absolute;
   /* Adjust as needed */
   right: -1;
-  width: 100svw;
+  width: 100%;
   /* Wider menu */
-  height: 100svh;
-  transition: transform 3s ease;
+  height: 5svh;
+  transition: transform 4s ease;
   /* Smooth animation */
   /* Initially hidden */
 

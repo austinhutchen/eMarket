@@ -1,8 +1,17 @@
-<div class="background noise" #background>
+
+<div class="background" >
   <img src="/assets/background.webp">
+  <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
+    <nav>
+      <b>
+        <ol class="links">
+          <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
+          <li><a routerLink="/horde" routerLinkActive="active">Hórde</a></li>
+        </ol>
+      </b>
+    </nav>
+  </div>
 </div>
-
-
 
 <div class="header" [class.black-background]="isScrolled">
   <div class="title">{{ title }}</div>
@@ -14,16 +23,8 @@
 </div>
 
 
-<div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
-  <nav>
-    <b>
-      <ol class="links">
-        <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
-        <li><a routerLink="/horde" routerLinkActive="active">Hórde</a></li>
-      </ol>
-    </b>
-  </nav>
-</div>
+
+
 
 <section>
   <div class="mailBox" #mailBox>
