@@ -186,7 +186,7 @@ ol{
   transition: background-color 0.5s ease;
     position: absolute; /* Change this from relative to absolute */
     top: 0; /* Position it at the top of the nearest positioned ancestor */
-    width: 99%; /* Make it span the full width */
+    width: 95%; /* Make it span the full width */
     z-index: 3; /* This should be higher than the z-index of .background and .background img */
 }
 
