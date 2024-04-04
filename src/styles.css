@@ -57,7 +57,11 @@ body.menu-open .background img {
   animation: zoomOut 3s ease forwards;
 }
 
+.inputgroup{
+  display:flex;
+  flex-direction: column;
 
+}
 section {
   display: flex;
   flex-direction: column;
@@ -65,6 +69,7 @@ section {
   justify-content: flex-end;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
+  margin-top: 5%;
 }
 
 .mailBox {
