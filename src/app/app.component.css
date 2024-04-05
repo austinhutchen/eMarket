@@ -4,13 +4,13 @@
 
 .links a {
   display: block;
-  margin: 10px;
-  color: white;
+  margin: 5px;
+  color: whitesmoke; /* Darker color for better contrast against light background */
+
   text-decoration: none;
-  font-size: 3.3vh;
+  font-size: 2.7vh;
   top: 1.3rem;
-  font-family: cursive;
-  font-weight: bold;
+  font-family: serif;
   opacity: 1;
   text-shadow:
     0 1px 0 #ccc,
@@ -76,6 +76,8 @@
   color: white;
   font-family: cursive;
   opacity: 0.8;
+  text-align: center; /* Centers the title in its column */
+
 }
 
 header.black-background .title {

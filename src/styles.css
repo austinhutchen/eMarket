@@ -11,44 +11,57 @@ html {
 
 }
 
-.links a{
+.links a {
   font-family: 'Roboto', "sans-serif";
   font-weight: thin;
 }
- input[type="email"] {
-  height: 2.4em; /* Adjust this value as needed */
-  width: 35em; /* Adjust this value as needed */
+
+input[type="email"] {
+  height: 2.4em;
+  /* Adjust this value as needed */
+  width: 35em;
+  /* Adjust this value as needed */
 }
-button{
-  height: 3em; /* Adjust this value as needed */
-  width: 5em; /* Adjust this value as needed */
+
+button {
+  height: 3em;
+  /* Adjust this value as needed */
+  width: 5em;
+  /* Adjust this value as needed */
 }
 
 .background::before {
   content: "";
   position: absolute;
   pointer-events: none;
-  top: 0; /* This will position it at the top of the parent container */
+  top: 0;
+  /* This will position it at the top of the parent container */
   left: 0;
-  bottom: 0; /* This will stretch it to the bottom of the parent container */
+  bottom: 0;
+  /* This will stretch it to the bottom of the parent container */
   width: 100%;
   opacity: 1;
   pointer-events: none;
   animation: noiseFX 3s infinite;
   background: url('/assets/noise.webp');
 }
-.links{
-  padding-top: 2vh ;
+
+.links {
+  padding-top: 2vh;
 }
 
-.background{
+.background {
   position: relative;
   width: 100%;
-  height: 75vh;
-  display: flex; /* Add this line */
-  justify-content: center; /* Add this line */
-  align-items: center; /* Add this line */
+  height: 85vh;
+  display: flex;
+  /* Add this line */
+  justify-content: center;
+  /* Add this line */
+  align-items: center;
+  /* Add this line */
 }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -67,11 +80,12 @@ body.menu-open .background img {
   animation: zoomOut 3s ease forwards;
 }
 
-.inputgroup{
-  display:flex;
+.inputgroup {
+  display: flex;
   flex-direction: column;
 
 }
+
 section {
   display: flex;
   flex-direction: column;
@@ -111,9 +125,11 @@ section {
 }
 
 @keyframes noiseFX {
+
   0%,
   100% {
-    opacity: 0.9; /* Lower value = stronger effect */
+    opacity: 0.9;
+    /* Lower value = stronger effect */
   }
 
   10% {
@@ -133,7 +149,8 @@ section {
   }
 
   50% {
-    opacity: 0.95; /* Higher value = less overpowering effect */
+    opacity: 0.95;
+    /* Higher value = less overpowering effect */
   }
 
   60% {
@@ -181,45 +198,57 @@ section {
 
 
 .footerImg {
-  height: 8svw;
-  width: 7svw;
+  height: 6svw;
+  width: 5svw;
 }
 
-
-ol{
-  list-style-type:none;
-}
-.header {
+.music-icons{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* Aligns the music icons to the right of their column */
+
+}
+ol {
+  list-style-type: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr 1fr; /* Creates three columns */
   align-items: center;
   padding: 1rem;
 
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.2);
   transition: background-color 0.5s ease;
-    position: absolute; /* Change this from relative to absolute */
-    top: 0; /* Position it at the top of the nearest positioned ancestor */
-    width: 98%; /* Make it span the full width */
-    z-index: 3; /* This should be higher than the z-index of .background and .background img */
+  position: absolute;
+  /* Change this from relative to absolute */
+  top: 0;
+  /* Position it at the top of the nearest positioned ancestor */
+  width: 97%;
+  /* Make it span the full width */
+  z-index: 3;
+  /* This should be higher than the z-index of .background and .background img */
 }
 
 
 @media (max-width: 576px) {
-  
+
   .hamburger-menu {
-    width: 2rem; /* Reduce size on small screens */
-    height: 2rem; /* Reduce size on small screens */
+    width: 2.4rem;
+    /* Reduce size on small screens */
+    height: 2.4rem;
+    /* Reduce size on small screens */
   }
+
   .navbar {
-    padding: 0.5rem 1rem; /* Reduce padding on small screens */
+    padding: 0.5rem 1rem;
+    /* Reduce padding on small screens */
   }
 }
+
 /* Hamburger Menu Styles */
 .hamburger-menu {
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-self: flex-end; /* Aligns the hamburger menu to the left of its column */
 
   width: 3rem;
   height: 3rem;
@@ -233,6 +262,7 @@ ol{
 .hamburger-menu.open .line:nth-child(2) {
   opacity: 0;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -240,9 +270,12 @@ ol{
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-  z-index: 4; /* This should be higher than the z-index of .background and .hamburger-menu */
-  display: none; /* Initially hidden */
+  z-index: 4;
+  /* This should be higher than the z-index of .background and .hamburger-menu */
+  display: none;
+  /* Initially hidden */
 }
+
 .footer {
   display: flex;
   opacity: 0;
@@ -257,13 +290,14 @@ ol{
   /* flex grow shrink basis */
   flex: 2 2 8svw;
   /* Other styles... */
-  z-index:3;
+  z-index: 3;
 }
 
 .background img {
   position: relative;
   /* Add this to make .background a positioned ancestor */
-  object-fit: cover; /* Add this line */
+  object-fit: cover;
+  /* Add this line */
   z-index: 2;
 
   width: 100%;
@@ -274,10 +308,12 @@ ol{
 
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .menu.open {
   display: block;
   transform: translateX(0);
-z-index: 4;
+  z-index: 4;
+
   .header.line {
     background-color: #fff;
     /* White color when menu is open */
@@ -322,7 +358,6 @@ z-index: 4;
   align-items: center;
   margin: 10px;
   /* Adjust as needed */
-  color: white;
 }
 
 .menu {

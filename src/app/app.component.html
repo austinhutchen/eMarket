@@ -6,7 +6,7 @@
       <b>
         <ol class="links">
           <li><a >DECEPTION</a></li>
-          <li><h4 ><i>out now</i></h4></li>
+          <li><a >out now</a></li>
         </ol>
       </b>
     </nav>
@@ -14,12 +14,26 @@
 </div>
 
 <div class="header" [class.black-background]="isScrolled">
+  <a>
+    <img src="/assets/Music.png">
+  </a>
+  <a>
+    <img src="/assets/Spotify.png">
+  </a>
   <div class="title">{{ title }}</div>
   <div class="hamburger-menu" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
   </div>
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -50,18 +64,3 @@ Copy the form action URL from the generated code. It should look something like 
 
 
 
-
-
-<div class="footer" [class.open]="isOpen" [class.closed]="!isOpen">
-
-
-
-  <a>
-    <img src="/assets/Music.png">
-  </a>
-  <a>
-    <img src="/assets/Spotify.png">
-  </a>
-
-
-</div>
