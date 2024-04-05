@@ -411,11 +411,11 @@ ol {
 }
 
 .title {
-  font-size: 3svh;
+  font-size: 2.7svh;
   font-weight: thin;
   color: white;
   font-family: "anziano";
-  opacity: 0.9;
+  opacity: 1;
     text-align: center; /* Centers the title in its column */
 
 }
