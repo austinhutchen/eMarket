@@ -384,9 +384,9 @@ ol {
   /* Adjust as needed */
 }
 .mailChimpHeader{
-  padding-bottom: 20px; /* Adds padding to the bottom of the title */
-  font-size: 2.4rem;
-  font-family: "anziano";
+  padding-bottom: 10px; /* Adds padding to the bottom of the title */
+  font-size: 2.0rem;
+  font-family: "aziano";
 }
 .menu {
   top: 30%;
