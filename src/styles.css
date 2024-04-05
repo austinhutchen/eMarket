@@ -93,7 +93,7 @@ section {
   justify-content: flex-end;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .mailBox {
@@ -103,7 +103,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   justify-content: center;
 }
 
@@ -251,8 +251,9 @@ ol {
 .hamburger-menu {
   cursor: pointer;
   justify-self: flex-end;
-  margin-right: 30px;
   position: relative;
+  margin-right: 30px;
+
   transition: transform 0.3s ease;
   /* Smooth animation */
   color: white;
@@ -380,4 +381,7 @@ ol {
 
   /* Smooth transition */
   /* White text */
+}
+.title {
+  text-align: center; /* Centers the title in its column */
 }
