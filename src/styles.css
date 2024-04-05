@@ -17,16 +17,16 @@ html {
 }
 
 input[type="email"] {
-  height: 2.4em;
+  height: 4.5em;
   /* Adjust this value as needed */
-  width: 35em;
+  width: 25em;
   /* Adjust this value as needed */
 }
 
 button {
-  height: 3em;
+  height: 5em;
   /* Adjust this value as needed */
-  width: 5em;
+  width: 8em;
   /* Adjust this value as needed */
 }
 
@@ -104,8 +104,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2rem;
-  font-family: "anziano";
   justify-content: center;
 }
 
@@ -387,7 +385,8 @@ ol {
 }
 .mailChimpHeader{
   padding-bottom: 20px; /* Adds padding to the bottom of the title */
-
+  font-size: 2.4rem;
+  font-family: "anziano";
 }
 .menu {
   top: 30%;
