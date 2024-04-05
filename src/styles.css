@@ -44,6 +44,8 @@ button {
   pointer-events: none;
   animation: noiseFX 3s infinite;
   background: url('/assets/noise.png');
+  background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent black overlay */
+z-index: 3;
 }
 
 .links {
@@ -126,43 +128,43 @@ section {
 
 @keyframes noiseFX {
   0%, 100% {
-    opacity: 0.6; /* Lower value = stronger effect */
+    opacity: 0.2; /* Lower value = stronger effect */
   }
 
   10% {
-    opacity: 0.61;
+    opacity: 0.22;
   }
 
   20% {
-    opacity: 0.62;
+    opacity: 0.24;
   }
 
   30% {
-    opacity: 0.63;
+    opacity: 0.26;
   }
 
   40% {
-    opacity: 0.64;
+    opacity: 0.28;
   }
 
   50% {
-    opacity: 0.65; /* Higher value = less overpowering effect */
+    opacity: 0.3; /* Lower maximum value = less grainy effect */
   }
 
   60% {
-    opacity: 0.64;
+    opacity: 0.28;
   }
 
   70% {
-    opacity: 0.63;
+    opacity: 0.26;
   }
 
   80% {
-    opacity: 0.62;
+    opacity: 0.24;
   }
 
   90% {
-    opacity: 0.61;
+    opacity: 0.22;
   }
 }
 
