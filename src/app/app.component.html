@@ -1,12 +1,16 @@
-<div class="overlay" ></div>
-<div class="background" >
+<div class="overlay"></div>
+<div class="background">
   <img src="/assets/background.webp">
   <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
     <nav>
       <b>
         <ol class="links">
-          <li><a >DECEPTION</a></li>
-          <li><a >out now</a></li>
+          <li><a>DECEPTION</a></li>
+          <li><a>
+              <u>
+                out now
+              </u>
+            </a></li>
         </ol>
       </b>
     </nav>
@@ -14,28 +18,22 @@
 </div>
 
 <div class="header" [class.black-background]="isScrolled">
+
   <div class="music-icons">
-    <a>
-      <img src="/assets/Music.png">
-    </a>
     <a>
       <img src="/assets/Spotify.png">
     </a>
+    <a>
+      <img src="/assets/Music.png">
+    </a>
   </div>
- 
+
   <div class="title">{{ title }}</div>
   <div class="hamburger-menu" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
   </div>
-
-
-
-
-
-
-
 
 </div>
 
@@ -53,7 +51,7 @@
       <div className="inputgroup">
         <input type="email" placeholder="Email Address" name="EMAIL" required>
 
-        <button type="submit">Sign Up</button>
+        <button class="signUp" type="submit">Sign Up</button>
       </div>
 
     </form>
@@ -64,6 +62,3 @@ Click the Manage Audience drop-down and choose Signup forms.
 Select Embedded forms.
 Choose a form type — Classic, Horizontal, or Unstyled — and customize the form options.
 Copy the form action URL from the generated code. It should look something like this: https://yourusername.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX.-->
-
-
-

@@ -1,31 +1,4 @@
-.menu.open .link a {
-  animation: fadeInFromMiddle;
-}
 
-.links a {
-  display: block;
-  margin: 5px;
-  color: whitesmoke; /* Darker color for better contrast against light background */
-
-  text-decoration: none;
-  font-size: 2.7vh;
-  top: 1.3rem;
-  font-family: serif;
-  opacity: 1;
-  text-shadow:
-    0 1px 0 #ccc,
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0, 0, 0, .5),
-    0 0 5px rgba(0, 0, 0, .5),
-    0 1px 3px rgba(0, 0, 0, .6),
-    0 3px 5px rgba(0, 0, 0, .5),
-    0 5px 10px rgba(0, 0, 0, .6),
-    0 10px 10px rgba(0, 0, 0, .5),
-    0 20px 20px rgba(0, 0, 0, .4);
-}
 
 .links a:link {
   opacity: 0;
@@ -70,15 +43,6 @@
   }
 }
 
-.title {
-  font-size: 3svh;
-  font-weight: thin;
-  color: white;
-  font-family: cursive;
-  opacity: 0.8;
-    text-align: center; /* Centers the title in its column */
-
-}
 
 header.black-background .title {
   color: white;
