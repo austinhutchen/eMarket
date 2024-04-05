@@ -204,8 +204,11 @@ section {
 
 .music-icons{
   display: flex;
-  justify-content: flex-end; /* Aligns the music icons to the right of their column */
+  justify-content: flex-start; /* Aligns the music icons to the right of their column */
 
+}
+.music-icons a img {
+  margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
 }
 ol {
   list-style-type: none;
@@ -213,7 +216,7 @@ ol {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr 1fr; /* Creates three columns */
+  grid-template-columns: 1fr auto 1fr; /* Creates three columns */
   align-items: center;
 
   background-color: rgba(0, 0, 0, 0.3);

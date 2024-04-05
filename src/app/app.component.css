@@ -72,11 +72,11 @@
 
 .title {
   font-size: 3svh;
-  font-weight: bold;
+  font-weight: thin;
   color: white;
   font-family: cursive;
   opacity: 0.8;
-  text-align: center; /* Centers the title in its column */
+    text-align: center; /* Centers the title in its column */
 
 }
 
