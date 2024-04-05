@@ -43,7 +43,7 @@ button {
   opacity: 1;
   pointer-events: none;
   animation: noiseFX 3s infinite;
-  background: url('/assets/noise.webp');
+  background: url('/assets/noise.png');
 }
 
 .links {
@@ -125,48 +125,44 @@ section {
 }
 
 @keyframes noiseFX {
-
-  0%,
-  100% {
-    opacity: 0.9;
-    /* Lower value = stronger effect */
+  0%, 100% {
+    opacity: 0.6; /* Lower value = stronger effect */
   }
 
   10% {
-    opacity: 0.91;
+    opacity: 0.61;
   }
 
   20% {
-    opacity: 0.92;
+    opacity: 0.62;
   }
 
   30% {
-    opacity: 0.93;
+    opacity: 0.63;
   }
 
   40% {
-    opacity: 0.94;
+    opacity: 0.64;
   }
 
   50% {
-    opacity: 0.95;
-    /* Higher value = less overpowering effect */
+    opacity: 0.65; /* Higher value = less overpowering effect */
   }
 
   60% {
-    opacity: 0.94;
+    opacity: 0.64;
   }
 
   70% {
-    opacity: 0.93;
+    opacity: 0.63;
   }
 
   80% {
-    opacity: 0.92;
+    opacity: 0.62;
   }
 
   90% {
-    opacity: 0.91;
+    opacity: 0.61;
   }
 }
 
@@ -271,7 +267,7 @@ ol {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  z-index: 4;
+  z-index: 5;
   /* This should be higher than the z-index of .background and .hamburger-menu */
   display: none;
   /* Initially hidden */
