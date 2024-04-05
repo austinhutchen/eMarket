@@ -19,7 +19,7 @@ html {
 input[type="email"] {
   height: 4.5em;
   /* Adjust this value as needed */
-  width: 25em;
+  width: 15em;
   /* Adjust this value as needed */
 }
 
@@ -95,7 +95,7 @@ section {
   justify-content: flex-end;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .mailBox {
@@ -194,8 +194,8 @@ section {
 
 
 .footerImg {
-  height: 6svw;
-  width: 5svw;
+  height: 4svw;
+  width: 3svw;
 }
 
 .music-icons{
@@ -219,7 +219,7 @@ ol {
   transition: background-color 0.5s ease;
   position: absolute;
   /* Change this from relative to absolute */
-  top: 1.2vh;
+  top: 1vh;
   /* Position it at the top of the nearest positioned ancestor */
   width: 100%;
   /* Make it span the full width */
