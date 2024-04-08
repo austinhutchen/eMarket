@@ -17,13 +17,17 @@ export class AppComponent  {
   isScrolled: boolean = false;
   isDesktop: boolean = false;
   inputValue: string = '';
-
+  @ViewChild('hamburgerMenu') hamburgerMenu!: ElementRef;
   submitForm() {
     console.log(this.inputValue);
   }
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.renderer.listen('window', 'resize', (e: Event) => {
-      this.isDesktop = window.innerWidth > 768;
+  if (this.isDesktop) {
+    this.renderer.addClass(this.hamburgerMenu.nativeElement, 'hide-element');
+  } else {
+    this.renderer.removeClass(this.hamburgerMenu.nativeElement, 'hide-element');
+  }
     });
     this.renderer.listen('window', 'scroll', (e: Event) => {
       if (window.scrollY > 0) {
