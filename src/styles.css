@@ -11,9 +11,11 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.title{
+
+.title {
   margin-left: 6%;
 }
+
 .links a {
   font-family: 'anziano';
   font-weight: 100;
@@ -253,6 +255,11 @@ ol {
 .music-icons a img {
   margin: 0 10px;
   /* Adds 20px of space on the left side of each image */
+}
+
+body {
+  padding-bottom: 200px;
+  /* Adjust as needed */
 }
 
 @media (max-width: 480px) {
