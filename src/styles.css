@@ -254,7 +254,14 @@ ol {
   grid-column: 2; /* Places the first child in the second column */
 
 }
-
+.overlay-icons{
+  position: fixed;
+  bottom:0;
+  left:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 .header > :last-child {
   grid-column: 3; /* Places the last child in the third column */
 

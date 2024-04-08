@@ -1,15 +1,18 @@
 <div class="overlay">
+  <div class="overlay-icons">
     <a>
       <img src="/assets/Spotify.png">
     </a>
     <a>
       <img src="/assets/Music.png">
     </a>
+  </div>
+
 </div>
 <div class="background">
-  <div class="image" >
-    </div>
-  <div class="menu" [class.open]="true" >
+  <div class="image">
+  </div>
+  <div class="menu" [class.open]="true">
     <nav>
       <b>
         <ol class="links">
@@ -37,7 +40,7 @@
   </div>
 
   <div class="title">{{ title }}</div>
-  <div class="hamburger-menu" (click)="toggleMenu()"  >
+  <div class="hamburger-menu" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
