@@ -223,7 +223,7 @@ ol {
   display: flex;
   opacity:1;
 }
-.music-icons .d-none{
+.music-icons .hide-element {
   display: none !important;
   opacity: 0;
 }
