@@ -79,9 +79,6 @@ z-index: 3;
 
 
 
-body.menu-open .background img {
-  animation: zoomOut 3s ease forwards;
-}
 
 .inputgroup {
   display: flex;
@@ -218,12 +215,7 @@ ol {
   z-index: 3;
   /* This should be higher than the z-index of .background and .background img */
 }
-.menu-open .overlay{
-  display: block;
-  /* Show the overlay */
-  opacity: 0.8;/* Show the overlay */
 
-}
 .music-icons{
   display: flex;
   opacity:1;
@@ -236,7 +228,7 @@ ol {
 .music-icons a img {
   margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
 }
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .background{
     height: 100svh;
     width: 100%;
@@ -249,7 +241,7 @@ ol {
   }
   .menu-open .overlay{
     display: block;
-    opacity: 0.8;/* Show the overlay */
+    opacity: 0.3;/* Show the overlay */
     position:fixed;
     
   }
