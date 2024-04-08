@@ -17,7 +17,7 @@ export class AppComponent  {
   isScrolled: boolean = false;
   isDesktop: boolean = false;
   inputValue: string = '';
-  @ViewChild('hamburgerMenu') hamburgerMenu!: ElementRef;
+  @ViewChild('hamburger-menu') hamburgerMenu!: ElementRef;
   submitForm() {
     console.log(this.inputValue);
   }

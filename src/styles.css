@@ -45,7 +45,7 @@ button {
   pointer-events: none;
   animation: noiseFX 3s infinite;
   background: url('/assets/noise.png');
-  background-color: rgba(0, 0, 0, 0.90); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.97); /* Semi-transparent black overlay */
 z-index: 3;
 }
 
@@ -296,20 +296,18 @@ ol {
   z-index: 3;
 }
 
-.background img {
+.background .image {
   position: relative;
   /* Add this to make .background a positioned ancestor */
-  object-fit: cover;
+  background-size: cover; 
   /* Add this line */
   z-index: 2;
-
   width: 100%;
   height: 100%;
-
+  background-position: center;
+  background-color: rgba(0,0,0,0.8);
   /* Start zoomed in */
-  background-size: cover;
-
-  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("/assets/background.webp")
 }
 
 .menu.open {
