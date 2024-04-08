@@ -34,7 +34,7 @@ export class AppComponent  {
     });
     this.renderer.listen('window', 'load', (e: Event) => {
       this.isDesktop = window.innerWidth > 768;
-    (this.isDesktop)? this.renderer.removeClass(this.musicIcons.nativeElement, 'd-none'): this.renderer.addClass(this.musicIcons.nativeElement, 'd-none');
+    (this.isDesktop)? this.renderer.removeClass(this.musicIcons.nativeElement, 'hide-element'): this.renderer.addClass(this.musicIcons.nativeElement, 'hide-element');
     });
   }
   toggleOverlay() {
