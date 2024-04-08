@@ -10,7 +10,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+.title{
+  margin-left: 6%;
+}
 .links a {
   font-family: 'anziano';
   font-weight: 100;
@@ -248,7 +250,7 @@ ol {
 }
 
 .music-icons a img {
-  margin: 0 10px
+  margin: 0 10px;
   /* Adds 20px of space on the left side of each image */
 }
 
@@ -306,7 +308,7 @@ ol {
   }
 
   .header {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     /* Creates three columns */
 
   }
