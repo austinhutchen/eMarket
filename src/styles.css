@@ -309,7 +309,7 @@ ol {
   /* Start zoomed in */
   background-size: cover;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .menu.open {
