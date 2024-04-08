@@ -218,7 +218,12 @@ ol {
   z-index: 3;
   /* This should be higher than the z-index of .background and .background img */
 }
+.menu-open .overlay{
+  display: block;
+  /* Show the overlay */
+  opacity: 0.8;/* Show the overlay */
 
+}
 .music-icons{
   display: flex;
   opacity:1;
@@ -242,7 +247,12 @@ ol {
     height: 2.4rem;
     /* Reduce size on small screens */
   }
-
+  .menu-open .overlay{
+    display: block;
+    opacity: 0.8;/* Show the overlay */
+    position:fixed;
+    
+  }
   .navbar {
     padding: 0.5rem 1rem;
     /* Reduce padding on small screens */
@@ -255,7 +265,8 @@ ol {
   justify-self: flex-end;
   position: relative;
   margin-right: 30px;
-
+  z-index: 10; /* Higher than .overlay's z-index */
+  
   transition: transform 0.3s ease;
   /* Smooth animation */
   color: white;
@@ -265,14 +276,27 @@ ol {
 .hamburger-menu.open .line:nth-child(2) {
   opacity: 0;
 }
-
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  transition: opacity 1s ease-in-out; /* Transition the opacity over 0.5 seconds */
+  animation: slideInFromBottom 0.5s forwards; /* Apply the animation */
+  background: rgba(0, 0, 0, 1); /* Solid black */
+
+  opacity: 0; /* Initially hidden */
   z-index: 5;
   /* This should be higher than the z-index of .background and .hamburger-menu */
   display: none;
