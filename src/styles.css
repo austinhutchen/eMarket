@@ -217,6 +217,7 @@ ol {
 
 .music-icons{
   display: flex;
+  flex-direction: row;
   opacity:1;
 }
 .music-icons .hide-element {
@@ -247,6 +248,9 @@ ol {
     opacity: 0.3;/* Show the overlay */
     position:fixed;
     
+  }
+  .music-icons{
+    flex-direction: row-reverse;
   }
   
 .header > :first-child {
