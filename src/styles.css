@@ -12,7 +12,8 @@ overflow-x: hidden;
 
 .links a {
   font-family: 'anziano';
-  font-weight: thin;
+  font-weight: 100;
+  font-size: larger;
 }
 
 input[type="email"] {
