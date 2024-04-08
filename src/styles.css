@@ -365,9 +365,7 @@ body {
     opacity: 1;
   }
 }
-.s{
-  
-}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -388,22 +386,7 @@ body {
   /* Initially hidden */
 }
 
-.footer {
-  display: flex;
-  opacity: 0;
-  flex-direction: row;
-  /* Initially hidden */
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  transform: translateY(100%);
-  /* Move it off-screen */
-  /* flex grow shrink basis */
-  flex: 2 2 8svw;
-  /* Other styles... */
-  z-index: 3;
-}
+
 
 .background .image {
   position: relative;
@@ -433,24 +416,6 @@ body {
   /* Slide out when open */
 }
 
-.footer.open {
-  display: flex;
-  /* Add this if not already present in your CSS */
-  justify-content: center;
-  /* Center items horizontally */
-  align-items: center;
-  /* Center items vertically */
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  transition: transform 0.3s ease-in-out;
-  /* Animate the transform property */
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0.7em;
-  animation: fadeInUp 2s ease-out forwards;
-  opacity: 1;
-  max-width: fit-content;
-}
 
 
 /* Rotate last line to form 'X' */
