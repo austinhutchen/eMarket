@@ -1,7 +1,7 @@
 <div class="overlay"></div>
 <div class="background">
   <img src="/assets/background.webp">
-  <div class="menu" [class.open]="isOpen" [class.closed]="!isOpen">
+  <div class="menu" [class.open]="true" >
     <nav>
       <b>
         <ol class="links">
@@ -19,7 +19,7 @@
 
 <div class="header" [class.black-background]="isScrolled">
 
-  <div class="music-icons">
+  <div class="music-icons" #musicIcons>
     <a>
       <img src="/assets/Spotify.png">
     </a>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="title">{{ title }}</div>
-  <div class="hamburger-menu" (click)="toggleMenu()">
+  <div class="hamburger-menu" (click)="toggleMenu()"  #musicIcons>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
@@ -43,9 +43,12 @@
 
 <section>
   <div class="mailBox" #mailBox>
-    <h1 class="mailChimpHeader">
-      Join the Hórde
-    </h1>
+    <h3 class="mailChimpHeader">
+      <i>
+        Join the Hórde
+
+      </i>
+    </h3>
     <form action="https://yourusername.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX" method="post"
       target="_blank">
       <div className="inputgroup">
@@ -57,6 +60,7 @@
     </form>
   </div>
 </section>
+
 <!-- Go to your Mailchimp account, navigate to the Audience tab.
 Click the Manage Audience drop-down and choose Signup forms.
 Select Embedded forms.

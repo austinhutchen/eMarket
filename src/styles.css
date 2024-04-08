@@ -24,6 +24,7 @@ input[type="email"] {
 
 button {
   height: 5em;
+  pointer-events: fill;
   /* Adjust this value as needed */
   width: 8em;
   /* Adjust this value as needed */
@@ -43,7 +44,7 @@ button {
   pointer-events: none;
   animation: noiseFX 3s infinite;
   background: url('/assets/noise.png');
-  background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.90); /* Semi-transparent black overlay */
 z-index: 3;
 }
 
@@ -54,7 +55,7 @@ z-index: 3;
 .background {
   position: relative;
   width: 100%;
-  height: 80svh;
+  height: 66svh;
   display: flex;
   /* Add this line */
   justify-content: center;
@@ -84,7 +85,7 @@ body.menu-open .background img {
 .inputgroup {
   display: flex;
   flex-direction: column;
-
+  white-space: pre-wrap;
 }
 
 section {
@@ -98,8 +99,6 @@ section {
 }
 
 .mailBox {
-  font-weight: thin;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,14 +196,7 @@ section {
   width: 3svw;
 }
 
-.music-icons{
-  display: flex;
-  justify-content: flex-start; /* Aligns the music icons to the right of their column */
 
-}
-.music-icons a img {
-  margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
-}
 ol {
   list-style-type: none;
 }
@@ -218,7 +210,7 @@ ol {
   transition: background-color 0.5s ease;
   position: absolute;
   /* Change this from relative to absolute */
-  top: 1vh;
+  top: 1.2vh;
   /* Position it at the top of the nearest positioned ancestor */
   width: 100%;
   /* Make it span the full width */
@@ -226,7 +218,18 @@ ol {
   /* This should be higher than the z-index of .background and .background img */
 }
 
-
+.music-icons{
+  display: flex;
+  opacity:1;
+}
+.music-icons .d-none{
+  display: none;
+  opacity: 0;
+}
+.music-icons 
+.music-icons a img {
+  margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
+}
 @media (max-width: 576px) {
 
   .hamburger-menu {
@@ -351,10 +354,11 @@ ol {
   display: block;
   margin: 5px;
   color: whitesmoke; /* Darker color for better contrast against light background */
+  font-weight: 100;
 
   text-decoration: none;
   font-size: 2.7vh;
-  top: 1.3rem;
+  top: 2.2rem;
   font-family: 'aziano';
   opacity: 1;
   text-shadow:
@@ -384,8 +388,11 @@ ol {
 }
 .mailChimpHeader{
   padding-bottom: 10px; /* Adds padding to the bottom of the title */
-  font-size: 2.0rem;
+  font-size: 2.3rem;
+  white-space: pre-wrap;
   font-family: "aziano";
+  font-weight: 100;
+  color: white;
 }
 .menu {
   top: 30%;
