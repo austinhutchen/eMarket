@@ -248,7 +248,7 @@ ol {
 }
 
 .music-icons a img {
-  margin: 0 10px 0 20px;
+  margin: 0 10px
   /* Adds 20px of space on the left side of each image */
 }
 
@@ -283,7 +283,7 @@ ol {
   .header> :first-child {
     justify-self: center;
     /* Horizontally centers the first child */
-    grid-column: 2;
+    grid-column: 1;
     /* Places the first child in the second column */
 
   }
@@ -306,7 +306,7 @@ ol {
   }
 
   .header {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /* Creates three columns */
 
   }
