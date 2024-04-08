@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body{
+html,
+body {
 
   /* Disable horizontal scrolling */
 
 
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0,0, 1), rgba(0, 0, 0, 1));
-overflow-x: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -45,8 +46,9 @@ button {
   pointer-events: none;
   animation: noiseFX 3s infinite;
   background: url('/assets/noise.png');
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black overlay */
+  z-index: 3;
 }
 
 .links {
@@ -121,8 +123,11 @@ section {
 }
 
 @keyframes noiseFX {
-  0%, 100% {
-    opacity: 0.2; /* Lower value = stronger effect */
+
+  0%,
+  100% {
+    opacity: 0.2;
+    /* Lower value = stronger effect */
   }
 
   10% {
@@ -142,7 +147,8 @@ section {
   }
 
   50% {
-    opacity: 0.3; /* Lower maximum value = less grainy effect */
+    opacity: 0.3;
+    /* Lower maximum value = less grainy effect */
   }
 
   60% {
@@ -201,7 +207,8 @@ ol {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* Creates three columns */
+  grid-template-columns: 1fr auto 1fr;
+  /* Creates three columns */
   align-items: center;
 
   transition: background-color 0.5s ease;
@@ -215,67 +222,95 @@ ol {
   /* This should be higher than the z-index of .background and .background img */
 }
 
-.music-icons{
+.overlay-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  z-index: 6;
+  color: white;
+  font-weight: 100;
+  font-family: 'anziano';
+  font-size: larger;
+}
+
+.music-icons {
   display: flex;
   flex-direction: row;
-  opacity:1;
+  opacity: 1;
 }
+
 .music-icons .hide-element {
   display: none !important;
   opacity: 0;
 }
-.music-icons 
-.music-icons a img {
-  margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
+
+.music-icons .music-icons a img {
+  margin: 0 10px 0 20px;
+  /* Adds 20px of space on the left side of each image */
 }
+
 @media (max-width: 600px) {
-  .background{
+  .background {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
   }
-  .music-icons{
+
+  .music-icons {
     opacity: 0;
     display: none;
   }
+
   .hamburger-menu {
     width: 2.4rem;
     /* Reduce size on small screens */
     height: 2.4rem;
     /* Reduce size on small screens */
   }
-  .menu-open .overlay{
+
+  .menu-open .overlay {
     display: block;
-    opacity: 0.3;/* Show the overlay */
-    position:fixed;
-    
+    position: fixed;
+
   }
-  .music-icons{
+
+  .music-icons {
     flex-direction: row-reverse;
   }
-  
-.header > :first-child {
-  justify-self: center; /* Horizontally centers the first child */
-  grid-column: 2; /* Places the first child in the second column */
 
-}
-.overlay-icons{
-  position: fixed;
-  bottom:0;
-  left:0;
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-.header > :last-child {
-  grid-column: 3; /* Places the last child in the third column */
-
-  justify-self: start; /* Aligns the last child to the right */
-}
-  .header{
-  grid-template-columns: 1fr 2fr 1fr; /* Creates three columns */
+  .header> :first-child {
+    justify-self: center;
+    /* Horizontally centers the first child */
+    grid-column: 2;
+    /* Places the first child in the second column */
 
   }
+
+  .overlay-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header> :last-child {
+    grid-column: 3;
+    /* Places the last child in the third column */
+
+    justify-self: start;
+    /* Aligns the last child to the right */
+  }
+
+  .header {
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Creates three columns */
+
+  }
+
   .navbar {
     padding: 0.5rem 1rem;
     /* Reduce padding on small screens */
@@ -288,8 +323,9 @@ ol {
   justify-self: flex-end;
   position: relative;
   margin-right: 30px;
-  z-index: 10; /* Higher than .overlay's z-index */
-  
+  z-index: 10;
+  /* Higher than .overlay's z-index */
+
   transition: transform 0.3s ease;
   /* Smooth animation */
   color: white;
@@ -299,27 +335,33 @@ ol {
 .hamburger-menu.open .line:nth-child(2) {
   opacity: 0;
 }
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 1s ease-in-out; /* Transition the opacity over 0.5 seconds */
-  animation: slideInFromBottom 0.5s forwards; /* Apply the animation */
-  background: rgba(0, 0, 0, 1); /* Solid black */
+  transition: opacity 1s ease-in-out;
+  /* Transition the opacity over 0.5 seconds */
+  animation: slideInFromBottom 0.5s forwards;
+  /* Apply the animation */
+  background: rgba(0, 0, 0, 1);
+  /* Solid black */
 
-  opacity: 0; /* Initially hidden */
+  /* Initially hidden */
   z-index: 5;
   /* This should be higher than the z-index of .background and .hamburger-menu */
   display: none;
@@ -346,13 +388,13 @@ ol {
 .background .image {
   position: relative;
   /* Add this to make .background a positioned ancestor */
-  background-size: cover; 
+  background-size: cover;
   /* Add this line */
   z-index: 2;
   width: 100%;
   height: 100%;
   background-position: center;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   /* Start zoomed in */
   background-image: url("/assets/background.webp")
 }
@@ -395,6 +437,7 @@ ol {
 .hamburger-menu.open .line:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
 .menu.open .link a {
   animation: fadeInFromMiddle;
 }
@@ -402,7 +445,8 @@ ol {
 .links a {
   display: block;
   margin: 5px;
-  color: whitesmoke; /* Darker color for better contrast against light background */
+  color: whitesmoke;
+  /* Darker color for better contrast against light background */
   font-weight: 100;
 
   text-decoration: none;
@@ -424,6 +468,7 @@ ol {
     0 10px 10px rgba(0, 0, 0, .5),
     0 20px 20px rgba(0, 0, 0, .4);
 }
+
 .links {
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -435,14 +480,17 @@ ol {
   margin: 10px;
   /* Adjust as needed */
 }
-.mailChimpHeader{
-  padding-bottom: 10px; /* Adds padding to the bottom of the title */
+
+.mailChimpHeader {
+  padding-bottom: 10px;
+  /* Adds padding to the bottom of the title */
   font-size: 2.3rem;
   white-space: pre-wrap;
   font-family: "aziano";
   font-weight: 100;
   color: white;
 }
+
 .menu {
   top: 30%;
   display: block;
@@ -471,6 +519,7 @@ ol {
   color: white;
   font-family: "anziano";
   opacity: 1;
-    text-align: center; /* Centers the title in its column */
+  text-align: center;
+  /* Centers the title in its column */
 
 }
