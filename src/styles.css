@@ -232,6 +232,10 @@ ol {
     height: 100svh;
     width: 100%;
   }
+  .music-icons{
+    opacity: 0;
+    display: none;
+  }
   .hamburger-menu {
     width: 2.4rem;
     /* Reduce size on small screens */
@@ -243,6 +247,22 @@ ol {
     opacity: 0.3;/* Show the overlay */
     position:fixed;
     
+  }
+  
+.header > :first-child {
+  justify-self: center; /* Horizontally centers the first child */
+  grid-column: 2; /* Places the first child in the second column */
+
+}
+
+.header > :last-child {
+  grid-column: 3; /* Places the last child in the third column */
+
+  justify-self: start; /* Aligns the last child to the right */
+}
+  .header{
+  grid-template-columns: 1fr 2fr 1fr; /* Creates three columns */
+
   }
   .navbar {
     padding: 0.5rem 1rem;
