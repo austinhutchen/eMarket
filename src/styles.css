@@ -239,6 +239,7 @@ ol {
   display: flex;
   flex-direction: row;
   opacity: 1;
+
 }
 
 .music-icons .hide-element {
@@ -246,7 +247,7 @@ ol {
   opacity: 0;
 }
 
-.music-icons .music-icons a img {
+.music-icons a img {
   margin: 0 10px 0 20px;
   /* Adds 20px of space on the left side of each image */
 }
@@ -294,7 +295,6 @@ ol {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .header> :last-child {
@@ -394,7 +394,7 @@ ol {
   width: 100%;
   height: 100%;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   /* Start zoomed in */
   background-image: url("/assets/background.webp")
 }
