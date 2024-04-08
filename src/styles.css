@@ -100,13 +100,14 @@ section {
   justify-content: flex-end;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
-  margin-top: 1%;
 }
 
 .mailBox {
+  animation: slideInFromLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:5vh;
   justify-content: center;
 }
 
@@ -251,14 +252,21 @@ ol {
   display: none !important;
   opacity: 0;
 }
-
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .music-icons a img {
   margin: 0 10px;
   /* Adds 20px of space on the left side of each image */
 }
 
 body {
-  padding-bottom: 200px;
+  padding-bottom: 300px;
   /* Adjust as needed */
 }
 
