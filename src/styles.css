@@ -231,7 +231,9 @@ ol {
   margin: 0 10px 0 20px; /* Adds 20px of space on the left side of each image */
 }
 @media (max-width: 576px) {
-
+  .background{
+    height: 100svh;
+  }
   .hamburger-menu {
     width: 2.4rem;
     /* Reduce size on small screens */
