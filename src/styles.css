@@ -214,7 +214,7 @@ ol {
   transition: background-color 0.5s ease;
   position: absolute;
   /* Change this from relative to absolute */
-  top: 3vh;
+  top: 2.7vh;
   /* Position it at the top of the nearest positioned ancestor */
   width: 100%;
   /* Make it span the full width */
