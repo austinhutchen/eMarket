@@ -233,6 +233,7 @@ ol {
 @media (max-width: 576px) {
   .background{
     height: 100svh;
+    width: 100%;
   }
   .hamburger-menu {
     width: 2.4rem;
