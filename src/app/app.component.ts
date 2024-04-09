@@ -34,7 +34,7 @@ this.header = null;
     });
     this.renderer.listen('window', 'scroll', (e: Event) => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 10) {
+      if (scrollPosition < 100) {
         this.renderer.addClass(this.header, 'scrolled');
       } else {
         this.renderer.removeClass(this.header, 'scrolled');
