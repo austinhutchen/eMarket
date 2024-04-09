@@ -23,17 +23,17 @@ body {
 }
 
 input[type="email"] {
-  height: 5em;
+  height: 5rem;
   /* Adjust this value as needed */
-  width: 16em;
+  width: 16rem;
   /* Adjust this value as needed */
 }
 
 button {
-  height: 5em;
+  height: 5rem;
   pointer-events: fill;
   /* Adjust this value as needed */
-  width: 8em;
+  width: 8rem;
   /* Adjust this value as needed */
 }
 
