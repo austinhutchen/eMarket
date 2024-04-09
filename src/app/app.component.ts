@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,9 +8,11 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
+export class AppComponent implements AfterViewInit {
   title: string = 'DLOR';
   overLay: boolean = false;
+  private header: HTMLElement | null;
+
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
   @ViewChild('musicIcons') musicIcons!: ElementRef;
@@ -18,29 +20,33 @@ export class AppComponent  {
   isDesktop: boolean = false;
   inputValue: string = '';
   @ViewChild('hamburger-menu') hamburgerMenu!: ElementRef;
-  submitForm() {
-    console.log(this.inputValue);
+  ngAfterViewInit() {
+    this.header = this.document.querySelector('.header');
   }
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private el: ElementRef) {
+this.header = null;
     this.renderer.listen('window', 'resize', (e: Event) => {
-  if (this.isDesktop) {
-    this.renderer.addClass(this.hamburgerMenu.nativeElement, 'hide-element');
-  } else {
-    this.renderer.removeClass(this.hamburgerMenu.nativeElement, 'hide-element');
-  }
+      if (this.isDesktop) {
+        this.renderer.addClass(this.hamburgerMenu, 'hide-element');
+      } else {
+        this.renderer.removeClass(this.hamburgerMenu, 'hide-element');
+      }
     });
     this.renderer.listen('window', 'scroll', (e: Event) => {
-      if (window.scrollY > 0) {
-        this.isScrolled = true;
+      const scrollPosition = window.pageYOffset;
+
+      if (scrollPosition > 100) {
+        this.renderer.addClass(this.header, 'scrolled');
       } else {
-        this.isScrolled = false;
+        this.renderer.removeClass(this.header, 'scrolled');
       }
     });
     this.renderer.listen('window', 'load', (e: Event) => {
       this.isDesktop = window.innerWidth > 768;
-    (this.isDesktop)? this.renderer.removeClass(this.musicIcons.nativeElement, 'hide-element'): this.renderer.addClass(this.musicIcons.nativeElement, 'hide-element');
+      (this.isDesktop) ? this.renderer.removeClass(this.musicIcons.nativeElement, 'hide-element') : this.renderer.addClass(this.musicIcons.nativeElement, 'hide-element');
     });
   }
+
   toggleOverlay() {
     this.overLay = !this.overLay;
   }
@@ -68,5 +74,9 @@ export class AppComponent  {
     } else {
       this.closeMenu();
     }
+  }
+
+  submitForm() {
+    console.log(this.inputValue);
   }
 }

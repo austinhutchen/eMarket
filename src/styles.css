@@ -7,9 +7,7 @@ body {
 
 
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  overflow:hidden;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .title {
@@ -20,6 +18,7 @@ body {
   font-family: 'anziano';
   font-weight: 100;
   font-size: larger;
+  color:white;
 }
 
 input[type="email"] {
@@ -127,7 +126,11 @@ section {
     opacity: 1;
   }
 }
+.header .scrolled{
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadein 2s;
 
+}
 @keyframes noiseFX {
 
   0%,
@@ -216,8 +219,7 @@ ol {
   grid-template-columns: 1fr auto 1fr;
   /* Creates three columns */
   align-items: center;
-
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease-in-out;
   position: absolute;
   /* Change this from relative to absolute */
   top: 2.7vh;
@@ -229,6 +231,7 @@ ol {
 }
 
 .overlay-links {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -435,9 +438,8 @@ body {
   font-weight: 100;
 
   text-decoration: none;
-  font-size: 2.7vh;
+
   top: 2.2rem;
-  font-family: 'aziano';
   opacity: 1;
   text-shadow:
     0 1px 0 #ccc,
@@ -445,13 +447,13 @@ body {
     0 3px 0 #bbb,
     0 4px 0 #b9b9b9,
     0 5px 0 #aaa,
-    0 6px 1px rgba(0, 0, 0, .5),
-    0 0 5px rgba(0, 0, 0, .5),
-    0 1px 3px rgba(0, 0, 0, .6),
-    0 3px 5px rgba(0, 0, 0, .5),
-    0 5px 10px rgba(0, 0, 0, .6),
-    0 10px 10px rgba(0, 0, 0, .5),
-    0 20px 20px rgba(0, 0, 0, .4);
+    0 6px 1px rgba(0, 0, 0, .3),
+    0 0 5px rgba(0, 0, 0, .3),
+    0 1px 3px rgba(0, 0, 0, .4),
+    0 3px 5px rgba(0, 0, 0, .3),
+    0 5px 10px rgba(0, 0, 0, .4),
+    0 10px 10px rgba(0, 0, 0, .3),
+    0 20px 20px rgba(0, 0, 0, .2);
 }
 
 .links {

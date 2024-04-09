@@ -56,7 +56,6 @@ header.black-background .title {
 /* Additional styles for menu items */
 .menu-item1 {
   padding: 6px 3px;
-  text-shadow: 0.5px 0.5px #ccc, 0.7px 0.7px #c9c9c9, 1px 1px #b6b6b6;
   font-size: 1.8rem;
 }
 .menu-item2 {
