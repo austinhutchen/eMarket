@@ -198,10 +198,7 @@ section {
 
 
 
-.footerImg {
-  height: 9vw;
-  width: auto;
-}
+
 
 
 
@@ -308,7 +305,7 @@ section {
     text-align: center; /* Center the text */
   }
   .overlay-icons img{
-    height: 2.3vh;
+    height: 6vh;
     width: auto;
   }
   .overlay-icons {
