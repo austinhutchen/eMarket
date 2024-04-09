@@ -25,7 +25,7 @@ body {
 input[type="email"] {
   height: 5rem;
   /* Adjust this value as needed */
-  width: 16rem;
+  width: 12rem;
   /* Adjust this value as needed */
 }
 
@@ -33,7 +33,7 @@ button {
   height: 5rem;
   pointer-events: fill;
   /* Adjust this value as needed */
-  width: 8rem;
+  width: 6rem;
   /* Adjust this value as needed */
 }
 
