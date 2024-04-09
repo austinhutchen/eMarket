@@ -306,7 +306,7 @@ section {
   }
   .overlay-icons img{
     height: 4vh;
-    width: auto;
+    width: 4vh;
   }
   .overlay-icons {
     position: fixed;
