@@ -25,7 +25,7 @@ body {
 input[type="email"] {
   height: 4.5em;
   /* Adjust this value as needed */
-  width: 15em;
+  width: 15.5em;
   /* Adjust this value as needed */
 }
 
@@ -305,7 +305,7 @@ section {
     text-align: center; /* Center the text */
   }
   .overlay-icons img{
-    height: 6vh;
+    height: 4vh;
     width: auto;
   }
   .overlay-icons {
