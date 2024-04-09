@@ -14,16 +14,19 @@ export class AppComponent implements AfterViewInit {
   private header!: HTMLElement | null;
   private hamburgerMenu!: HTMLElement | null;
   private musicIcons!: HTMLElement | null;
+  private bg!: HTMLElement | null;
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
   isScrolled: boolean = false;
   isDesktop: boolean = false;
   inputValue: string = '';
-
+  
   ngAfterViewInit() {
     this.header = this.document.querySelector('.header');
     this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
     this.musicIcons = this.document.querySelector('.music-icons');
+    this.bg= this.document.querySelector('background');
+
   }
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private el: ElementRef) {
     this.header = null;
@@ -47,7 +50,6 @@ export class AppComponent implements AfterViewInit {
   toggleOverlay() {
     this.overLay = !this.overLay;
   }
-  @ViewChild('background') backgroundImage!: ElementRef;
 
 
   openMenu(): void {
@@ -64,8 +66,7 @@ export class AppComponent implements AfterViewInit {
   toggleMenu() {
     this.isOpen = !(this.isOpen);
     console.log(this.isOpen);
-    const hamburger = document.querySelector('.hamburger-menu');
-    hamburger?.classList.toggle('open');
+    this.hamburgerMenu?.classList.toggle('open');
     if (this.isOpen) {
       this.openMenu();
     } else {
