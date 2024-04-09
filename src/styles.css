@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 
-html {
+html,
+body {
 
   /* Disable horizontal scrolling */
   overflow-x: hidden;
@@ -99,6 +99,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  padding-bottom: 200px;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
 }
@@ -258,10 +259,7 @@ ol {
   /* Adds 20px of space on the left side of each image */
 }
 
-body {
-  padding-bottom: 300px;
-  /* Adjust as needed */
-}
+
 
 @media (max-width: 480px) {
   .background {
