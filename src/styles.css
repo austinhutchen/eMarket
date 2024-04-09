@@ -232,22 +232,7 @@ section {
   /* This should be higher than the z-index of .background and .background img */
 }
 
-.overlay-links {
-  position: fixed;
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50vh;
-  z-index: 6;
-  color: white;
-  font-weight: 150;
-  font-family: 'anziano';
-  font-size: 2.5em; /* Increase font size */
-  width: 100%; /* Take full width of the parent */
-  text-align: center; /* Center the text */
-}
+
 
 .music-icons {
   display: flex;
@@ -315,6 +300,22 @@ section {
     grid-column: 1;
     /* Places the first child in the second column */
 
+  }
+  .overlay-links {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50svh;
+    z-index: 6;
+    color: white;
+    font-weight: 150;
+    font-family: 'anziano';
+    font-size: 2.5em; /* Increase font size */
+    width: 100%; /* Take full width of the parent */
+    text-align: center; /* Center the text */
   }
   .overlay-icons img{
     height: 2vh;
