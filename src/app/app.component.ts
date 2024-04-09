@@ -24,14 +24,8 @@ export class AppComponent implements AfterViewInit {
     this.header = this.document.querySelector('.header');
   }
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private el: ElementRef) {
-this.header = null;
-    this.renderer.listen('window', 'resize', (e: Event) => {
-      if (this.isDesktop) {
-        this.renderer.addClass(this.hamburgerMenu, 'hide-element');
-      } else {
-        this.renderer.removeClass(this.hamburgerMenu, 'hide-element');
-      }
-    });
+    this.header = null;
+
     this.renderer.listen('window', 'scroll', (e: Event) => {
       const scrollPosition = window.scrollY;
       if (scrollPosition < 100) {
@@ -43,6 +37,8 @@ this.header = null;
     this.renderer.listen('window', 'load', (e: Event) => {
       this.isDesktop = window.innerWidth > 768;
       (this.isDesktop) ? this.renderer.removeClass(this.musicIcons.nativeElement, 'hide-element') : this.renderer.addClass(this.musicIcons.nativeElement, 'hide-element');
+      (this.isDesktop) ? this.renderer.addClass(this.hamburgerMenu.nativeElement, 'hide-element') : this.renderer.removeClass(this.hamburgerMenu.nativeElement, 'hide-element');
+
     });
   }
 

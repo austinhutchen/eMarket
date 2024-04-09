@@ -12,7 +12,7 @@ body {
 }
 
 .title {
-  margin-left: 5%;
+  margin-left: 6%;
 }
 
 .links a {
@@ -226,7 +226,7 @@ ol {
   transition: background-color 0.5s ease-in-out;
   position: absolute;
   /* Change this from relative to absolute */
-  top: 2.7vh;
+  top: 2.1vh;
   /* Position it at the top of the nearest positioned ancestor */
   width: 100%;
   /* Make it span the full width */
@@ -254,7 +254,10 @@ ol {
   opacity: 1;
 
 }
-
+.hamburger-menu .hide-element {
+  display: none !important;
+  opacity: 0;
+}
 .music-icons .hide-element {
   display: none !important;
   opacity: 0;
@@ -277,7 +280,7 @@ ol {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .background {
     height: 100vh;
     width: 100vw;
@@ -349,8 +352,9 @@ ol {
   position: relative;
   margin-right: 30px;
   z-index: 10;
+  display: block;
+  opacity: 1;
   /* Higher than .overlay's z-index */
-
   transition: transform 0.3s ease;
   /* Smooth animation */
   color: white;
