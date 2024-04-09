@@ -33,8 +33,7 @@ this.header = null;
       }
     });
     this.renderer.listen('window', 'scroll', (e: Event) => {
-      const scrollPosition = window.pageYOffset;
-
+      const scrollPosition = window.scrollY;
       if (scrollPosition > 100) {
         this.renderer.addClass(this.header, 'scrolled');
       } else {
