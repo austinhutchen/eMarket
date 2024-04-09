@@ -21,7 +21,9 @@ body {
   font-size: larger;
   color: white;
 }
-
+button{
+  background-color: rgba(0,0,0,0.3);
+}
 input[type="email"] {
   height: 3rem;
   /* Adjust this value as needed */
