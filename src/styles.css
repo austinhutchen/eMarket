@@ -51,7 +51,7 @@ button {
   width: 100%;
   opacity: 1;
   pointer-events: none;
-  animation: noiseFX 3s infinite;
+  animation: noiseFX 5s infinite;
   background: url('/assets/noise.png');
   background-color: rgba(0, 0, 0, 0.7);
   /* Semi-transparent black overlay */
@@ -134,49 +134,37 @@ section {
   animation: fadein 2s;
 
 }
+
 @keyframes noiseFX {
-
-  0%,
-  100% {
-    opacity: 0.2;
-    /* Lower value = stronger effect */
+  0%, 100% {
+    opacity: 0.2; /* Lower starting value = stronger effect */
   }
-
   10% {
     opacity: 0.22;
   }
-
   20% {
-    opacity: 0.24;
+    opacity: 0.23;
   }
-
   30% {
-    opacity: 0.26;
-  }
-
-  40% {
-    opacity: 0.28;
-  }
-
-  50% {
-    opacity: 0.3;
-    /* Lower maximum value = less grainy effect */
-  }
-
-  60% {
-    opacity: 0.28;
-  }
-
-  70% {
-    opacity: 0.26;
-  }
-
-  80% {
     opacity: 0.24;
   }
-
+  40% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.30; /* Higher maximum value = more grainy effect */
+  }
+  60% {
+    opacity: 0.33;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.3;
+  }
   90% {
-    opacity: 0.22;
+    opacity: 0.2;
   }
 }
 
@@ -433,31 +421,7 @@ body {
   animation: fadeInFromMiddle;
 }
 
-.links a {
-  display: block;
-  margin: 5px;
-  color: whitesmoke;
-  /* Darker color for better contrast against light background */
-  font-weight: 100;
 
-  text-decoration: none;
-
-  top: 2.2rem;
-  opacity: 1;
-  text-shadow:
-    0 1px 0 #ccc,
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0, 0, 0, .3),
-    0 0 5px rgba(0, 0, 0, .3),
-    0 1px 3px rgba(0, 0, 0, .4),
-    0 3px 5px rgba(0, 0, 0, .3),
-    0 5px 10px rgba(0, 0, 0, .4),
-    0 10px 10px rgba(0, 0, 0, .3),
-    0 20px 20px rgba(0, 0, 0, .2);
-}
 
 .links {
   opacity: 0;

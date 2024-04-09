@@ -22,28 +22,6 @@
   transform: translateY(0);
 }
 
-@keyframes noiseFX {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -10%);
-  }
-  30% {
-    transform: translate(3%, -15%);
-  }
-  50% {
-    transform: translate(12%, 9%);
-  }
-  70% {
-    transform: translate(9%, 4%);
-  }
-  90% {
-    transform: translate(-1%, 7%);
-  }
-}
-
-
 header.black-background .title {
   color: white;
 }
@@ -63,13 +41,26 @@ header.black-background .title {
   0 3px 0 #bbb,
   0 4px 0 #b9b9b9,
   0 5px 0 #aaa,
-  0 6px 1px rgba(0, 0, 0, .3),
-  0 0 5px rgba(0, 0, 0, .3),
-  0 1px 3px rgba(0, 0, 0, .4),
-  0 3px 5px rgba(0, 0, 0, .3),
-  0 5px 10px rgba(0, 0, 0, .4),
-  0 10px 10px rgba(0, 0, 0, .3),
-  0 20px 20px rgba(0, 0, 0, .2);
+  0 6px 1px rgba(0, 0, 0, .2),
+  0 0 5px rgba(0, 0, 0, .2),
+  0 1px 3px rgba(0, 0, 0, .3),
+  0 3px 5px rgba(0, 0, 0, .2),
+  0 5px 10px rgba(0, 0, 0, .3),
+  0 10px 10px rgba(0, 0, 0, .2),
+  0 20px 20px rgba(0, 0, 0, .1);
+}
+.links a {
+  display: block;
+  margin: 5px;
+  color: whitesmoke;
+  /* Darker color for better contrast against light background */
+  font-weight: 100;
+
+  text-decoration: none;
+
+  top: 2.7rem;
+  opacity: 1;
+
 }
 .menu-item2 {
   padding: 6px 3px;
