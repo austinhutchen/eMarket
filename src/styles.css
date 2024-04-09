@@ -98,7 +98,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 250px;
+  padding-bottom: 300px;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
 }
@@ -108,7 +108,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8vh;
+  margin-top: 6.5vh;
   justify-content: center;
 }
 
