@@ -311,9 +311,9 @@ section {
     margin-top: 50svh;
     z-index: 6;
     color: white;
-    font-weight: 150;
+    font-weight: 100;
     font-family: 'anziano';
-    font-size: 2.5em; /* Increase font size */
+    font-size: 2.3em; /* Increase font size */
     width: 100%; /* Take full width of the parent */
     text-align: center; /* Center the text */
   }
