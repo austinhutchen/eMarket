@@ -23,9 +23,9 @@ body {
 }
 
 input[type="email"] {
-  height: 4.5em;
+  height: 5em;
   /* Adjust this value as needed */
-  width: 15.5em;
+  width: 16em;
   /* Adjust this value as needed */
 }
 
