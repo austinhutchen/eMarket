@@ -65,7 +65,7 @@ button {
 .background {
   position: relative;
   width: 100%;
-  height: 70svh;
+  height: 73svh;
   display: flex;
   /* Add this line */
   justify-content: center;
@@ -222,12 +222,19 @@ section {
 }
 
 
-
+.music-icons img{
+ width: auto;
+ height: 3vh;
+}
 .music-icons {
   display: flex;
   flex-direction: row;
   opacity: 1;
+  width: 100%;
+  gap: 20px;
 
+justify-content: center;
+flex-direction: row;
 }
 .hamburger-menu .hide-element {
   display: none !important;
@@ -248,10 +255,6 @@ section {
   }
 }
 
-.music-icons a img {
-  margin: 0 10px;
-  /* Adds 20px of space on the left side of each image */
-}
 
 
 
