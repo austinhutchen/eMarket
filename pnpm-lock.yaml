@@ -38,6 +38,9 @@ dependencies:
   express:
     specifier: ^4.19.2
     version: 4.19.2
+  intersection-observer:
+    specifier: ^0.12.2
+    version: 0.12.2
   rxjs:
     specifier: ~7.8.1
     version: 7.8.1
@@ -4562,6 +4565,10 @@ packages:
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
     dev: true
+
+  /intersection-observer@0.12.2:
+    resolution: {integrity: sha512-7m1vEcPCxXYI8HqnL8CKI6siDyD+eIWSwgB3DZA+ZTogxk9I4CDnj4wilt9x/+/QbHI4YG5YZNmC6458/e9Ktg==}
+    dev: false
 
   /ip-address@9.0.5:
     resolution: {integrity: sha512-zHtQzGojZXTwZTHQqra+ETKd4Sn3vgi7uBmlPoXVWZqYvuKmtI0l/VZTjqGmJY9x88GGOaZ9+G9ES8hC4T4X8g==}

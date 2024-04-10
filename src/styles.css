@@ -202,7 +202,9 @@ section {
 
 
 
-
+.fade-in {
+  animation: fadeInFromMiddle 1s ease-in forwards;
+}
 
 
 .header {
