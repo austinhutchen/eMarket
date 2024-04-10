@@ -4,7 +4,6 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -24,6 +23,14 @@
       "dom"
     ]
   },
+  "files": [
+    "src/polyfills.ts" ,
+    "src/main.ts",
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

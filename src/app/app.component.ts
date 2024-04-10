@@ -44,8 +44,12 @@ export class AppComponent implements AfterViewInit {
         return;
       }
       this.observer.observe(this.mailBox);
-    } else {
-      console.log("Intersection observer is not supported here");
+    }  else {
+      // Fallback for environments that don't support IntersectionObserver
+      if (this.mailBox) {
+        
+          this.renderer.addClass(this.mailBox, 'show');
+      }
     }
   }
   constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object, @Inject(DOCUMENT) private document: Document, private el: ElementRef) {
