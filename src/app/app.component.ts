@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
@@ -52,7 +52,7 @@ export class AppComponent implements AfterViewInit {
       }
     }
   }
-  constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object, @Inject(DOCUMENT) private document: Document, private el: ElementRef) {
+  constructor(private renderer: Renderer2,@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object, private el: ElementRef) {
     this.header = null;
     this.observer = null;
     this.renderer.listen('window', 'scroll', (e: Event) => {
