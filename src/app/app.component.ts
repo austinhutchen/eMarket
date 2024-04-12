@@ -64,7 +64,7 @@ export class AppComponent implements AfterViewInit {
       }
     });
 
-    this.renderer.listen('window', 'load', (e: Event) => {
+    this.renderer.listen('window', 'resize', (e: Event) => {
       this.isDesktop = window.innerWidth > 768;
       (this.isDesktop) ? this.renderer.removeClass(this.musicIcons, 'hide-element') : this.renderer.addClass(this.musicIcons, 'hide-element');
       (this.isDesktop) ? this.renderer.addClass(this.hamburgerMenu, 'hide-element') : this.renderer.removeClass(this.hamburgerMenu, 'hide-element');
