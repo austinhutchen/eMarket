@@ -382,7 +382,7 @@ section {
 @media (max-width: 700px) {
 
 .menu-open .links a {
-  animation: fadeOut 0.8s ;
+  animation: fadeOut 0.6s;
 }
   .overlay {
     position: fixed;
