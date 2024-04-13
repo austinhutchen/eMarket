@@ -447,7 +447,7 @@ section {
     align-items: center;
     z-index: 6;
     color: white;
-    top: 50svh;
+    top: 43svh;
     font-weight: 100;
     font-family: 'anziano';
     font-size: 4svh;
@@ -512,7 +512,7 @@ section {
 
   .overlay-icons {
     position: fixed;
-    bottom: 100px;
+    bottom: 5vh;
     left: 0;
     width: 100%;
     display: flex;
