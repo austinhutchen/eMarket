@@ -11,6 +11,8 @@ import { PLATFORM_ID } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements AfterViewInit {
+  @Inject(DOCUMENT) private document: Document;
+  @Inject(PLATFORM_ID) private platformId: Object;
   title: string = 'DLOR';
   overLay: boolean = false;
   private header!: HTMLElement | null;
@@ -52,7 +54,8 @@ export class AppComponent implements AfterViewInit {
       }
     }
   }
-  constructor(private renderer: Renderer2,@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object, private el: ElementRef) {
+  constructor(private renderer: Renderer2, private el: ElementRef) {
+
     this.header = null;
     this.observer = null;
     this.renderer.listen('window', 'scroll', (e: Event) => {
