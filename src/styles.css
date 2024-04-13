@@ -21,9 +21,14 @@ body {
   margin: 10px 0;
   transition: all 0.3s linear;
 }
+.mailChimpHeader{
+  font-family: 'minerva-modern';
+  font-weight: 100;
+
+}
 .title {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 100;
   color: white;
   font-family: minerva-modern;
   opacity: 1;
@@ -46,17 +51,18 @@ button {
 }
 
 input[type="email"] {
-  height: 3rem;
+  height: 3.6rem;
   /* Adjust this value as needed */
-  width: 12rem;
+  width: 14rem;
+  text-align: center;
   /* Adjust this value as needed */
 }
 
 button {
-  height: 3rem;
+  height: 4rem;
   pointer-events: all;
   /* Adjust this value as needed */
-  width: 6rem;
+  width: 6.4rem;
   /* Adjust this value as needed */
 }
 
@@ -86,7 +92,7 @@ button {
 .background {
   position: relative;
   width: 100%;
-  height: 73svh;
+  height: 68%;
   display: flex;
   /* Add this line */
   justify-content: center;
@@ -131,7 +137,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12vh;
   justify-content: center;
 }
 
@@ -139,6 +144,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:5%;
 }
 
 @keyframes fadeInFromMiddle {
@@ -278,7 +284,10 @@ section {
   .hamburger-menu {
     display: none;
   }
-
+  .mailBox{
+    display: flex;
+    margin-top: 1%;
+  }
   /* DESKTOP*/
   .headerLinks {
     display: flex;
@@ -304,7 +313,10 @@ section {
 }
 
 @media (max-width: 620px) {
+  .mailBox{
+    margin-top: 1%;
 
+  }
   .background {
     height: 100vh;
     width: 100vw;
