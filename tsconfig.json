@@ -1,9 +1,15 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "./*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": false,
+    "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -13,26 +19,22 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "Node16",
+    "moduleResolution": "NodeNext",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "Node16",
+    "module": "NodeNext",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2022",
+      "ES2023",
       "dom"
     ]
   },
   "files": [
-    "src/polyfills.ts" ,
     "src/main.ts",
-    "src/app/server.ts",
+    "src/server.ts",
     "src/main.server.ts",
-    
   ],
-  "include": [
-    "src/**/*.d.ts"
-  ],
+ 
 
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

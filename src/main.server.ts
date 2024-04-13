@@ -1,7 +1,12 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { config } from './app/app.config.server';
-import 'zone.js';
-const AppServerModule = () => bootstrapApplication(AppComponent, config);
-
-export default AppServerModule;
+import { NgModule } from '@angular/core';
+import { ServerModule } from '@angular/platform-server';
+import { AppModule } from './app/app.module'; // Corrected path
+import {AppComponent} from './app/app.component'
+@NgModule({
+  imports: [
+   AppModule, // Add this line
+    ServerModule
+  ],
+  bootstrap: [AppComponent], // Add this line if you have a root component
+})
+export default class AppServerModule { }

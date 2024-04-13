@@ -4,15 +4,16 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
+      "jasmine",
       "node"
     ]
   },
   "files": [
-    "src/polyfills.ts",
     "src/main.ts",
     "src/main.server.ts",
+    "server.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.ts"  // Include all TypeScript files
   ]
 }
