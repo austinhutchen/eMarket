@@ -6,7 +6,7 @@ body {
   overflow-y: auto;
   height: 100%;
   margin: 0;
-  z-index:0;
+  z-index: 0;
   padding: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
@@ -24,7 +24,7 @@ body {
 
 
 .title {
-  font-size: 7svw;
+  font-size: 3svh;
   font-weight: 200;
   color: white;
 
@@ -38,7 +38,7 @@ body {
 
 .links a {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   /* Adjust this value to increase or decrease the space */
 }
 
@@ -68,6 +68,7 @@ body {
 .menu>* {
   display: block;
   width: 100%;
+
   /* ...other styles... */
 }
 
@@ -322,19 +323,19 @@ section {
   /* DESKTOP*/
   .headerLinks {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     pointer-events: all;
     z-index: 6;
     color: white;
     font-weight: 150;
     font-family: 'minerva-modern';
-    font-size: 1.3em;
+    font-size: 2svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
     text-align: center;
     /* Center the text */
-    margin-left: 3%;
+    margin-left: 1%;
 
   }
 
@@ -345,8 +346,8 @@ section {
 
 }
 
-.overlay{
-  display:none;
+.overlay {
+  display: none;
 }
 
 @media (max-width: 700px) {
@@ -361,12 +362,13 @@ section {
     /* Apply the animation */
     background: rgba(0, 0, 0, 1);
     /* Solid black */
-  
+
     /* Initially hidden */
     z-index: 5;
     /* This should be higher than the z-index of .background and .hamburger-menu */
     /* Initially hidden */
   }
+
   .links .menu-item1 a {
     font-size: 20vw;
   }
@@ -377,7 +379,7 @@ section {
 
   .mailBox {
     margin-top: 4%;
-  
+
   }
 
   .background {
@@ -390,13 +392,13 @@ section {
   .overlay-links {
     display: flex;
     gap: 25px;
-    position:absolute;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 6;
     color: white;
-    margin-top: 43svh;
+    top: 40%;
     font-weight: 100;
     font-family: 'anziano';
     font-size: 7.3vw;
@@ -453,7 +455,9 @@ section {
 
   }
 
-
+.title{
+  font-size: 
+}
   .overlay-icons img {
     width: auto;
     height: 2.3rem;
