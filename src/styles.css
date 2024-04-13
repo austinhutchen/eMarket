@@ -20,11 +20,7 @@ body {
   transition: all 0.3s linear;
 }
 
-.mailChimpHeader {
-  font-family: 'minerva-modern';
-  font-weight: 100;
 
-}
 
 .title {
   font-size: 2.3rem;
@@ -39,19 +35,39 @@ body {
 }
 
 
-
-.links {
+.links a {
   display: block;
-  color: whitesmoke;
-  /* Darker color for better contrast against light background */
-  text-decoration: none;
-  top: 3.4rem;
-  opacity: 1;
+  margin-bottom: 40px;
+  /* Adjust this value to increase or decrease the space */
 }
 
-.links {
-  animation: fadeInFromMiddle 1.5s;
-  animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+.menu {
+  top: 40%;
+  /* Dark background */
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+  animation: fadeInFromMiddle 2s cubic-bezier(0.42, 0, 0.58, 1.0);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  /* Remove border */
+  position: absolute;
+  /* Adjust as needed */
+  right: -1;
+  /* Wider menu */
+  z-index: 4;
+  /* Smooth animation */
+  /* Initially hidden */
+
+  /* Smooth transition */
+  /* White text */
+}
+
+.menu>* {
+  display: block;
+  width: 100%;
+  /* ...other styles... */
 }
 
 
@@ -134,7 +150,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 300px;
+  margin-top: 6%;
   /* Pushes children to the bottom */
   /* Full height of the viewport */
 }
@@ -152,7 +168,6 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 5%;
 }
 
 @keyframes fadeInFromMiddle {
@@ -293,7 +308,7 @@ section {
 
 
 
-@media not (max-width: 750px) {
+@media not (max-width: 700px) {
   .hamburger-menu {
     display: none;
   }
@@ -307,7 +322,7 @@ section {
   /* DESKTOP*/
   .headerLinks {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     pointer-events: all;
     z-index: 6;
     color: white;
@@ -327,6 +342,7 @@ section {
     flex: 1;
 
   }
+
 }
 
 .overlay {
@@ -348,7 +364,15 @@ section {
   /* Initially hidden */
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
+  .links .menu-item1 a {
+    font-size: 10vw;
+  }
+
+  .links .menu-item2 a {
+    font-size: 8vw;
+  }
+
   .mailBox {
     margin-top: 4%;
 
@@ -360,15 +384,17 @@ section {
   }
 
 
+
   .overlay-links {
     display: flex;
     gap: 25px;
+    position:absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 6;
     color: white;
-    margin-top: 25em;
+    margin-top: 43svh;
     font-weight: 100;
     font-family: 'anziano';
     font-size: 7.3vw;
@@ -508,19 +534,7 @@ section {
   background-image: url("/assets/background.webp")
 }
 
-.menu.open {
-  display: block;
-  transform: translateX(0);
-  z-index: 4;
 
-  .header.line {
-    background-color: #fff;
-    /* White color when menu is open */
-
-  }
-
-  /* Slide out when open */
-}
 
 
 
@@ -529,54 +543,16 @@ section {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.menu.open .link a {
-  animation: fadeInFromMiddle;
-}
 
 
 
-.links {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-  justify-content: space-evenly;
-  text-align: center;
-  animation: fadeInFromMiddle 3s cubic-bezier(0.42, 0, 0.58, 1.0);
 
-  flex-direction: column;
-  align-items: center;
-  gap: 70px;
-  /* Adjust as needed */
-}
+
 
 .mailChimpHeader {
-  padding-bottom: 10px;
   /* Adds padding to the bottom of the title */
-  font-size: 2.3rem;
-  white-space: pre-wrap;
-  font-family: "aziano";
+  font-size: 2.6rem;
+  font-family: 'minerva-modern';
   font-weight: 100;
   color: white;
-}
-
-.menu {
-  top: 30%;
-  display: block;
-  /* Dark background */
-  justify-content: center;
-  align-items: center;
-  border: none;
-  /* Remove border */
-  position: absolute;
-  /* Adjust as needed */
-  right: -1;
-  width: 100%;
-  /* Wider menu */
-  height: 5svh;
-  animation: ease 2s;
-  /* Smooth animation */
-  /* Initially hidden */
-
-  /* Smooth transition */
-  /* White text */
 }

@@ -1,11 +1,5 @@
 
 
-
-
-.menu.open .links {
-  opacity: 1;
-}
-
 .body.open {
   display: flex;
   transform: translateY(0);
@@ -20,39 +14,29 @@ header.black-background .title {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.links a {
-  display: block;
-  /* ...other styles... */
-}
-.links {
-  color: whitesmoke;
-  gap:20px;
-  /* Darker color for better contrast against light background */
-  text-decoration: none;
-  top: 3.4rem;
-  opacity: 1;
-}
+
+
 
 .menu-item1 {
   padding: 6px 3px;
-  font-size: 1.8rem;
+  font-size: 4.3vw;
   text-shadow:
-  0 1px 0 #ccc,
-  0 2px 0 #c9c9c9,
-  0 3px 0 #bbb,
-  0 4px 0 #b9b9b9,
-  0 5px 0 #aaa,
-  0 6px 1px rgba(0, 0, 0, .2),
-  0 0 5px rgba(0, 0, 0, .2),
-  0 1px 3px rgba(0, 0, 0, .3),
-  0 3px 5px rgba(0, 0, 0, .2),
-  0 5px 10px rgba(0, 0, 0, .3),
-  0 10px 10px rgba(0, 0, 0, .2),
-  0 20px 20px rgba(0, 0, 0, .1);
+  0 1px 0 rgba(204, 204, 204, 0.5),
+  0 2px 0 rgba(201, 201, 201, 0.5),
+  0 3px 0 rgba(187, 187, 187, 0.5),
+  0 4px 0 rgba(185, 185, 185, 0.5),
+  0 5px 0 rgba(170, 170, 170, 0.5),
+  0 6px 1px rgba(0, 0, 0, 0.1),
+  0 0 2.5px rgba(0, 0, 0, 0.1),
+  0 1px 1.5px rgba(0, 0, 0, 0.15),
+  0 3px 2.5px rgba(0, 0, 0, 0.1),
+  0 5px 5px rgba(0, 0, 0, 0.15),
+  0 10px 5px rgba(0, 0, 0, 0.1),
+  0 20px 10px rgba(0, 0, 0, 0.05);
 }
 
 .menu-item2 {
   padding: 6px 3px;
-  text-shadow: 0.5px 0.5px #ccc, 0.7px 0.7px #c9c9c9, 0.6px 0.6px #b6b6b6;
-  font-size: 1.3rem;
+  text-shadow: 0.5px 0.5px rgba(204, 204, 204, 0.2), 0.7px 0.7px rgba(201, 201, 201, 0.2), 0.6px 0.6px rgba(182, 182, 182, 0.2);
+  font-size: 2.7vw;
 }

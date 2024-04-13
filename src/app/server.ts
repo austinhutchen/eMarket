@@ -1,20 +1,31 @@
-import express from 'express';
+import 'zone.js/dist/zone-node';
 import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app.module';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
+import AppServerModule from '../main.server';
+import * as express from 'express';
+import { join } from 'path';
+
+enableProdMode();
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 4000;
+const DIST_FOLDER = join(process.cwd(), 'dist');
 
-app.get('/', (req, res) => {
- res.send('Hello, world!');
+app.engine('html', ngExpressEngine({
+ bootstrap: AppServerModule,
+ providers: [
+ ]
+}));
+
+app.set('view engine', 'html');
+app.set('views', join(DIST_FOLDER, 'browser'));
+
+app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
+app.get('*', (req, res) => {
+ res.render('index', { req });
 });
 
-app.listen(port, () => {
- console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+ console.log(`Node server listening on http://localhost:${PORT}`);
 });
-const bootstrap = async () => {
- const app = await platformBrowserDynamic().bootstrapModule(AppModule);
-};
-
-bootstrap().catch((err) => console.error(err));
