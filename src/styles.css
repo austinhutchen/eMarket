@@ -158,6 +158,7 @@ section {
 .mailBox {
   animation: fadeInFromMiddle 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
+  padding-bottom: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
