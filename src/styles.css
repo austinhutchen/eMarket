@@ -324,12 +324,11 @@ section {
   .headerLinks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    pointer-events: all;
     z-index: 6;
     color: white;
-    font-weight: 150;
+    font-weight: 100;
     font-family: 'minerva-modern';
-    font-size: 2svh;
+    font-size: 1.7svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
@@ -343,7 +342,29 @@ section {
     flex: 1;
 
   }
-
+  .menu-item1 {
+    padding: 6px 3px;
+    font-size: 3.6svh;
+    text-shadow:
+    0 1px 0 rgba(204, 204, 204, 0.3),
+    0 2px 0 rgba(201, 201, 201, 0.3),
+    0 3px 0 rgba(187, 187, 187, 0.3),
+    0 4px 0 rgba(185, 185, 185, 0.3),
+    0 5px 0 rgba(170, 170, 170, 0.3),
+    0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 2.5px rgba(0, 0, 0, 0.1),
+    0 1px 1.5px rgba(0, 0, 0, 0.15),
+    0 3px 2.5px rgba(0, 0, 0, 0.1),
+    0 5px 5px rgba(0, 0, 0, 0.15),
+    0 10px 5px rgba(0, 0, 0, 0.1),
+    0 20px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .menu-item2 {
+    padding: 6px 3px;
+    text-shadow: 0.5px 0.5px rgba(204, 204, 204, 0.2), 0.7px 0.7px rgba(201, 201, 201, 0.2), 0.6px 0.6px rgba(182, 182, 182, 0.2);
+    font-size: 2.1svh;
+  }
 }
 
 .overlay {
@@ -369,12 +390,28 @@ section {
     /* Initially hidden */
   }
 
-  .links .menu-item1 a {
-    font-size: 20vw;
+  .menu-item1 {
+    padding: 6px 3px;
+    font-size: 6vw;
+    text-shadow:
+    0 1px 0 rgba(204, 204, 204, 0.5),
+    0 2px 0 rgba(201, 201, 201, 0.5),
+    0 3px 0 rgba(187, 187, 187, 0.5),
+    0 4px 0 rgba(185, 185, 185, 0.5),
+    0 5px 0 rgba(170, 170, 170, 0.5),
+    0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 2.5px rgba(0, 0, 0, 0.1),
+    0 1px 1.5px rgba(0, 0, 0, 0.15),
+    0 3px 2.5px rgba(0, 0, 0, 0.1),
+    0 5px 5px rgba(0, 0, 0, 0.15),
+    0 10px 5px rgba(0, 0, 0, 0.1),
+    0 20px 10px rgba(0, 0, 0, 0.05);
   }
-
-  .links .menu-item2 a {
-    font-size: 15vw;
+  
+  .menu-item2 {
+    padding: 6px 3px;
+    text-shadow: 0.5px 0.5px rgba(204, 204, 204, 0.2), 0.7px 0.7px rgba(201, 201, 201, 0.2), 0.6px 0.6px rgba(182, 182, 182, 0.2);
+    font-size: 4vw;
   }
 
   .mailBox {
@@ -455,9 +492,7 @@ section {
 
   }
 
-.title{
-  font-size: 
-}
+
   .overlay-icons img {
     width: auto;
     height: 2.3rem;
