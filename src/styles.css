@@ -118,7 +118,7 @@ button {
 .background {
   position: relative;
   width: 100%;
-  height: 68%;
+  height: 70%;
   display: flex;
   /* Add this line */
   justify-content: center;
@@ -406,11 +406,11 @@ section {
     padding: 6px 3px;
     font-size: 6vw;
     text-shadow:
-      0 1px 0 rgba(204, 204, 204, 0.5),
-      0 2px 0 rgba(201, 201, 201, 0.5),
-      0 3px 0 rgba(187, 187, 187, 0.5),
-      0 4px 0 rgba(185, 185, 185, 0.5),
-      0 5px 0 rgba(170, 170, 170, 0.5),
+      0 1px 0 rgba(204, 204, 204, 0.3),
+      0 2px 0 rgba(201, 201, 201, 0.3),
+      0 3px 0 rgba(187, 187, 187, 0.3),
+      0 4px 0 rgba(185, 185, 185, 0.3),
+      0 5px 0 rgba(170, 170, 170, 0.3),
       0 6px 1px rgba(0, 0, 0, 0.1),
       0 0 2.5px rgba(0, 0, 0, 0.1),
       0 1px 1.5px rgba(0, 0, 0, 0.15),
@@ -447,10 +447,10 @@ section {
     align-items: center;
     z-index: 6;
     color: white;
-    top: 40%;
+    top: 50svh;
     font-weight: 100;
     font-family: 'anziano';
-    font-size: 7.3vw;
+    font-size: 4svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
