@@ -367,16 +367,16 @@ section {
 
 @media (max-width: 700px) {
   .links .menu-item1 a {
-    font-size: 10vw;
+    font-size: 15vw;
   }
 
   .links .menu-item2 a {
-    font-size: 8vw;
+    font-size: 13vw;
   }
 
   .mailBox {
     margin-top: 4%;
-
+  
   }
 
   .background {
