@@ -234,14 +234,12 @@ section {
 @-webkit-keyframes fadeInFromMiddle {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 
