@@ -54,7 +54,6 @@ input[type="email"] {
   height: 3.6rem;
   /* Adjust this value as needed */
   width: 14rem;
-  text-align: center;
   /* Adjust this value as needed */
 }
 
@@ -144,6 +143,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap:5%;
 }
 
@@ -331,7 +331,7 @@ section {
     align-items: center;
     z-index: 6;
     color: white;
-    margin-top: 74%;
+    margin-top: 70%;
     font-weight: 100;
     font-family: 'anziano';
     font-size: 2.3em;
