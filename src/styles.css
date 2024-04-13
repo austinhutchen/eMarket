@@ -381,6 +381,7 @@ section {
 
 .menu-open .links a {
   animation: fadeOut 0.2s;
+  opacity:0;
 }
   .overlay {
     position: fixed;
