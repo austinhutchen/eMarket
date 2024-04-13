@@ -57,7 +57,7 @@ export class AppComponent implements AfterViewInit {
     this.observer = null;
     this.renderer.listen('window', 'scroll', (e: Event) => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition < 100) {
+      if (scrollPosition > 0) {
         this.renderer.addClass(this.header, 'scrolled');
       } else {
         this.renderer.removeClass(this.header, 'scrolled');
