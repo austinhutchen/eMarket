@@ -21,29 +21,41 @@ body {
   margin: 10px 0;
   transition: all 0.3s linear;
 }
-.mailChimpHeader{
+
+.mailChimpHeader {
   font-family: 'minerva-modern';
   font-weight: 100;
 
 }
+
 .title {
-  font-size: 1.8rem;
-  font-weight: 100;
+  font-size: 2.3rem;
+  font-weight: 200;
   color: white;
-  font-family: minerva-modern;
+
+  font-family: 'minerva-modern';
   opacity: 1;
   text-align: center;
   /* Centers the title in its column */
 
 }
-.title {font-family: 'minerva-modern';}
 
-.links a {
-  font-family: 'anziano';
-  font-weight: 100;
-  font-size: larger;
-  color: white;
+
+
+.links {
+  display: block;
+  color: whitesmoke;
+  /* Darker color for better contrast against light background */
+  text-decoration: none;
+  top: 3.4rem;
+  opacity: 1;
 }
+
+.links {
+  animation: fadeInFromMiddle 1.5s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
 
 button {
   color: white;
@@ -84,9 +96,7 @@ button {
   z-index: 3;
 }
 
-.links {
-  padding-top: 2vh;
-}
+
 
 .background {
   position: relative;
@@ -144,7 +154,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap:5%;
+  gap: 5%;
 }
 
 @keyframes fadeInFromMiddle {
@@ -165,8 +175,11 @@ section {
 }
 
 @keyframes noiseFX {
-  0%, 100% {
-    opacity: 0.35; /* Lower starting value = stronger effect */
+
+  0%,
+  100% {
+    opacity: 0.35;
+    /* Lower starting value = stronger effect */
   }
 
   10% {
@@ -198,7 +211,8 @@ section {
   }
 
   80% {
-    opacity: 0.39; /* Higher maximum value = more grainy effect */
+    opacity: 0.39;
+    /* Higher maximum value = more grainy effect */
   }
 }
 
@@ -227,29 +241,30 @@ section {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 1.5fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   transition: background-color 0.5s ease-in-out;
   position: absolute;
   top: 1.8vh;
+
   width: 100%;
   z-index: 999;
+  animation: fadeInFromMiddle 0.6s cubic-bezier(0.42, 0, 0.58, 1.0);
 }
 
 .music-icons {
   display: flex;
   flex-direction: row;
   opacity: 1;
-  width: 100%;
-  gap: 12px;
+  gap: 2vw;
 
   justify-content: center;
   flex-direction: row;
 }
 
 .music-icons img {
-  width: auto;
-  height: 1.5rem;
+  width: 100%;
+  height: 1.3em;
 }
 
 
@@ -280,43 +295,67 @@ section {
 
 
 
-@media not (max-width: 620px) {
+@media not (max-width: 750px) {
   .hamburger-menu {
     display: none;
   }
-  .mailBox{
+
+  .mailBox {
     display: flex;
-    margin-top: 1%;
+    margin-top: 2%;
   }
+
+
   /* DESKTOP*/
   .headerLinks {
-    display: flex;
-    margin-left: 7%;
-
-    gap: 20px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    pointer-events: all;
     z-index: 6;
     color: white;
     font-weight: 150;
-    font-family: 'anziano';
-    font-size: 1.1em;
+    font-family: 'minerva-modern';
+    font-size: 1.3em;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
     text-align: center;
     /* Center the text */
+    margin-left: 3%;
 
+  }
+
+  .headerLinks a {
+    flex: 1;
 
   }
 }
 
-@media (max-width: 620px) {
-  .mailBox{
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Transition the opacity over 0.5 seconds */
+  animation: fadeInFromMiddle 0.75s cubic-bezier(0.42, 0, 0.58, 1.0);
+  /* Apply the animation */
+  background: rgba(0, 0, 0, 1);
+  /* Solid black */
+
+  /* Initially hidden */
+  z-index: 5;
+  /* This should be higher than the z-index of .background and .hamburger-menu */
+  display: none;
+  /* Initially hidden */
+}
+
+@media (max-width: 750px) {
+  .mailBox {
     margin-top: 4%;
 
   }
+
   .background {
     height: 100vh;
     width: 100vw;
@@ -331,10 +370,10 @@ section {
     align-items: center;
     z-index: 6;
     color: white;
-    margin-top: 68%;
+    margin-top: 25em;
     font-weight: 100;
     font-family: 'anziano';
-    font-size: 2.3em;
+    font-size: 7.3vw;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
@@ -346,8 +385,6 @@ section {
   .music-icons {
     opacity: 0;
     display: none;
-    width: auto;
-    height: 5%;
   }
 
   .hamburger-menu {
@@ -392,16 +429,18 @@ section {
 
 
   .overlay-icons img {
-    height: 4vh;
-    width: 4vh;
+    width: auto;
+    height: 2.3rem;
   }
 
   .overlay-icons {
     position: fixed;
-    bottom: 12vh;
+    bottom: 100px;
     left: 0;
     width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 20px;
   }
@@ -418,9 +457,8 @@ section {
     grid-template-columns: 1fr 2fr 0.5fr;
     /* Creates three columns */
     display: grid;
-
     align-items: center;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.8s ease-in-out;
     position: absolute;
     top: 1.8vh;
     width: 100%;
@@ -442,9 +480,9 @@ section {
   opacity: 0;
 }
 
-@keyframes slideInFromBottom {
+@keyframes slideInFromTop {
   0% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     opacity: 0;
   }
 
@@ -454,25 +492,7 @@ section {
   }
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1s ease-in-out;
-  /* Transition the opacity over 0.5 seconds */
-  animation: slideInFromBottom 0.5s forwards;
-  /* Apply the animation */
-  background: rgba(0, 0, 0, 1);
-  /* Solid black */
 
-  /* Initially hidden */
-  z-index: 5;
-  /* This should be higher than the z-index of .background and .hamburger-menu */
-  display: none;
-  /* Initially hidden */
-}
 
 
 
@@ -523,9 +543,11 @@ section {
   cursor: pointer;
   justify-content: space-evenly;
   text-align: center;
+  animation: fadeInFromMiddle 3s cubic-bezier(0.42, 0, 0.58, 1.0);
+
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  gap: 70px;
   /* Adjust as needed */
 }
 
@@ -560,4 +582,3 @@ section {
   /* Smooth transition */
   /* White text */
 }
-
