@@ -346,26 +346,28 @@ section {
 
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Transition the opacity over 0.5 seconds */
-  animation: fadeInFromMiddle 0.75s cubic-bezier(0.42, 0, 0.58, 1.0);
-  /* Apply the animation */
-  background: rgba(0, 0, 0, 1);
-  /* Solid black */
-
-  /* Initially hidden */
-  z-index: 5;
-  /* This should be higher than the z-index of .background and .hamburger-menu */
-  display: none;
-  /* Initially hidden */
+.overlay{
+  display:none;
 }
 
 @media (max-width: 700px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Transition the opacity over 0.5 seconds */
+    animation: fadeInFromMiddle 0.75s cubic-bezier(0.42, 0, 0.58, 1.0);
+    /* Apply the animation */
+    background: rgba(0, 0, 0, 1);
+    /* Solid black */
+  
+    /* Initially hidden */
+    z-index: 5;
+    /* This should be higher than the z-index of .background and .hamburger-menu */
+    /* Initially hidden */
+  }
   .links .menu-item1 a {
     font-size: 15vw;
   }
