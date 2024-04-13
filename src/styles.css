@@ -6,6 +6,7 @@ body {
   overflow-y: auto;
   height: 100%;
   margin: 0;
+  z-index:0;
   padding: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
