@@ -391,7 +391,7 @@ section {
     width: 100%;
     height: 100%;
     /* Transition the opacity over 0.5 seconds */
-    animation: fadeInFromMiddle 0.75s cubic-bezier(0.42, 0, 0.58, 1.0);
+    animation: fadeInFromMiddle 1.2s cubic-bezier(0.42, 0, 0.58, 1.0);
     /* Apply the animation */
     background: rgba(0, 0, 0, 1);
     /* Solid black */
