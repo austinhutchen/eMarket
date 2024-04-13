@@ -20,8 +20,18 @@ header.black-background .title {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-
-
+.links a {
+  display: block;
+  /* ...other styles... */
+}
+.links {
+  color: whitesmoke;
+  gap:20px;
+  /* Darker color for better contrast against light background */
+  text-decoration: none;
+  top: 3.4rem;
+  opacity: 1;
+}
 
 .menu-item1 {
   padding: 6px 3px;

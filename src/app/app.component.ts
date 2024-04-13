@@ -3,22 +3,18 @@ import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
-
+interface Menu { }
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
-  @Inject(DOCUMENT) private document: Document;
-  @Inject(PLATFORM_ID) private platformId: Object;
+class AppComponent implements AfterViewInit {
   title: string = 'DLOR';
   overLay: boolean = false;
   private header!: HTMLElement | null;
   private hamburgerMenu!: HTMLElement | null;
-  private musicIcons!: HTMLElement | null;
-  private bg!: HTMLElement | null;
   private mailBox!: HTMLElement | null;
   menu: string[] = ["Home", "Shop", "Contact"];
   isOpen: boolean = false;
@@ -26,35 +22,12 @@ export class AppComponent implements AfterViewInit {
   isDesktop: boolean = false;
   inputValue: string = '';
   private observer: IntersectionObserver | null;
-  ngAfterViewInit() {
-    this.header = this.document.querySelector('.header');
-    this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
-    this.musicIcons = this.document.querySelector('.music-icons');
-    this.bg = this.document.querySelector('background');
-    this.mailBox = this.document.querySelector('.mailBox');
-    if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
-      this.observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.renderer.addClass(this.mailBox, 'fade-in');
-          } else {
-            this.renderer.removeClass(this.mailBox, 'fade-in');
-          }
-        });
-      });
-      if (!this.mailBox) {
-        return;
-      }
-      this.observer.observe(this.mailBox);
-    }  else {
-      // Fallback for environments that don't support IntersectionObserver
-      if (this.mailBox) {
-        
-          this.renderer.addClass(this.mailBox, 'show');
-      }
-    }
-  }
-  constructor(private renderer: Renderer2, private el: ElementRef) {
+  constructor(
+    private renderer: Renderer2,
+    private el: ElementRef,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
 
     this.header = null;
     this.observer = null;
@@ -67,13 +40,33 @@ export class AppComponent implements AfterViewInit {
       }
     });
 
-    this.renderer.listen('window', 'resize', (e: Event) => {
-      this.isDesktop = window.innerWidth > 768;
-      (this.isDesktop) ? this.renderer.removeClass(this.musicIcons, 'hide-element') : this.renderer.addClass(this.musicIcons, 'hide-element');
-      (this.isDesktop) ? this.renderer.addClass(this.hamburgerMenu, 'hide-element') : this.renderer.removeClass(this.hamburgerMenu, 'hide-element');
-
-    });
   }
+
+
+  ngAfterViewInit() {
+    this.header = this.document.querySelector('.header');
+    this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
+    this.mailBox = this.document.querySelector('.mailBox');
+    if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(this.mailBox, 'fade-in');
+          } else {
+            this.renderer.removeClass(this.mailBox, 'fade-in');
+          }
+        });
+      }, {
+        threshold: 1.0 // Adjust this value
+      });
+
+      if (!this.mailBox) {
+        return;
+      }
+      this.observer.observe(this.mailBox);
+    }
+  }
+
 
   toggleOverlay() {
     this.overLay = !this.overLay;
@@ -106,3 +99,5 @@ export class AppComponent implements AfterViewInit {
     console.log(this.inputValue);
   }
 }
+
+export { AppComponent };
