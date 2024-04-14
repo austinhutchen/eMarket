@@ -173,7 +173,7 @@ section {
   text-align: center;
 }
 
-@keyframes fadeInFromMiddle {
+@keyframes fadeIn{
   from {
     opacity: 0;
     transition-timing-function: ease-in;
@@ -375,7 +375,12 @@ section {
 .overlay {
   display: none;
 }
-
+.header{
+  animation: fadeIn 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.menu {
+  animation: fadeIn 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
 @media (max-width: 700px) {
 
 .menu-open .links a {
