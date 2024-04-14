@@ -444,7 +444,7 @@ section {
 
   .overlay-links {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     position: absolute;
     flex-direction: column;
     justify-content: center;
@@ -454,7 +454,7 @@ section {
     top: 41svh;
     font-weight: 200;
     font-family: 'anziano';
-    font-size: 5svh;
+    font-size: 5.3svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
