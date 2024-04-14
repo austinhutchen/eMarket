@@ -12,7 +12,7 @@ body {
 }
 
 .menu, .header {
-  animation: fadeIn 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation: fadeIn 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 .line {
