@@ -507,12 +507,12 @@ section {
 
   .overlay-icons img {
     width: auto;
-    height: 2.4rem;
+    height: 2.6rem;
   }
 
   .overlay-icons {
     position: fixed;
-    bottom: 1.5vh;
+    bottom: 3svh;
     left: 0;
     width: 100%;
     display: flex;
