@@ -445,10 +445,10 @@ section {
     align-items: center;
     z-index: 6;
     color: white;
-    top: 43svh;
-    font-weight: 100;
+    top: 41svh;
+    font-weight: 200;
     font-family: 'anziano';
-    font-size: 4svh;
+    font-size: 5svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
