@@ -145,6 +145,7 @@ button {
   display: flex;
   flex-direction: column;
   white-space: pre-wrap;
+  text-align:center;
 }
 
 section {
