@@ -274,7 +274,6 @@ section {
 
   width: 100%;
   z-index: 999;
-  animation: fadeInFromMiddle cubic-bezier(0.42, 0, 0.58, 1.0);
 }
 
 .music-icons {
