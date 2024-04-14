@@ -403,7 +403,7 @@ section {
 
   .menu-item1 {
     padding: 6px 3px;
-    font-size: larger;
+    font-size: 4svh;
     text-shadow:
       0 1px 0 rgba(204, 204, 204, 0.3),
       0 2px 0 rgba(201, 201, 201, 0.3),
@@ -422,7 +422,7 @@ section {
   .menu-item2 {
     padding: 6px 3px;
     text-shadow: 0.5px 0.5px rgba(204, 204, 204, 0.2), 0.7px 0.7px rgba(201, 201, 201, 0.2), 0.6px 0.6px rgba(182, 182, 182, 0.2);
-    font-size: large;
+    font-size: 3svh;
   }
 
   .mailBox {
