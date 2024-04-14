@@ -511,14 +511,14 @@ section {
 
   .overlay-icons {
     position: fixed;
-    bottom: 2vh;
+    bottom: 1.5vh;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 14px;
   }
 
   .header> :last-child {
