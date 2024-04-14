@@ -32,7 +32,6 @@ body {
   opacity: 1;
   text-align: center;
   /* Centers the title in its column */
-
 }
 
 
@@ -49,7 +48,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border: none;
-  animation: fadeInFromMiddle 2s cubic-bezier(0.42, 0, 0.58, 1.0);
+  animation: fadeInFromMiddle cubic-bezier(0.42, 0, 0.58, 1.0);
   color: white;
   text-align: center;
   cursor: pointer;
@@ -259,7 +258,7 @@ section {
 
 
 .fade-in {
-  animation: fadeInFromMiddle 1s ease-in forwards;
+  animation: fadeInFromMiddle 1s ease-in;
 }
 
 .header {
@@ -272,7 +271,7 @@ section {
 
   width: 100%;
   z-index: 999;
-  animation: fadeInFromMiddle 1.5s cubic-bezier(0.42, 0, 0.58, 1.0);
+  animation: fadeInFromMiddle cubic-bezier(0.42, 0, 0.58, 1.0);
 }
 
 .music-icons {
@@ -333,17 +332,17 @@ section {
   .headerLinks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-column-align: end;
     z-index: 6;
     color: white;
     font-weight: 100;
     font-family: 'minerva-modern';
-    font-size: 1.7svh;
+    font-size: 1.6svh;
     /* Increase font size */
     width: 100%;
     /* Take full width of the parent */
     text-align: center;
     /* Center the text */
-    margin-left: 1%;
 
   }
 
@@ -380,8 +379,8 @@ section {
 @media (max-width: 700px) {
 
 .menu-open .links a {
-  animation: fadeOut 0.4s;
-  opacity:0;
+  animation: fadeOut 0.2s forwards;
+
 }
   .overlay {
     position: fixed;
@@ -390,7 +389,7 @@ section {
     width: 100%;
     height: 100%;
     /* Transition the opacity over 0.5 seconds */
-    animation: fadeInFromMiddle 0.8s cubic-bezier(0.42, 0, 0.58, 1.0);
+    animation: fadeInFromMiddle 0.6s cubic-bezier(0.42, 0, 0.58, 1.0);
     /* Apply the animation */
     background: rgba(0, 0, 0, 1);
     /* Solid black */
