@@ -51,7 +51,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border: none;
-  animation: fadeInFromMiddle cubic-bezier(0.42, 0, 0.58, 1.0);
   color: white;
   text-align: center;
   cursor: pointer;
@@ -379,12 +378,7 @@ section {
 .overlay {
   display: none;
 }
-.header{
-  animation: fadeIn 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);
-}
-.menu {
-  animation: fadeIn 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
-}
+
 @media (max-width: 700px) {
 
 .menu-open .links a {
