@@ -1,9 +1,5 @@
 
 
-.body.open {
-  display: flex;
-  transform: translateY(0);
-}
 
 header.black-background .title {
   color: white;
