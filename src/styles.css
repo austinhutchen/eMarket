@@ -247,7 +247,9 @@ section {
     opacity: 1;
   }
 }
-
+a {
+  cursor: pointer;
+}
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
