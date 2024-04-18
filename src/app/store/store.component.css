@@ -1,19 +1,43 @@
-.products{
+.products {}
+
+hr {
+z-index: 1002;
+}
+h3{
+ color: white;
+ font-family: "aziano";
+ font-weight: 100;
+}
+h1{
+ color: white;
+ font-family: "aziano";
+ font-weight: 150;
+font-size: 4vh;
+}
+.storeHead {
+ margin-top: 100px;
+ color: white;
 
 }
-.storeApp{
- height:100%;
- width:100%;
- display:flex;
+
+.store-header {
+ display: flex;
+ gap: 7px;
+ flex-direction: row;
+ list-style-type: none;
+}
+
+.storeApp {
+ height: 100%;
+ width: 100%;
+ display: flex;
  flex-direction: column;
  align-items: center;
  text-align: center;
- justify-content: center;
-margin-top: 30px; /* Adjust this value as needed */
-gap: 45px;
+ padding-bottom: 200px;
+ gap: 45px;
 }
-@media screen and (max-width: 600px) {
- .products {
 
- }
+@media screen and (max-width: 600px) {
+ .products {}
 }

@@ -1,4 +1,19 @@
 <div class="storeApp">
+ <h1 class="storeHead">STORE</h1>
+
+ <div class="store-header">
+  
+<h3>
+  HATS |
+</h3>
+<h3>
+  HOODIES |
+</h3>
+<h3>
+  SHIRTS
+</h3>
+<hr/>
+ </div>
  <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" class="products">
    <img [src]="product.image" alt="{{product.name}}" >
    <h2>{{product.name}}</h2>
