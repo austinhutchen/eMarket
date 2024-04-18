@@ -109,7 +109,7 @@ export class AppComponent implements AfterViewInit {
       this.overlayElement?.classList.add('exit');
       setTimeout(() => {
         this.closeMenu();
-      }, 400); // Adjust this value to match the duration of your exit animation
+      }, 300); // Adjust this value to match the duration of your exit animation
     }
   }
 
