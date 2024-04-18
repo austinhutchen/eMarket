@@ -13,3 +13,8 @@ header.black-background .title {
 
 
 
+a {
+  color: inherit; /* Inherit color from parent element */
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove outline */
+}
