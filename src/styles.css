@@ -16,12 +16,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  color:white;
   height: 100%;
   background: rgba(0, 0, 0, 1); /* Change this to the color you want */
 }
 .menu, .header {
   opacity:0;
-  animation: fadeIn 2s forwards cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation: fadeIn 2.2s forwards cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 .line {
@@ -185,12 +186,13 @@ section {
 }
 
 @keyframes fadeIn{
-  from {
+  0% {
     opacity: 0;
-    transition-timing-function: ease-in;
   }
-
-  to {
+  50%{
+    opacity: 0.6;
+  }
+  100% {
     opacity: 1;
   }
 }
