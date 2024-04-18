@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { AppRoutingModule } from './app.routes';
 import  {AppComponent}  from './app.component';
 import { StoreComponent } from './store/store.component';
-import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
