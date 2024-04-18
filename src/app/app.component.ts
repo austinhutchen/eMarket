@@ -12,8 +12,9 @@ import { PLATFORM_ID } from '@angular/core';
 
 export class AppComponent implements AfterViewInit {
   public title: string = 'DLOR';
-  public showOutlet:boolean = false;
+  public showOutlet: boolean = false;
   private overLay: boolean = false;
+  private overlayElement!: HTMLElement | null;
   private header!: Element | null | undefined;
   private hamburgerMenu!: HTMLElement | null;
   private mailBox!: HTMLElement | null;
@@ -49,6 +50,7 @@ export class AppComponent implements AfterViewInit {
     this.header = this.document?.querySelector('.header');
     this.hamburgerMenu = this.document?.querySelector('.hamburger-menu');
     this.mailBox = this.document?.querySelector('.mailBox');
+    this.overlayElement = this.document?.querySelector('.overlay');
     if (!this.header || !this.hamburgerMenu || !this.mailBox || !this.platformId) {
       return;
     }
@@ -101,9 +103,13 @@ export class AppComponent implements AfterViewInit {
     console.log(this.isOpen);
     this.hamburgerMenu?.classList.toggle('open');
     if (this.isOpen) {
+      this.overlayElement?.classList.remove('exit');
       this.openMenu();
     } else {
-      this.closeMenu();
+      this.overlayElement?.classList.add('exit');
+      setTimeout(() => {
+        this.closeMenu();
+      }, 400); // Adjust this value to match the duration of your exit animation
     }
   }
 
