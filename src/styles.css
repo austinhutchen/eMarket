@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 1); /* Change this to the color you want */
+  background-color: rgba(0, 0, 0, 0.8); /* Change this to the color you want */
 }
 .menu, .header {
   opacity:0;
@@ -407,7 +407,7 @@ a {
     /* Solid black */
 
     /* Initially hidden */
-    z-index: 5;
+    z-index: 1001;
     /* This should be higher than the z-index of .background and .hamburger-menu */
     /* Initially hidden */
   }
