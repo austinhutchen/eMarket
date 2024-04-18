@@ -3,5 +3,12 @@
  flex-direction: column;
  align-items: center;
  justify-content: center;
- margin-top:40%;
+ margin-top:25%;
+}
+
+@media screen and (max-width: 600px) {
+ .products {
+   flex-direction: column;
+   margin-top: 5%;
+ }
 }
