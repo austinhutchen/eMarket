@@ -27,7 +27,7 @@ body {
 
 @keyframes bounceInUp {
   0% {
-    transform: translateY(10vh);
+    transform: translateY(5vh);
     animation-timing-function: ease-in;
     opacity: 0;
   }
