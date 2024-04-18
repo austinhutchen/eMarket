@@ -18,10 +18,8 @@ export class AppComponent implements AfterViewInit {
   private header!: Element | null | undefined;
   private hamburgerMenu!: HTMLElement | null;
   private mailBox!: HTMLElement | null;
-  private menu: string[] = ["Home", "Shop", "Contact"];
   private isOpen: boolean = false;
   public isScrolled: boolean = false;
-  private isDesktop: boolean = false;
   private inputValue: string = '';
   private observer: IntersectionObserver | null;
   constructor(
@@ -30,9 +28,8 @@ export class AppComponent implements AfterViewInit {
     @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object | null
   ) {
-
-    this.header = null;
     this.observer = null;
+    this.header = null;
     this.renderer.listen('window', 'scroll', (e: Event) => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
@@ -109,7 +106,7 @@ export class AppComponent implements AfterViewInit {
       this.overlayElement?.classList.add('exit');
       setTimeout(() => {
         this.closeMenu();
-      }, 300); // Adjust this value to match the duration of your exit animation
+      }, 310); // Adjust this value to match the duration of your exit animation
     }
   }
 
