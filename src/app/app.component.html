@@ -1,8 +1,8 @@
 <div class="overlay">
   <div class="overlay-links">
-    <a routerLink="/store">STORE</a>
-    <a routerLink="/store">X1100</a>
-    <a routerLink="/store">HÓRDE</a>
+    <a routerLink="/store" target="_blank">STORE</a>
+    <a href="https://www.patreon.com/XII00" target="_blank">X1100</a>
+    <a href="https://mailchi.mp/a25c53434ecd/midnight-rage" target="_blank">HÓRDE</a>
   </div>
   <div class="overlay-icons">
     <a>
@@ -50,9 +50,9 @@
 
 <div class="header" [class.black-background]="isScrolled">
   <div class="headerLinks">
-    <a routerLink="/store">STORE</a>
-    <a routerLink="/store">X1100</a>
-    <a routerLink="/store">HÓRDE</a>
+    <a routerLink="/store" target="_blank">STORE</a>
+    <a href="https://www.patreon.com/XII00" target="_blank">X1100</a>
+    <a href="https://mailchi.mp/a25c53434ecd/midnight-rage" target="_blank">HÓRDE</a>
   </div>
   <div class="title">{{ title }}</div>
   <div class="music-icons" #musicIcons>
@@ -86,7 +86,6 @@
 
 </div>
 
-<router-outlet></router-outlet>
 
 <section>
   <div class="mailBox" #mailBox>
@@ -104,6 +103,7 @@
     </form>
   </div>
 </section>
+<router-outlet></router-outlet>
 
 <!-- Go to your Mailchimp account, navigate to the Audience tab.
 Click the Manage Audience drop-down and choose Signup forms.
