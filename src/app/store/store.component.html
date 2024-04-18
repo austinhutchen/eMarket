@@ -12,8 +12,9 @@
 <h3>
   SHIRTS
 </h3>
-<hr/>
  </div>
+
+<hr/>
  <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" class="products">
    <img [src]="product.image" alt="{{product.name}}" >
    <h2>{{product.name}}</h2>
