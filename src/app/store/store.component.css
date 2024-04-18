@@ -1,14 +1,19 @@
 .products{
+
+}
+.storeApp{
+ height:100%;
+ width:100%;
  display:flex;
  flex-direction: column;
  align-items: center;
+ text-align: center;
  justify-content: center;
- margin-top:25%;
+margin-top: 30px; /* Adjust this value as needed */
+gap: 45px;
 }
-
 @media screen and (max-width: 600px) {
  .products {
-   flex-direction: column;
-   margin-top: 5%;
+
  }
 }

@@ -1,6 +1,6 @@
 <div class="storeApp">
  <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" class="products">
-   <img [src]="product.image" alt="{{product.name}}">
+   <img [src]="product.image" alt="{{product.name}}" >
    <h2>{{product.name}}</h2>
    <p>{{product.description}}</p>
    <p>{{product.price}}</p>

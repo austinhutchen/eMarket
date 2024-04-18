@@ -282,7 +282,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   transition: background-color 0.5s ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 1.8vh;
 
   width: 100%;
