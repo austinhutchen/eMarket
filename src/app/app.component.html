@@ -1,9 +1,8 @@
 <div class="overlay">
   <div class="overlay-links">
     <a routerLink="/" target="_blank">HOME</a>
-    <a routerLink="/store" target="_blank">STORE</a>
-    <a href="https://www.patreon.com/XII00" target="_blank">X1100</a>
-    <a href="https://mailchi.mp/a25c53434ecd/midnight-rage" target="_blank">HÓRDE</a>
+    <a routerLink="/store" class="signUp" (click)="$event.preventDefault(); showOutlet = true;">STORE</a> <a
+      href="https://mailchi.mp/a25c53434ecd/midnight-rage" target="_blank">HÓRDE</a>
   </div>
   <div class="overlay-icons">
     <a>
@@ -51,8 +50,8 @@
 
 <div class="header" [class.black-background]="isScrolled">
   <div class="headerLinks">
-    <a routerLink="/store" target="_blank">STORE</a>
-    <a href="https://www.patreon.com/XII00" target="_blank">X1100</a>
+    <a routerLink="/store" class="signUp" (click)="$event.preventDefault(); showOutlet = true;">STORE</a> <a
+      href="https://www.patreon.com/XII00" target="_blank">X1100</a>
     <a href="https://mailchi.mp/a25c53434ecd/midnight-rage" target="_blank">HÓRDE</a>
   </div>
   <div class="title">{{ title }}</div>
@@ -104,8 +103,7 @@
     </form>
   </div>
 </section>
-<router-outlet></router-outlet>
-
+<router-outlet *ngIf="showOutlet" class="storeApp"></router-outlet>
 <!-- Go to your Mailchimp account, navigate to the Audience tab.
 Click the Manage Audience drop-down and choose Signup forms.
 Select Embedded forms.

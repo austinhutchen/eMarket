@@ -12,6 +12,7 @@ import { PLATFORM_ID } from '@angular/core';
 
 export class AppComponent implements AfterViewInit {
   public title: string = 'DLOR';
+  public showOutlet:boolean = false;
   private overLay: boolean = false;
   private header!: Element | null | undefined;
   private hamburgerMenu!: HTMLElement | null;
