@@ -10,7 +10,9 @@ body {
   padding: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
-
+input {
+  text-align: center;
+}
 .storeApp {
   z-index: 1001;
   position: fixed;
