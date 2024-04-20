@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { AppRoutingModule } from './app.routes';
 import  {AppComponent}  from './app.component';
 import { StoreComponent } from './store/store.component';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -11,6 +13,7 @@ import { StoreComponent } from './store/store.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule, // Add FormsModule to the imports array,
     AppRoutingModule
   ],

@@ -1,5 +1,7 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { loadStripe } from '@stripe/stripe-js';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-store',
@@ -23,6 +25,21 @@ export class StoreComponent {
     { id: 6, name: 'Product 6', price: 100, image: 'image6.jpg', description: 'Description 1', state: 'hidden' }
     // other products...
   ];
+  stripe: any;
+
+  constructor(private el: ElementRef, private http: HttpClient) {
+    this.initializeStripe();
+  }
+
+  async initializeStripe() {
+    this.stripe = await loadStripe('your-publishable-key');
+  }
+
+  async purchaseProduct(product:any) {
+    const sessionId = await this.http.post('/create-checkout-session', { productId: product.id }).toPromise();
+    await this.stripe.redirectToCheckout({ sessionId });
+  }
+
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -36,5 +53,4 @@ export class StoreComponent {
     });
   }
 
-  constructor(private el: ElementRef) { }
 }
