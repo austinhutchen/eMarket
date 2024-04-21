@@ -16,6 +16,7 @@ import { HttpClient } from '@angular/common/http';
   ]
 })
 export class StoreComponent {
+  cart: any[] = [];
   products = [
     { id: 1, name: 'Product 1', price: 100, image: 'image1.jpg', description: 'Description 1', state: 'hidden' },
     { id: 2, name: 'Product 2', price: 200, image: 'image2.jpg', description: 'Description 2', state: 'hidden' },
@@ -30,7 +31,9 @@ export class StoreComponent {
   constructor(private el: ElementRef, private http: HttpClient) {
     this.initializeStripe();
   }
-
+  addToCart(product:any) {
+    this.cart.push(product);
+  }
   async initializeStripe() {
     this.stripe = await loadStripe('your-publishable-key');
   }
