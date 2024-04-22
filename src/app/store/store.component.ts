@@ -2,7 +2,15 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { loadStripe } from '@stripe/stripe-js';
 import { HttpClient } from '@angular/common/http';
+interface product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+  state: string;
 
+}
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -15,8 +23,9 @@ import { HttpClient } from '@angular/common/http';
     ])
   ]
 })
+
 export class StoreComponent {
-  cart: any[] = [];
+  cart: product[] = [];
   products = [
     { id: 1, name: 'Product 1', price: 100, image: 'image1.jpg', description: 'Description 1', state: 'hidden' },
     { id: 2, name: 'Product 2', price: 200, image: 'image2.jpg', description: 'Description 2', state: 'hidden' },
@@ -31,15 +40,15 @@ export class StoreComponent {
   constructor(private el: ElementRef, private http: HttpClient) {
     this.initializeStripe();
   }
-  addToCart(product:any) {
+  addToCart(product: any) {
     this.cart.push(product);
   }
   async initializeStripe() {
     this.stripe = await loadStripe('your-publishable-key');
   }
 
-  async purchaseProduct(product:any) {
-    const sessionId = await this.http.post('/create-checkout-session', { productId: product.id }).toPromise();
+  async purchaseProduct(product: any) {
+    const sessionId = await this.http.post('/create-checkout-session', { productId: product.id })?.toPromise()
     await this.stripe.redirectToCheckout({ sessionId });
   }
 
