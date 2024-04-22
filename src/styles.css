@@ -449,7 +449,7 @@ a {
 
 @media (max-width: 700px) {
 
-  .menu-open .links a {
+  .menu-open .links {
     animation: fadeOut 0.2s forwards;
 
   }

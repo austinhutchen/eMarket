@@ -40,15 +40,15 @@ export class StoreComponent {
   constructor(private el: ElementRef, private http: HttpClient) {
     this.initializeStripe();
   }
-  addToCart(product: any) {
-    this.cart.push(product);
+  addToCart(Product: product) {
+    this.cart.push(Product);
   }
   async initializeStripe() {
     this.stripe = await loadStripe('your-publishable-key');
   }
 
-  async purchaseProduct(product: any) {
-    const sessionId = await this.http.post('/create-checkout-session', { productId: product.id })?.toPromise()
+  async purchaseProduct(Product: product) {
+    const sessionId = await this.http.post('/create-checkout-session', { productId: Product.id })?.toPromise()
     await this.stripe.redirectToCheckout({ sessionId });
   }
 
