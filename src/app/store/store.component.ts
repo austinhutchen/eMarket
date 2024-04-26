@@ -29,10 +29,10 @@ export class StoreComponent {
   products = [
     { id: 1, name: 'Product 1', price: 100, image: 'image1.jpg', description: 'Description 1', state: 'hidden' },
     { id: 2, name: 'Product 2', price: 200, image: 'image2.jpg', description: 'Description 2', state: 'hidden' },
-    { id: 3, name: 'Product 3', price: 100, image: 'image3.jpg', description: 'Description 1', state: 'hidden' },
-    { id: 4, name: 'Product 4', price: 100, image: 'image4.jpg', description: 'Description 1', state: 'hidden' },
-    { id: 5, name: 'Product 5', price: 100, image: 'image5.jpg', description: 'Description 1', state: 'hidden' },
-    { id: 6, name: 'Product 6', price: 100, image: 'image6.jpg', description: 'Description 1', state: 'hidden' }
+    { id: 3, name: 'Product 3', price: 300, image: 'image3.jpg', description: 'Description 3', state: 'hidden' },
+    { id: 4, name: 'Product 4', price: 400, image: 'image4.jpg', description: 'Description 4', state: 'hidden' },
+    { id: 5, name: 'Product 5', price: 500, image: 'image5.jpg', description: 'Description 5', state: 'hidden' },
+    { id: 6, name: 'Product 6', price: 600, image: 'image6.jpg', description: 'Description 6', state: 'hidden' }
     // other products...
   ];
   stripe: any;
