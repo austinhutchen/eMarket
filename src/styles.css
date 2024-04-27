@@ -167,9 +167,8 @@ button {
   width: 100%;
   opacity: 1;
   pointer-events: none;
-  animation: fadein 3s infinite;
   background: url('/assets/noise.gif');
-  opacity: 0.03;  /* Semi-transparent black overlay */
+  opacity: 0.08;  /* Semi-transparent black overlay */
   z-index: 3;
 }
 
