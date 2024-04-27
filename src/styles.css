@@ -167,10 +167,9 @@ button {
   width: 100%;
   opacity: 1;
   pointer-events: none;
-  animation: fadein 3s, noiseFX 3s infinite;
-  background: url('/assets/noise.png');
-  background: rgba(0, 0, 0, 0.96);
-  /* Semi-transparent black overlay */
+  animation: fadein 3s infinite;
+  background: url('/assets/noise.gif');
+  opacity: 0.1;  /* Semi-transparent black overlay */
   z-index: 3;
 }
 
@@ -255,48 +254,44 @@ section {
   animation: fadein 3s;
 
 }
-
 @keyframes noiseFX {
-
   0%,
   100% {
-    opacity: 0.45;
+    opacity: 0.6;
   }
 
   10% {
-    opacity: 0.46;
+    opacity: 0.61;
   }
 
   20% {
-    opacity: 0.47;
+    opacity: 0.62;
   }
 
   30% {
-    opacity: 0.48;
+    opacity: 0.63;
   }
 
   40% {
-    opacity: 0.49;
+    opacity: 0.64;
   }
 
   50% {
-    opacity: 0.50;
+    opacity: 0.65;
   }
 
   60% {
-    opacity: 0.51;
+    opacity: 0.66;
   }
 
   70% {
-    opacity: 0.50;
+    opacity: 0.67;
   }
-
-  80% {
-    opacity: 0.49;
+  80%{
+    opacity: 0.68;
   }
-
-  90% {
-    opacity: 0.47;
+  90%{
+    opacity: 0.69;
   }
 }
 
@@ -575,7 +570,7 @@ a {
 
 
   .overlay-icons img {
-    width: 10svw;
+    width: 5svw;
     height: auto;
   }
 
@@ -639,9 +634,6 @@ a {
 }
 
 
-
-
-
 .background .image {
   position: relative;
   /* Add this to make .background a positioned ancestor */
@@ -651,24 +643,15 @@ a {
   width: 100%;
   height: 100%;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.9);
+
   /* Start zoomed in */
   background-image: url("/assets/background.webp")
 }
-
-
-
-
 
 /* Rotate last line to form 'X' */
 .hamburger-menu.open .line:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-
-
-
-
-
 
 
 .mailChimpHeader {
