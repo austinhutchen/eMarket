@@ -253,46 +253,7 @@ section {
   animation: fadein 3s;
 
 }
-@keyframes noiseFX {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
 
-  10% {
-    opacity: 0.61;
-  }
-
-  20% {
-    opacity: 0.62;
-  }
-
-  30% {
-    opacity: 0.63;
-  }
-
-  40% {
-    opacity: 0.64;
-  }
-
-  50% {
-    opacity: 0.65;
-  }
-
-  60% {
-    opacity: 0.66;
-  }
-
-  70% {
-    opacity: 0.67;
-  }
-  80%{
-    opacity: 0.68;
-  }
-  90%{
-    opacity: 0.69;
-  }
-}
 
 
 @-webkit-keyframes fadeInFromMiddle {
