@@ -165,7 +165,7 @@ button {
   bottom: 0;
   /* This will stretch it to the bottom of the parent container */
   width: 100%;
-  opacity: 0.08;
+  opacity: 0.1;
   pointer-events: none;
   background: url('/assets/noise.gif');
 
