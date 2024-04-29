@@ -165,14 +165,24 @@ button {
   bottom: 0;
   /* This will stretch it to the bottom of the parent container */
   width: 100%;
-  opacity: 0.115;
+  opacity: 0.0485;
   pointer-events: none;
   background: url('/assets/noise.gif');
 
   z-index: 3;
 }
 
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* semi-transparent black */
+  z-index: 2;
 
+}
 
 .background {
   position: relative;
@@ -375,9 +385,9 @@ a {
 
   .menu-item1 {
     padding: 6px 3px;
-    font-size: 3.1svh;
+    font-size: 3.3svh;
     text-shadow:
-      0 1px 0 rgba(204, 204, 204, 0.3),
+      0 1px 0 rgba(204, 204, 204, 0.15),
       0 2px 0 rgba(201, 201, 201, 0.3),
       0 3px 0 rgba(187, 187, 187, 0.3),
       0 4px 0 rgba(185, 185, 185, 0.3),
