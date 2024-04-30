@@ -1,6 +1,6 @@
 .products {}
 .storeImg img {
- width: 50%;  /* Adjust as needed */
+ width: 40%;  /* Adjust as needed */
  height: auto;
  object-fit: cover;  /* This will make the image cover the entire width and height of its box */
 }
@@ -27,7 +27,7 @@ h1{
 font-size: 4vh;
 }
 .storeHead {
- margin-top: 70px;
+ margin-top: 90px;
  color: white;
 
 }
@@ -46,7 +46,7 @@ font-size: 4vh;
  align-items: center;
  text-align: center;
  padding-bottom: 200px;
- gap: 45px;
+ gap: 37px;
 }
 
 @media screen and (max-width: 600px) {

@@ -29,11 +29,11 @@ export class StoreComponent {
 
   products = [
     { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.png', state: 'hidden', link: '' },
-    { id: 2, name: ' X11 CAP ', price: 50, image: 'assets/x11.jpg', state: 'hidden', link: '' },
+    { id: 2, name: ' X100 CAP ', price: 50, image: 'assets/x11.jpg', state: 'hidden', link: '' },
     { id: 3, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.jpg', state: 'hidden', link: '' },
-    { id: 4, name: 'Product 4', price: 400, image: 'image4.jpg', state: 'hidden', link: '' },
-    { id: 5, name: 'Product 5', price: 500, image: 'image5.jpg', state: 'hidden', link: '' },
-    { id: 6, name: 'Product 6', price: 600, image: 'image6.jpg', state: 'hidden', link: '' }
+    { id: 4, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.jpg', state: 'hidden', link: '' },
+    { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.jpg', state: 'hidden', link: '' },
+    { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.jpg', state: 'hidden', link: '' }
     // other products...
   ];
   stripe: any;
