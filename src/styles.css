@@ -147,7 +147,7 @@ button {
   background-size: cover;
 
   /* Add this line */
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background-position: center;
@@ -185,7 +185,7 @@ button {
   pointer-events: none;
   background: url('/assets/noise.gif');
 
-  z-index: 3;
+  z-index: 4;
 }
 
 .background::after {
