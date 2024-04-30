@@ -1,5 +1,9 @@
 .products {}
-
+.storeImg img {
+ width: 50%;  /* Adjust as needed */
+ height: auto;
+ object-fit: cover;  /* This will make the image cover the entire width and height of its box */
+}
 hr {
  border: none;
  height: 1px;
@@ -17,7 +21,7 @@ h1{
 font-size: 4vh;
 }
 .storeHead {
- margin-top: 100px;
+ margin-top: 70px;
  color: white;
 
 }
@@ -30,8 +34,7 @@ font-size: 4vh;
 }
 
 .storeApp {
- height: 100%;
- width: 100%;
+
  display: flex;
  flex-direction: column;
  align-items: center;

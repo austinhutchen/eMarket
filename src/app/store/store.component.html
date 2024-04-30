@@ -15,8 +15,11 @@
   </div>
 
   <hr />
-  <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" class="products">
-    <img [src]="product.image" alt="{{product.name}}">
+  <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" className="products">
+    <div class="storeImg">
+      <img [src]="product.image" alt="{{product.name}}">
+
+    </div>
     <h2>{{product.name}}</h2>
     <p>{{product.description}}</p>
     <p>{{product.price}}</p>
