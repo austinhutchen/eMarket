@@ -17,14 +17,18 @@
   <hr />
   <div *ngFor="let product of products; index as i" id="product{{i}}" [@fadeIn]="product.state" className="products">
     <div class="storeImg">
+      <a href="{{product.link}}">
+        
       <img [src]="product.image" alt="{{product.name}}">
-
+</a>
     </div>
     <h2>{{product.name}}</h2>
-    <p>{{product.description}}</p>
     <p>{{product.price}}</p>
     <button (click)="purchaseProduct(product)">Purchase</button>
     <button (click)="addToCart(product)">Add to Cart</button>
 
   </div>
+</div>
+<div class="subItemLayout">
+  
 </div>

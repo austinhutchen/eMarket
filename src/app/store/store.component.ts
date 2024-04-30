@@ -7,8 +7,8 @@ interface product {
   name: string;
   price: number;
   image: string;
-  description: string;
   state: string;
+  link: string;  // Add this line
 
 }
 @Component({
@@ -26,13 +26,14 @@ interface product {
 
 export class StoreComponent {
   cart: product[] = [];
+
   products = [
-    { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.png', description: '', state: 'hidden' },
-    { id: 2, name: ' X11 CAP ', price: 50, image: 'assets/x11.jpg', description: '', state: 'hidden' },
-    { id: 3, name: 'HOODIE ', price: 300, image: 'assets/blckheavy.jpg', description: 'Description 3', state: 'hidden' },
-    { id: 4, name: 'Product 4', price: 400, image: 'image4.jpg', description: 'Description 4', state: 'hidden' },
-    { id: 5, name: 'Product 5', price: 500, image: 'image5.jpg', description: 'Description 5', state: 'hidden' },
-    { id: 6, name: 'Product 6', price: 600, image: 'image6.jpg', description: 'Description 6', state: 'hidden' }
+    { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.png', state: 'hidden', link: '' },
+    { id: 2, name: ' X11 CAP ', price: 50, image: 'assets/x11.jpg', state: 'hidden', link: '' },
+    { id: 3, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.jpg', state: 'hidden', link: '' },
+    { id: 4, name: 'Product 4', price: 400, image: 'image4.jpg', state: 'hidden', link: '' },
+    { id: 5, name: 'Product 5', price: 500, image: 'image5.jpg', state: 'hidden', link: '' },
+    { id: 6, name: 'Product 6', price: 600, image: 'image6.jpg', state: 'hidden', link: '' }
     // other products...
   ];
   stripe: any;

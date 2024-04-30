@@ -4,6 +4,12 @@
  height: auto;
  object-fit: cover;  /* This will make the image cover the entire width and height of its box */
 }
+.subItemLayout{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+
+}
 hr {
  border: none;
  height: 1px;
