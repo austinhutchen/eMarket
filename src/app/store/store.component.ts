@@ -16,10 +16,10 @@ interface product {
   styleUrls: ['./store.component.css'],
   animations: [
     trigger('fadeIn', [
-      state('void', style({ opacity: 0 })),
-      state('*', style({ opacity: 1 })),  // Add this line
+      state('void', style({ opacity: 0, transform: 'translatex(-100px)' })),
+      state('*', style({ opacity: 1, transform: 'translatex(0)'})),  // Add this line
       transition(':enter', [
-        animate('2s ease-in-out')
+        animate('1.3s ease-in-out')
       ])
     ])
   ]
