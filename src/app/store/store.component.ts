@@ -7,9 +7,8 @@ interface product {
   name: string;
   price: number;
   image: string;
-  state: string;
+  state:string;
   link: string;  // Add this line
-
 }
 @Component({
   selector: 'app-store',
@@ -17,9 +16,11 @@ interface product {
   styleUrls: ['./store.component.css'],
   animations: [
     trigger('fadeIn', [
-      state('hidden', style({ opacity: 0 })),
-      state('visible', style({ opacity: 1 })),
-      transition('hidden => visible', animate('1s'))
+      state('void', style({ opacity: 0 })),
+      state('*', style({ opacity: 1 })),  // Add this line
+      transition(':enter', [
+        animate('2s ease-in-out')
+      ])
     ])
   ]
 })
@@ -35,7 +36,7 @@ export class StoreComponent {
     { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', link: '' },
     { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', link: '' },
     { id: 7, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', link: '' },
-  
+
     // other products...
   ];
   stripe: any;
@@ -45,6 +46,7 @@ export class StoreComponent {
   }
   addToCart(Product: product) {
     this.cart.push(Product);
+    console.log('product pushed into cart');
   }
   async initializeStripe() {
     this.stripe = await loadStripe('your-publishable-key');
@@ -58,13 +60,11 @@ export class StoreComponent {
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const scrollPosition = window.scrollY + window.innerHeight;
+    const scrollPosition = window.scrollY;
 
     this.products.forEach((product, index) => {
-      const productElement = this.el.nativeElement.querySelector(`#product${index}`);
-      const productPosition = productElement.offsetTop;
-
-      product.state = scrollPosition > productPosition ? 'visible' : 'hidden';
+      const productPosition = this.el.nativeElement.offsetTop + 200 * index;
+      product.state = scrollPosition >= productPosition ? 'visible' : 'hidden';
     });
   }
 

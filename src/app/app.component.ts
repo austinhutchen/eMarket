@@ -18,7 +18,7 @@ export class AppComponent implements AfterViewInit {
   private header!: Element | null | undefined;
   private hamburgerMenu!: HTMLElement | null;
   private mailBox!: HTMLElement | null;
-  private isOpen: boolean = false;
+  private isMenuOpen: boolean = false;
   public isScrolled: boolean = false;
   private inputValue: string = '';
   private observer: IntersectionObserver | null;
@@ -96,10 +96,10 @@ export class AppComponent implements AfterViewInit {
 
   }
   toggleMenu() {
-    this.isOpen = !(this.isOpen);
-    console.log(this.isOpen);
+    this.isMenuOpen = !(this.isMenuOpen);
+    console.log(this.isMenuOpen);
     this.hamburgerMenu?.classList.toggle('open');
-    if (this.isOpen) {
+    if (this.isMenuOpen) {
       this.overlayElement?.classList.remove('exit');
       this.openMenu();
     } else {

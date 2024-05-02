@@ -2,7 +2,11 @@
 .storeImg img {
  width: 90%;  /* Adjust as needed */
  height: auto;
- object-fit: cover;  /* This will make the image cover the entire width and height of its box */
+ object-fit: cover; 
+  /* This will make the image cover the entire width and height of its box */
+}
+.storeImg{
+ opacity:0;
 }
 .subItemLayout{
  display: flex;

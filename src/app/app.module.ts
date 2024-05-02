@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app.routes';
 import  {AppComponent}  from './app.component';
 import { StoreComponent } from './store/store.component';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     FormsModule, // Add FormsModule to the imports array,
     AppRoutingModule
   ],
