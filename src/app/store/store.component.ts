@@ -28,12 +28,12 @@ export class StoreComponent {
   cart: product[] = [];
 
   products = [
-    { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.png', state: 'hidden', link: '' },
-    { id: 2, name: ' X100 CAP ', price: 50, image: 'assets/x11.jpg', state: 'hidden', link: '' },
-    { id: 3, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.jpg', state: 'hidden', link: '' },
-    { id: 4, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.jpg', state: 'hidden', link: '' },
-    { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.jpg', state: 'hidden', link: '' },
-    { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.jpg', state: 'hidden', link: '' }
+    { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', link: '' },
+    { id: 2, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', link: '' },
+    { id: 3, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', link: '' },
+    { id: 4, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', link: '' },
+    { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', link: '' },
+    { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', link: '' }
     // other products...
   ];
   stripe: any;
