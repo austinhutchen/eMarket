@@ -33,6 +33,9 @@
   </div>
   <p>{{currentProduct.price}}</p>
   <p>{{currentProduct.description}}</p>
-  <button (click)="addToCart(currentProduct)">Add to Cart</button>
-  <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+  <div class="shopBtn">
+    <button (click)="addToCart(currentProduct)">Add to Cart</button>
+    <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+  </div>
+
 </div>
