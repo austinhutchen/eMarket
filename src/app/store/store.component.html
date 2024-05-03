@@ -26,7 +26,7 @@
   </div>
 
 </div>
-<div class="subItemLayout" *ngIf="overlayVisible" (click)="overlayVisible = false">
+<div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]= "isMenuOpen" >
   <h2>{{currentProduct.name}}</h2>
   <div class="subImg">
     <img [src]="currentProduct.image" alt="{{currentProduct.name}}">

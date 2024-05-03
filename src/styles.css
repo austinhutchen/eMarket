@@ -13,9 +13,7 @@ body {
 input {
   text-align: center;
 }
-.storeApp.overlay {
-  opacity: 0; /* Set the opacity to 0 */
-}
+
 .storeApp {
   z-index: 1001;
   position: fixed;
