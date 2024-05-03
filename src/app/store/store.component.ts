@@ -34,15 +34,25 @@ export class StoreComponent {
   private overlayElement!: HTMLElement | null;
 
   overlayVisible: boolean = false;
+  descriptions = [
+    'Embrace your obsession. This hoodie is for those who are unapologetically passionate.',
+    'The X100 Cap. A statement piece that speaks volumes about your style.',
+    'The Beauty + Pain Hoodie. For those who understand that true beauty often comes with a price.',
+    'The On Me Art Cover Long Sleeve. Wear your art on your sleeve, literally.',
+    'The "Live ! LÓR ! Die !" Shirt. For the bold, the brave, and the fearless.',
+    'The Red Rose Hat. A symbol of love, passion, and respect.',
+    'The Deception Art Hoodie. Because not everything is as it seems.',
+    'The "LÓR" Hoodie. Minimalist design, maximum statement.'
+  ]
   products = [
-    { id: 0, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', description: '' },
-    { id: 1, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', description: '' },
-    { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', description: '' },
-    { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', description: '' },
-    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: '' },
-    { id: 5, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', description: '' },
-    { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', description: '' },
-    { id: 7, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', description: '' },
+    { id: 0, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', description: this.descriptions[0] },
+    { id: 1, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', description: this.descriptions[1] },
+    { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', description: this.descriptions[2] },
+    { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', description: this.descriptions[3] },
+    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: this.descriptions[4]},
+    { id: 5, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', description: this.descriptions[5] },
+    { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', description: this.descriptions[6] },
+    { id: 7, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', description: this.descriptions[7] },
 
     // other products...
   ];

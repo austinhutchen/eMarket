@@ -22,7 +22,9 @@
   }
 
 }
-
+.opacity-0 {
+  opacity: 0 !important;
+}
 .subItemLayout {
   align-content: start; /* Add this line */
   display: flex;
