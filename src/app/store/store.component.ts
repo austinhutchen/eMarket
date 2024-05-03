@@ -1,14 +1,16 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, Renderer2, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { loadStripe } from '@stripe/stripe-js';
 import { HttpClient } from '@angular/common/http';
+import { DOCUMENT } from '@angular/common';
+
 interface product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  state: string;
-  link: string;  // Add this line
+  id?: number;
+  name?: string;
+  price?: number;
+  image?: string;
+  state?: string;
+  description?: string;
 }
 @Component({
   selector: 'app-store',
@@ -27,22 +29,63 @@ interface product {
 
 export class StoreComponent {
   cart: product[] = [];
+  currentProduct: product;
+  isMenuOpen: boolean = false;
+  private overlayElement!: HTMLElement | null;
+
+  overlayVisible: boolean = false;
   products = [
-    { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', link: '' },
-    { id: 2, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', link: '' },
-    { id: 3, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', link: '' },
-    { id: 4, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', link: '' },
-    { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', link: '' },
-    { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', link: '' },
-    { id: 7, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', link: '' },
-    { id: 8, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', link: '' },
-    
+    { id: 0, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', description: '' },
+    { id: 1, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', description: '' },
+    { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', description: '' },
+    { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', description: '' },
+    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: '' },
+    { id: 5, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', description: '' },
+    { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', description: '' },
+    { id: 7, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', description: '' },
+
     // other products...
   ];
   stripe: any;
 
-  constructor(private el: ElementRef, private http: HttpClient) {
+  hamburgerMenu: Element | null;
+
+  constructor(private el: ElementRef, private http: HttpClient, private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.initializeStripe();
+    this.hamburgerMenu = null;
+    this.currentProduct = this.products[0];
+    this.overlayElement = this.document?.querySelector('.overlay');
+  }
+
+  ngAfterViewInit() {
+    this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
+  }
+  openMenu(): void {
+    if (!this.document) {
+      return;
+    }
+    this.isMenuOpen = true;
+    this.renderer?.addClass(this.document.body, 'menu-open');
+    this.hamburgerMenu?.classList.add('open');
+    this.overlayElement?.classList.remove('exit');
+  }
+
+  closeMenu() {
+    if (!this.document) {
+      return;
+    }
+    this.isMenuOpen = false;
+    this.renderer?.removeClass(this.document.body, 'menu-open');
+    this.hamburgerMenu?.classList.remove('open');
+    this.overlayElement?.classList.add('exit');
+  }
+
+  toggleMenu() {
+    if (this.isMenuOpen) {
+      this.closeMenu();
+    } else {
+      this.openMenu();
+    }
   }
   addToCart(Product: product) {
     this.cart.push(Product);
@@ -56,7 +99,11 @@ export class StoreComponent {
     const sessionId = await this.http.post('/create-checkout-session', { productId: Product.id })?.toPromise()
     await this.stripe.redirectToCheckout({ sessionId });
   }
-
+  navProduct(link: number) {
+    this.overlayVisible = true;
+    this.currentProduct = this.products[link];
+    console.log(this.currentProduct);
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {

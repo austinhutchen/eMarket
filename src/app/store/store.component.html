@@ -1,4 +1,4 @@
-<div class="storeApp">
+<div class="storeApp" class="storeApp" [class.overlay]="overlayVisible">
   <h1 class="storeHead">STORE</h1>
 
   <div class="store-header">
@@ -14,19 +14,25 @@
     </h3>
   </div>
 
-  <div *ngFor="let product of products; index as i" id="product{{i}}"  className="products">
+  <div *ngFor="let product of products; index as i" id="product{{i}}" className="products">
     <div class="storeImg" [@fadeIn]>
-      <a href="{{product.link}}">
-      <img [src]="product.image" alt="{{product.name}}">
-</a>
+      <a (click)="navProduct(product.id); $event.preventDefault()"> <img [src]="product.image" alt="{{product.name}}">
+      </a>
     </div>
     <h2>{{product.name}}</h2>
     <p>{{product.price}}</p>
-    <button (click)="purchaseProduct(product)">Purchase</button>
-    <button (click)="addToCart(product)">Add to Cart</button>
+
 
   </div>
+
 </div>
-<div class="subItemLayout">
-  
+<div class="subItemLayout" *ngIf="overlayVisible" (click)="overlayVisible = false">
+  <h2>{{currentProduct.name}}</h2>
+  <div class="subImg">
+    <img [src]="currentProduct.image" alt="{{currentProduct.name}}">
+  </div>
+  <p>{{currentProduct.price}}</p>
+  <p>{{currentProduct.description}}</p>
+  <button (click)="addToCart(currentProduct)">Add to Cart</button>
+  <button (click)="purchaseProduct(currentProduct)">Purchase</button>
 </div>

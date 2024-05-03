@@ -7,15 +7,38 @@
   object-fit: cover;
   /* This will make the image cover the entire width and height of its box */
 }
+/* mobile */
+.subImg{
+  align-items: center;
+}
+.subImg img{
+  height:50vh;
+  width:  auto;
+}
+/* desktop */
+@media (min-width: 768px) {
+  .storeImg img {
+    max-width: 50svw;
+  }
 
-.storeImg {
-  opacity: 0;
 }
 
 .subItemLayout {
+  align-content: start; /* Add this line */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  z-index:1002;
+  font-family: 'aziano';
+  font-weight: 200;
+  position: fixed;
+  top: 7vh;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  color: white;
+  overflow: auto;
+  /* Add this line */
+  background: rgba(0, 0, 0, 1);
 }
 
 
@@ -50,10 +73,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 200px;
   gap: 37px;
 }
 
-@media screen and (max-width: 600px) {
-  .products {}
-}
