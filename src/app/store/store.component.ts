@@ -19,7 +19,7 @@ interface product {
       state('void', style({ opacity: 0, transform: 'translatex(-100px)' })),
       state('*', style({ opacity: 1, transform: 'translatex(0)'})),  // Add this line
       transition(':enter', [
-        animate('1.3s ease-in-out')
+        animate('1.5s 0s cubic-bezier(0.68, -0.55, 0.27, 1.55)')
       ])
     ])
   ]
