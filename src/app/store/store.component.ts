@@ -7,7 +7,7 @@ interface product {
   name: string;
   price: number;
   image: string;
-  state:string;
+  state: string;
   link: string;  // Add this line
 }
 @Component({
@@ -17,7 +17,7 @@ interface product {
   animations: [
     trigger('fadeIn', [
       state('void', style({ opacity: 0, transform: 'translatex(-100px)' })),
-      state('*', style({ opacity: 1, transform: 'translatex(0)'})),  // Add this line
+      state('*', style({ opacity: 1, transform: 'translatex(0)' })),  // Add this line
       transition(':enter', [
         animate('1.5s 0s cubic-bezier(0.68, -0.55, 0.27, 1.55)')
       ])
@@ -27,7 +27,6 @@ interface product {
 
 export class StoreComponent {
   cart: product[] = [];
-
   products = [
     { id: 1, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', link: '' },
     { id: 2, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', link: '' },
@@ -36,7 +35,8 @@ export class StoreComponent {
     { id: 5, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', link: '' },
     { id: 6, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', link: '' },
     { id: 7, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', link: '' },
-
+    { id: 8, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', link: '' },
+    
     // other products...
   ];
   stripe: any;
