@@ -1,58 +1,66 @@
 .products {}
+
 .storeImg img {
- width: 90%;  /* Adjust as needed */
- height: auto;
- object-fit: cover; 
+  width: 85%;
+  /* Adjust as needed */
+  height: auto;
+  object-fit: cover;
   /* This will make the image cover the entire width and height of its box */
 }
-.storeImg{
- opacity:0;
+
+.storeImg {
+  opacity: 0;
 }
-.subItemLayout{
- display: flex;
- flex-direction: row;
- justify-content: space-between;
+
+.subItemLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
+
 hr {
- border: none;
- height: 1px;
- background-color: white;
+  border: none;
+  height: 1px;
+  background-color: white;
 }
-h3{
- color: white;
- font-family: "aziano";
- font-weight: 100;
+
+h3 {
+  color: white;
+  font-family: "aziano";
+  font-weight: 100;
 }
-h1{
- color: white;
- font-family: "aziano";
- font-weight: 150;
-font-size: 4vh;
+
+h1 {
+  color: white;
+  font-family: "aziano";
+  font-weight: 150;
+  font-size: 4vh;
 }
+
 .storeHead {
- margin-top: 90px;
- color: white;
+  margin-top: 12%;
+  color: white;
 
 }
 
 .store-header {
- display: flex;
- gap: 7px;
- flex-direction: row;
- list-style-type: none;
+  display: flex;
+  gap: 7px;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 .storeApp {
 
- display: flex;
- flex-direction: column;
- align-items: center;
- text-align: center;
- padding-bottom: 200px;
- gap: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 200px;
+  gap: 37px;
 }
 
 @media screen and (max-width: 600px) {
- .products {}
+  .products {}
 }

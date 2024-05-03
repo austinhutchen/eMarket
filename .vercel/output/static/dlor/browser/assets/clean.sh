@@ -1,10 +1,11 @@
 #!/bin/bash
 
-for file in *.png; do
-  base_name=$(basename "$file" .png)
-  if [[ -f "${base_name}.webp" ]]; then
-    echo "Deleting ${file}..."
-    rm "${file}"
-  fi
+for ext in jpg png; do
+  for file in *."$ext"; do
+    base_name=$(basename "$file" ."$ext")
+    if [[ -f "${base_name}.webp" ]]; then
+      echo "Deleting ${file}..."
+      rm "${file}"
+    fi
+  done
 done
-
