@@ -26,7 +26,7 @@
   opacity: 0 !important;
 }
 .subItemLayout {
-  align-content: start; /* Add this line */
+  align-content: center; /* Add this line */
   display: flex;
   flex-direction: column;
   z-index:1001;

@@ -1,4 +1,4 @@
-<div class="storeApp" class="storeApp"  [class.opacity-0]="overlayVisible">
+<div class="storeApp" class="storeApp" [class.opacity-0]="overlayVisible">
   <h1 class="storeHead">STORE</h1>
 
   <div class="store-header">
@@ -26,16 +26,19 @@
   </div>
 
 </div>
-<div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]= "isMenuOpen" >
+<div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]="isMenuOpen">
   <h2>{{currentProduct.name}}</h2>
-  <div class="subImg" [@fadeShop] >
-    <img [src]="currentProduct.image" alt="{{currentProduct.name}}">
+  <div class="subImg" [@fadeImg]>
+    <img  [src]="currentProduct.image" alt="{{currentProduct.name}}">
+
   </div>
-  <p>{{currentProduct.price}}</p>
-  <p>{{currentProduct.description}}</p>
-  <div class="shopBtn">
-    <button (click)="addToCart(currentProduct)">Add to Cart</button>
-    <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+  <div  #subItemText>
+    <p>{{currentProduct.price}}</p>
+    <p>{{currentProduct.description}}</p>
+    <div class="shopBtn">
+      <button (click)="addToCart(currentProduct)">Add to Cart</button>
+      <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+    </div>
   </div>
 
 </div>

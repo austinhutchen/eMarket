@@ -1,9 +1,8 @@
-import { Component, HostListener, ElementRef, Renderer2, Inject } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, Renderer2, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { loadStripe } from '@stripe/stripe-js';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
-
 interface product {
   id: number;
   name?: string;
@@ -24,22 +23,23 @@ interface product {
         animate('1.5s 0s cubic-bezier(0.68, -0.55, 0.27, 1.55)')
       ]),
     ]),
-    trigger('fadeShop', [
+    trigger('fadeImg', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.5s', style({ opacity: 1 })),
+        style({ opacity: 0, transform: 'translatey(20px)' }),
+        animate('1s', style({ opacity: 1, transform: 'translatey(0)' })),
       ]),
     ]),
+
   ]
 })
 
 export class StoreComponent {
+
   cart: product[] = [];
   currentProduct: product;
   isMenuOpen: boolean = false;
   private overlayElement!: HTMLElement | null;
   scrollPosition: number = 0;
-
   overlayVisible: boolean = false;
   descriptions = [
     'Embrace your obsession. This hoodie is for those who are unapologetically passionate.',
@@ -64,18 +64,19 @@ export class StoreComponent {
     // other products...
   ];
   stripe: any;
-
-  hamburgerMenu: Element | null;
+  hamburgerMenu: HTMLElement | null;
 
   constructor(private el: ElementRef, private http: HttpClient, private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.initializeStripe();
     this.hamburgerMenu = null;
     this.currentProduct = this.products[0];
     this.overlayElement = this.document?.querySelector('.overlay');
+
   }
 
   ngAfterViewInit() {
     this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
+
   }
   openMenu(): void {
     if (!this.document) {
@@ -121,8 +122,9 @@ export class StoreComponent {
     this.currentProduct = this.products[link];
     console.log(this.currentProduct);
   }
-
+  @ViewChild('subItemText', { static: false }) subItemText!: ElementRef;
   @HostListener('window:scroll', ['$event'])
+
   checkScroll() {
     const scrollPosition = window.scrollY;
 
@@ -133,5 +135,8 @@ export class StoreComponent {
   }
   onWindowScroll($event: Event) {
     this.scrollPosition = (event?.target as Document).scrollingElement?.scrollTop || 0;
+    if (this.scrollPosition > this.subItemText.nativeElement.offsetTop) {
+      this.subItemText.nativeElement.classList.add('fade-in');
+    }
   }
 }
