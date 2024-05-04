@@ -15,9 +15,7 @@ align-items: center;
 }
 
 /* mobile */
-.subImg {
-  align-items: center;
-}
+
 
 .subImg img {
   height: 55vh;
@@ -30,7 +28,8 @@ align-items: center;
 
 @media (max-height: 700px) {
   .productDetails p {
-    font-size: 0.6em; /* smaller font size for screens with a height of 600px or less */
+    font-size: 0.5em; /* smaller font size for screens with a height of 600px or less */
+    font-weight: 200;
   }
 }
 @media (min-width: 768px) {
