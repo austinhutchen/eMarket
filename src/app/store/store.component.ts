@@ -6,7 +6,7 @@ import { DOCUMENT } from '@angular/common';
 interface product {
   id: number;
   name?: string;
-  price?: number;
+  price?: string;
   image?: string;
   state: string;
   description: string;
@@ -42,24 +42,58 @@ export class StoreComponent {
   scrollPosition: number = 0;
   overlayVisible: boolean = false;
   descriptions = [
-    'Embrace your obsession. This hoodie is for those who are unapologetically passionate.',
-    'The X100 Cap. A statement piece that speaks volumes about your style.',
-    'The Beauty + Pain Hoodie. For those who understand that true beauty often comes with a price.',
-    'The On Me Art Cover Long Sleeve. Wear your art on your sleeve, literally.',
+    `Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!
+
+    • 50% pre-shrunk cotton, 50% polyester
+    • Fabric weight: 8.0 oz/yd² (271.25 g/m²)
+    • Air-jet spun yarn with a soft feel and reduced pilling
+    • Double-lined hood with matching drawcord
+    • Quarter-turned body to avoid crease down the middle
+    • 1 × 1 athletic rib-knit cuffs and waistband with spandex
+    • Front pouch pocket
+    • Double-needle stitched collar, shoulders, armholes, cuffs, and hem
+    • Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador
+  
+    This product is made especially for you as soon as you place an order, which is why it takes us a bit longer to deliver it to you. Making products on demand instead of in bulk helps reduce overproduction, so thank you for making thoughtful purchasing decisions!`,
+    `Complement your everyday wardrobe with this pigment-dyed denim hat! Made out of 100% cotton, the 6-panel cap offers a light feel, while the adjustable strap ensures a solid and comfortable fit.
+
+    • 100% cotton
+    • 6-panel unstructured cap with a low profile
+    • Soft crown
+    • 6 sewn eyelets
+    • 4 rows of visible stitching on the visor
+    • Adjustable strap
+    • Head circumference: 21.65″–25.19″ (55 cm–64 cm)
+    • Blank product sourced from China
+  
+    This product is made especially for you as soon as you place an order, which is why it takes us a bit longer to deliver it to you. Making products on demand instead of in bulk helps reduce overproduction, so thank you for making thoughtful purchasing decisions!`,
+    `Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!
+
+    • 50% pre-shrunk cotton, 50% polyester
+    • Fabric weight: 8.0 oz/yd² (271.25 g/m²)
+    • Air-jet spun yarn with a soft feel and reduced pilling
+    • Double-lined hood with matching drawcord
+    • Quarter-turned body to avoid crease down the middle
+    • 1 × 1 athletic rib-knit cuffs and waistband with spandex
+    • Front pouch pocket
+    • Double-needle stitched collar, shoulders, armholes, cuffs, and hem
+    • Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador
+  
+    This product is made especially for you as soon as you place an order, which is why it takes us a bit longer to deliver it to you. Making products on demand instead of in bulk helps reduce overproduction, so thank you for making thoughtful purchasing decisions!`,    'The On Me Art Cover Long Sleeve. Wear your art on your sleeve, literally.',
     'The "Live ! LÓR ! Die !" Shirt. For the bold, the brave, and the fearless.',
     'The Red Rose Hat. A symbol of love, passion, and respect.',
     'The Deception Art Hoodie. Because not everything is as it seems.',
     'The "LÓR" Hoodie. Minimalist design, maximum statement.'
   ]
   products = [
-    { id: 0, name: ' "OBSESSED" HOODIE ', price: 150, image: 'assets/obsessed.webp', state: 'hidden', description: this.descriptions[0] },
-    { id: 1, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', description: this.descriptions[1] },
-    { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', description: this.descriptions[2] },
-    { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', description: this.descriptions[3] },
-    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: this.descriptions[4] },
-    { id: 5, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', description: this.descriptions[5] },
-    { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', description: this.descriptions[6] },
-    { id: 7, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', description: this.descriptions[7] },
+    { id: 0, name: ' "OBSESSED" HOODIE ',  price: (150).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/obsessed.webp', state: 'hidden', description: this.descriptions[0] },
+    { id: 1, name: ' X100 CAP ', price: (50).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/x11.webp', state: 'hidden', description: this.descriptions[1] },
+    { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: (300).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/blckheavy.webp', state: 'hidden', description: this.descriptions[2] },
+    { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: (400).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/onMe.webp', state: 'hidden', description: this.descriptions[3] },
+    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: (500).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/livlordie.webp', state: 'hidden', description: this.descriptions[4] },
+    { id: 5, name: 'RED ROSE HAT', price: (600).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/rosehat.webp', state: 'hidden', description: this.descriptions[5] },
+    { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: (300).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/deceptionArt.webp', state: 'hidden', description: this.descriptions[6] },
+    { id: 7, name: '"LÓR" HOODIE',price: (300).toLocaleString('en-US', { style: 'currency', currency: 'USD' }), image: 'assets/lorheavy.webp', state: 'hidden', description: this.descriptions[7] },
 
     // other products...
   ];

@@ -19,7 +19,7 @@
       <a (click)="navProduct(product.id); $event.preventDefault()"> <img [src]="product.image" alt="{{product.name}}">
       </a>
     </div>
-    <h2>{{product.name}}</h2>
+    <h3>{{product.name}}</h3>
     <p>{{product.price}}</p>
 
 
@@ -29,16 +29,17 @@
 <div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]="isMenuOpen">
   <h2>{{currentProduct.name}}</h2>
   <div class="subImg" [@fadeImg]>
-    <img  [src]="currentProduct.image" alt="{{currentProduct.name}}">
+    <img [src]="currentProduct.image" alt="{{currentProduct.name}}">
 
   </div>
-  <div  #subItemText>
-    <p>{{currentProduct.price}}</p>
+  <h2>{{currentProduct.price}}</h2>
+
+  <div #subItemText>
     <p>{{currentProduct.description}}</p>
-    <div class="shopBtn">
-      <button (click)="addToCart(currentProduct)">Add to Cart</button>
-      <button (click)="purchaseProduct(currentProduct)">Purchase</button>
-    </div>
-  </div>
 
+  </div>
+  <div class="shopBtn">
+    <button (click)="addToCart(currentProduct)">Add to Cart</button>
+    <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+  </div>
 </div>
