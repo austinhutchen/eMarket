@@ -22,8 +22,14 @@ interface product {
       state('*', style({ opacity: 1, transform: 'translatex(0)' })),  // Add this line
       transition(':enter', [
         animate('1.5s 0s cubic-bezier(0.68, -0.55, 0.27, 1.55)')
-      ])
-    ])
+      ]),
+    ]),
+    trigger('fadeShop', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('0.5s', style({ opacity: 1 })),
+      ]),
+    ]),
   ]
 })
 
@@ -49,7 +55,7 @@ export class StoreComponent {
     { id: 1, name: ' X100 CAP ', price: 50, image: 'assets/x11.webp', state: 'hidden', description: this.descriptions[1] },
     { id: 2, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/blckheavy.webp', state: 'hidden', description: this.descriptions[2] },
     { id: 3, name: 'ON ME ART COVER LONG SLEEVE', price: 400, image: 'assets/onMe.webp', state: 'hidden', description: this.descriptions[3] },
-    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: this.descriptions[4]},
+    { id: 4, name: ' "LIVE ! LÓR ! DIE !" SHIRT', price: 500, image: 'assets/livlordie.webp', state: 'hidden', description: this.descriptions[4] },
     { id: 5, name: 'RED ROSE HAT', price: 600, image: 'assets/rosehat.webp', state: 'hidden', description: this.descriptions[5] },
     { id: 6, name: ' BEAUTY + PAIN HOODIE ', price: 300, image: 'assets/deceptionArt.webp', state: 'hidden', description: this.descriptions[6] },
     { id: 7, name: '"LÓR" HOODIE', price: 300, image: 'assets/lorheavy.webp', state: 'hidden', description: this.descriptions[7] },

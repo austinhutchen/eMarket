@@ -28,7 +28,7 @@
 </div>
 <div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]= "isMenuOpen" >
   <h2>{{currentProduct.name}}</h2>
-  <div class="subImg">
+  <div class="subImg" [@fadeShop] >
     <img [src]="currentProduct.image" alt="{{currentProduct.name}}">
   </div>
   <p>{{currentProduct.price}}</p>
