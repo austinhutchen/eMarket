@@ -28,9 +28,9 @@ align-items: center;
   font-size: 1em; /* default font size */
 }
 
-@media (max-height: 600px) {
-  .productDetails h2, .productDetails p {
-    font-size: 0.8em; /* smaller font size for screens with a height of 600px or less */
+@media (max-height: 700px) {
+  .productDetails p {
+    font-size: 0.6em; /* smaller font size for screens with a height of 600px or less */
   }
 }
 @media (min-width: 768px) {
