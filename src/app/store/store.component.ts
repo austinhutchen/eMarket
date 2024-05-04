@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
 
 interface product {
-  id?: number;
+  id: number;
   name?: string;
   price?: number;
   image?: string;
-  state?: string;
-  description?: string;
+  state: string;
+  description: string;
 }
 @Component({
   selector: 'app-store',
@@ -38,6 +38,7 @@ export class StoreComponent {
   currentProduct: product;
   isMenuOpen: boolean = false;
   private overlayElement!: HTMLElement | null;
+  scrollPosition: number = 0;
 
   overlayVisible: boolean = false;
   descriptions = [
@@ -130,5 +131,7 @@ export class StoreComponent {
       product.state = scrollPosition >= productPosition ? 'visible' : 'hidden';
     });
   }
-
+  onWindowScroll($event: Event) {
+    this.scrollPosition = (event?.target as Document).scrollingElement?.scrollTop || 0;
+  }
 }
