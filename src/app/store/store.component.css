@@ -7,33 +7,61 @@
   object-fit: cover;
   /* This will make the image cover the entire width and height of its box */
 }
+
 /* mobile */
-.subImg{
+.subImg {
   align-items: center;
 }
-.subImg img{
-  height:50vh;
-  width:  auto;
+
+.subImg img {
+  height: 50vh;
+  width: auto;
 }
-/* desktop */
+.productDetails h2, .productDetails p {
+  font-size: 1em; /* default font size */
+}
+
+@media (max-height: 600px) {
+  .productDetails h2, .productDetails p {
+    font-size: 0.8em; /* smaller font size for screens with a height of 600px or less */
+  }
+}
 @media (min-width: 768px) {
-  .storeImg img {
-    max-width: 50svw;
+  .subItemLayout {
+    flex-direction: row;
+    align-content: center;
   }
 
+  .subItemLayout .subImg {
+    order: 1;
+    float: left;
+    margin-right: 20px; /* adjust as needed */
+  }
+
+  .subItemLayout .productDetails {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
 }
+
 .opacity-0 {
   opacity: 0 !important;
 }
+
 .subItemLayout {
-  align-content: center; /* Add this line */
+  align-content: center;
+  /* Add this line */
+  overflow-y: auto; /* Add this line */
+  align-items: flex-start;
+
   display: flex;
   flex-direction: column;
-  z-index:1001;
+  z-index: 1001;
   font-family: 'aziano';
   font-weight: 200;
   position: fixed;
-  top: 7vh;
+  top: 9vh;
   left: 0;
   width: 100%;
   align-items: center;
@@ -69,11 +97,14 @@ h1 {
   flex-direction: row;
   list-style-type: none;
 }
-.shopBtn{
+
+.shopBtn {
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  order:3;
 }
+
 .storeApp {
   display: flex;
   flex-direction: column;
@@ -81,4 +112,3 @@ h1 {
   text-align: center;
   gap: 37px;
 }
-
