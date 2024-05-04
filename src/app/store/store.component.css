@@ -1,10 +1,16 @@
-.products {}
+.products {
+text-align: center;
+justify-content: center;
+align-items: center;
+
+}
 
 .storeImg img {
-  width: 89%;
   /* Adjust as needed */
-  height: auto;
+  height: 60vh;
   object-fit: cover;
+  max-width: 60vh;
+
   /* This will make the image cover the entire width and height of its box */
 }
 
@@ -14,8 +20,9 @@
 }
 
 .subImg img {
-  height: 50vh;
+  height: 55vh;
   width: auto;
+  object-fit: cover;
 }
 .productDetails h2, .productDetails p {
   font-size: 1em; /* default font size */
