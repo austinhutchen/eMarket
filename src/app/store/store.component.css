@@ -1,7 +1,4 @@
 .products {
-text-align: center;
-justify-content: center;
-align-items: center;
 
 }
 
@@ -22,32 +19,52 @@ align-items: center;
   width: auto;
   object-fit: cover;
 }
-.productDetails h2, .productDetails p {
-  font-size: 1em; /* default font size */
+
+.productDetails h2,
+.productDetails p {
+  font-size: 1em;
+  /* default font size */
 }
 
 @media (max-height: 700px) {
   .productDetails p {
-    font-size: 0.5em; /* smaller font size for screens with a height of 600px or less */
+    font-size: 0.5em;
+    /* smaller font size for screens with a height of 600px or less */
     font-weight: 200;
   }
 }
+
+.subItemLayout {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.subImg {
+  order: 1;
+  /* adjust as needed */
+  flex: 1 0 auto; /* Add this line */
+
+}
+
+.productDetails {
+  order: 2;
+  flex: 1 1 auto; /* Add this line */
+
+}
+
 @media (min-width: 768px) {
   .subItemLayout {
+
     flex-direction: row;
-    align-content: center;
   }
 
-  .subItemLayout .subImg {
-    order: 1;
-    float: left;
-    margin-right: 20px; /* adjust as needed */
-  }
 
-  .subItemLayout .productDetails {
-    order: 2;
-    display: flex;
-    flex-direction: column;
+
+  .subImg img {
+    height: 55vh;
+    width: auto;
+    object-fit: cover;
   }
 }
 
@@ -56,12 +73,13 @@ align-items: center;
 }
 
 .subItemLayout {
-  align-content: center;
   /* Add this line */
-  overflow-y: auto; /* Add this line */
-  align-items: flex-start;
+  text-align: center;
 
+  /* Add this line */
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   z-index: 1001;
   font-family: 'aziano';
@@ -108,7 +126,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  order:3;
+  order: 3;
 }
 
 .storeApp {
