@@ -1,4 +1,4 @@
-<div class="storeApp" class="storeApp" [class.opacity-0]="overlayVisible">
+<div class="storeApp" [class.opacity-0]="overlayVisible">
   <h1 class="storeHead">STORE</h1>
 
   <div class="store-header">
@@ -29,11 +29,11 @@
 <div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]="isMenuOpen">
 
   <div class="subImg" [@fadeImg]>
-    <img [src]="currentProduct.image" alt="{{currentProduct.name}}">
+    <img [src]="currentProduct.image" alt="{{currentProduct.name}}"/>
 
   </div>
   <div class="productDetails">
-    <div #subItemText>
+    <div #subItemText class="subItemText">
       <h2>{{currentProduct.name}}</h2>
       <h2>{{currentProduct.price}}</h2>
       <p>{{currentProduct.description}}</p>

@@ -25,8 +25,11 @@
 }
 
 @media (max-height: 850px) {
+  .subItemText {
+    font-size: 1.5svh;
+  }
+
   .productDetails p {
-    font-size: 0.68em;
     /* smaller font size for screens with a height of 600px or less */
     font-weight: 200;
   }
@@ -116,10 +119,16 @@ h1 {
 }
 
 .shopBtn {
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
   order: 3;
+}
+
+.shotBtn button {
+  height: 3vh;
+  width: auto;
 }
 
 .storeApp {
