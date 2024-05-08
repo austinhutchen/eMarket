@@ -1,6 +1,4 @@
-.products {
-
-}
+.products {}
 
 .storeImg img {
   /* Adjust as needed */
@@ -26,37 +24,31 @@
   /* default font size */
 }
 
-@media (max-height: 700px) {
+@media (max-height: 850px) {
   .productDetails p {
-    font-size: 0.5em;
+    font-size: 0.68em;
     /* smaller font size for screens with a height of 600px or less */
     font-weight: 200;
   }
 }
 
-.subItemLayout {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
 
 .subImg {
   order: 1;
   /* adjust as needed */
-  flex: 1 0 auto; /* Add this line */
+  /* Add this line */
 
 }
 
 .productDetails {
   order: 2;
-  flex: 1 1 auto; /* Add this line */
-
+  /* Add this line */
 }
 
 @media (min-width: 768px) {
   .subItemLayout {
-
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    /* aligns the items horizontally on desktop */
   }
 
 
@@ -77,14 +69,15 @@
   text-align: center;
 
   /* Add this line */
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* creates two equal-width columns */
+
   justify-content: center;
-  flex-direction: column;
   z-index: 1001;
   font-family: 'aziano';
   font-weight: 200;
-  position: fixed;
+  position: absolute;
   top: 9vh;
   left: 0;
   width: 100%;
