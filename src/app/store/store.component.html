@@ -1,5 +1,5 @@
 <div class="storeApp" [class.opacity-0]="overlayVisible">
-  <h1 class="storeHead">STORE</h1>
+  <h1 class="storeHead">XII00</h1>
 
   <div class="store-header">
 
@@ -29,18 +29,48 @@
 <div class="subItemLayout" *ngIf="overlayVisible" [class.opacity-0]="isMenuOpen">
 
   <div class="subImg" [@fadeImg]>
-    <img [src]="currentProduct.image" alt="{{currentProduct.name}}"/>
+    <img [src]="currentProduct.image" alt="{{currentProduct.name}}" />
 
   </div>
   <div class="productDetails">
     <div #subItemText class="subItemText">
       <h2>{{currentProduct.name}}</h2>
       <h2>{{currentProduct.price}}</h2>
-      <p>{{currentProduct.description}}</p>
     </div>
 
   </div>
-  <div class="shopBtn">
-    <button (click)="addToCart(currentProduct)">Add to Cart</button>
-    <button (click)="purchaseProduct(currentProduct)">Purchase</button>
+  <div class="productOptions">
+    <label for="color">Color:</label>
+    <select id="color" name="color">
+      <option value="">--Please choose an option--</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <!-- Add more options as needed -->
+    </select>
+    <br />
+    <label for="size">Size:</label>
+    <select id="size" name="size">
+      <option value="">--Please choose an option--</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <!-- Add more options as needed -->
+    </select>
+    <br />
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="99" value="1">
+    <br />
+    <div class="shopBtn">
+
+
+      <button (click)="addToCart(currentProduct)">Add to Cart</button>
+
+    </div>
+  </div>
+  <br />
+  <div class="productDetails">
+
+    <p>{{currentProduct.description}}</p>
   </div>

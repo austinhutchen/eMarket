@@ -36,17 +36,6 @@
 }
 
 
-.subImg {
-  order: 1;
-  /* adjust as needed */
-  /* Add this line */
-
-}
-
-.productDetails {
-  order: 2;
-  /* Add this line */
-}
 
 @media (min-width: 768px) {
   .subItemLayout {
@@ -123,7 +112,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  order: 3;
 }
 
 .shotBtn button {
