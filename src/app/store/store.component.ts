@@ -40,6 +40,7 @@ export class StoreComponent {
   isMenuOpen: boolean = false;
   private overlayElement!: HTMLElement | null;
   scrollPosition: number = 0;
+  private headerRef!: HTMLElement | null;
   overlayVisible: boolean = false;
   descriptions = [
     `Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!    • 50% pre-shrunk cotton, 50% polyester    • Fabric weight: 8.0 oz/yd² (271.25 g/m²)    • Air-jet spun yarn with a soft feel and reduced pilling    • Double-lined hood with matching drawcord    • Quarter-turned body to avoid crease down the middle    • 1 × 1 athletic rib-knit cuffs and waistband with spandex    • Front pouch pocket    • Double-needle stitched collar, shoulders, armholes, cuffs, and hem    • Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador      This product is made especially for you as soon as you place an order, which is why it takes us a bit longer to deliver it to you. Making products on demand instead of in bulk helps reduce overproduction, so thank you for making thoughtful purchasing decisions!`,
@@ -70,11 +71,11 @@ export class StoreComponent {
     this.hamburgerMenu = null;
     this.currentProduct = this.products[0];
     this.overlayElement = this.document?.querySelector('.overlay');
-
   }
 
   ngAfterViewInit() {
     this.hamburgerMenu = this.document.querySelector('.hamburger-menu');
+    this.headerRef = this.document?.querySelector('.header');
 
   }
   openMenu(): void {
@@ -123,7 +124,15 @@ export class StoreComponent {
   }
   @ViewChild('subItemText', { static: false }) subItemText!: ElementRef;
   @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: Event) {
+    const scrollPosition = window.scrollY;
 
+    if (scrollPosition > 100) { // adjust this value as needed
+      this.headerRef?.classList.add('header-hide');
+    } else {
+      this.headerRef?.classList.remove('header-hide');
+    }
+  }
   checkScroll() {
     const scrollPosition = window.scrollY;
 
@@ -132,10 +141,5 @@ export class StoreComponent {
       product.state = scrollPosition >= productPosition ? 'visible' : 'hidden';
     });
   }
-  onWindowScroll($event: Event) {
-    this.scrollPosition = ($event?.target as Document).scrollingElement?.scrollTop || 0;
-    if (this.scrollPosition > this.subItemText.nativeElement.offsetTop) {
-      this.subItemText.nativeElement.classList.add('fade-in');
-    }
-  }
+
 }

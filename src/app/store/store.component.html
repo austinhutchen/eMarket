@@ -19,7 +19,7 @@
       <a (click)="navProduct(product.id); $event.preventDefault()"> <img [src]="product.image" alt="{{product.name}}">
       </a>
     </div>
-    <h3>{{product.name}}</h3>
+    <h2>{{product.name}}</h2>
     <p>{{product.price}}</p>
 
 
@@ -34,13 +34,13 @@
   </div>
   <div class="productDetails">
     <div #subItemText class="subItemText">
-      <h2>{{currentProduct.name}}</h2>
+      <h3>{{currentProduct.name}}</h3>
       <h2>{{currentProduct.price}}</h2>
     </div>
 
   </div>
   <div class="productOptions">
-    <label for="color">Color:</label>
+    <label for="color">Color: </label> <br/>
     <select id="color" name="color">
       <option value="red">Red</option>
       <option value="blue">Blue</option>
@@ -48,7 +48,7 @@
       <!-- Add more options as needed -->
     </select>
     <br />
-    <label for="size">Size:</label>
+    <label for="size">Size: </label> <br/>
     <select id="size" name="size">
       <option value="small">Small</option>
       <option value="medium">Medium</option>
@@ -57,15 +57,16 @@
     </select>
     <br />
 
-    <label for="quantity">Quantity:</label>
+    <label for="quantity">Quantity:</label> <br/>
     <input type="number" id="quantity" name="quantity" min="1" max="99" value="1">
     <br />
-    <div class="shopBtn">
+    
+  </div>
+  <div class="shopBtn">
 
 
-      <button (click)="addToCart(currentProduct)">Add to Cart</button>
+    <button (click)="addToCart(currentProduct)">Add to Cart</button>
 
-    </div>
   </div>
   <br />
   <div class="productDetails">
