@@ -127,7 +127,7 @@ h1 {
 }
 
 .shotBtn button {
-  height: 3vh;
+  max-height: 3vh;
   width: auto;
 }
 
