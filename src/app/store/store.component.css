@@ -8,9 +8,12 @@
 
   /* This will make the image cover the entire width and height of its box */
 }
+
 .header-hide {
-  display: none; /* hides the header */
+  display: none;
+  /* hides the header */
 }
+
 .productOptions {
 
   flex-direction: column;
@@ -18,21 +21,34 @@
   justify-content: center;
 }
 
-.productOptions select, .productOptions input {
-  background: transparent; /* makes the background transparent */
-  color: white; /* makes the text white */
-  border: 1.4px solid white; /* adds a white border */
-  border-radius: 3px; /* adds a slight roundness to the corners for a 'boxy' look */
-  padding: 5px; /* adds some space around the text */
-  outline: none; /* removes the default outline */
-  -webkit-appearance: none; /* removes the default arrow in Webkit browsers */
-  -moz-appearance: none; /* removes the default arrow in Firefox */
-  appearance: none; /* removes the default arrow in other browsers */
+.productOptions select,
+.productOptions input {
+  background: transparent;
+  /* makes the background transparent */
+  color: white;
+  /* makes the text white */
+  border: 1.4px solid white;
+  /* adds a white border */
+  border-radius: 3px;
+  /* adds a slight roundness to the corners for a 'boxy' look */
+  padding: 5px;
+  /* adds some space around the text */
+  outline: none;
+  /* removes the default outline */
+  -webkit-appearance: none;
+  /* removes the default arrow in Webkit browsers */
+  -moz-appearance: none;
+  /* removes the default arrow in Firefox */
+  appearance: none;
+  /* removes the default arrow in other browsers */
   height: auto;
   width: 5em;
 
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 /* mobile */
 .productOptions select::after {
   content: "▼";
@@ -41,9 +57,9 @@
   pointer-events: none;
   color: white;
 }
-.productOptions{
 
-}
+.productOptions {}
+
 .subImg img {
   height: 55vh;
   width: auto;
@@ -57,9 +73,7 @@
 }
 
 @media (max-height: 850px) {
-  .subItemText {
-    font-size: 1.5svw;
-  }
+
 
   .productDetails p {
     /* smaller font size for screens with a height of 600px or less */
@@ -139,17 +153,9 @@ h1 {
   list-style-type: none;
 }
 
-.shopBtn {
 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.shotBtn button {
-  max-height: 3vh;
-  width: auto;
-}
+
 
 .storeApp {
   display: flex;
