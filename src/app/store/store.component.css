@@ -9,6 +9,7 @@
   /* This will make the image cover the entire width and height of its box */
 }
 
+
 /* mobile */
 
 
@@ -26,7 +27,7 @@
 
 @media (max-height: 850px) {
   .subItemText {
-    font-size: 1.5svh;
+    font-size: 1.5svw;
   }
 
   .productDetails p {
