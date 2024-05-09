@@ -3,7 +3,7 @@
   "target": "preview",
   "argv": [
     "/usr/local/bin/node",
-    "/opt/homebrew/bin/vc",
+    "/opt/homebrew/bin/vercel",
     "build"
   ],
   "builds": [
