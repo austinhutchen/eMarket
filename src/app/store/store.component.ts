@@ -133,7 +133,7 @@ export class StoreComponent {
     });
   }
   onWindowScroll($event: Event) {
-    this.scrollPosition = (event?.target as Document).scrollingElement?.scrollTop || 0;
+    this.scrollPosition = ($event?.target as Document).scrollingElement?.scrollTop || 0;
     if (this.scrollPosition > this.subItemText.nativeElement.offsetTop) {
       this.subItemText.nativeElement.classList.add('fade-in');
     }
